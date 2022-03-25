@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: robot;
+  src: url("../public/Fonts/RobotoCondensed-Regular.ttf");
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #030a17;
+  margin: 0;
+  font-family: robot;
+}
+
+.about {
+  text-align: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.about h1 {
+  color: #ededed;
+}
+
+.about p {
+  font-size: 1.5em;
+  line-height: 2em;
+  color: white;
+}
+
+.about a {
+  color: gray;
+  transition: 0.3s;
+  font-size: 1.5em;
+}
+
+.about a:hover {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.skills {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 10%;
+  color: #ededed;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  color: white;
+  width: 100%;
+  justify-content: space-evenly;
+  row-gap: 50px;
+  align-items: center;
+}
+
+.jobs {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 10%;
+  color: #ededed;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.job {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.job-profile img {
+  width: 9vw;
+}
+
+.job-profile {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.job-name h3 {
+  color: white;
+}
+
+.job-name p {
+  color: gray;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.job-name {
+  text-align: left;
+}
+
+.date {
+  color: grey;
+}
+
+.socials {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  color: #ededed;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.socials h2 {
+  color: #ededed;
+  padding-bottom: 50px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.social-icons {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+.social-icons svg path {
+  fill: grey;
+  transition: 0.3s;
+}
+
+.social-icons svg {
+  width: 30px;
+  transition: 0.3s;
+}
+
+#stackoverflow {
+  opacity: 0.5;
+  width: 30px;
+  transition: 0.3s;
+}
+
+#stackoverflow:hover {
+  opacity: 1;
+}
+
+.social-icons svg path:hover {
+  fill: white !important;
+}
+
+#btn {
+  position: absolute;
+  bottom: 5px;
+}
+
+#btn svg {
+  width: 40px;
+  height: 40px;
+}
+
+#btn svg polygon {
+  fill: grey;
+  transition: 0.3s;
+}
+
+#btn svg polygon:hover {
+  fill: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .about p {
+    font-size: 1em;
+  }
+
+  .about a {
+    font-size: 1.5em;
+  }
+
+  #email {
+    margin-top: -50px;
+  }
+}
