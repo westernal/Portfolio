@@ -18,6 +18,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="home">
+      
       <Parallax ref={parallax} pages={4}>
         <ParallaxLayer
           offset={1}
@@ -84,25 +85,24 @@ const Home: NextPage = () => {
         </ParallaxLayer>
 
         <ParallaxLayer offset={3} speed={0.4} style={{ opacity: 0.6 }}>
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "20%", marginLeft: "5%" }}
-          />
+        <p id="song">"Cause you're a sky, you're a sky full of stars"</p>
           <img
             src={url("bash")}
             style={{ display: "block", width: "15%", marginLeft: "75%" }}
           />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={0}
-          speed={-0.3}
-          style={{
-            backgroundSize: "80%",
-            backgroundPosition: "center",
-            backgroundImage: url("clients", true),
-          }}
-        />
+        <ParallaxLayer offset={0} speed={0.2} style={{ opacity: 0.2 }}>
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "10%", marginLeft: "10%" }}
+          />
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "20%", marginLeft: "75%" }}
+          />
+        </ParallaxLayer>
+
 
         <ParallaxLayer
           offset={0}

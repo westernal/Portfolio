@@ -1,4 +1,5 @@
 const About = () => {
+
   function hover(e) {
     if (e.target.querySelector("path")) {
       e.target.querySelector("path").style.fill = "white";
@@ -13,7 +14,7 @@ const About = () => {
 
   return (
     <div className="about" id="about">
-      <h1>Hi, i{"'"}m Ali Navidi</h1>
+      <h1>Ali Navidi</h1>
       <p>Frontend Developer</p>
       <div className="social-icons">
         <a href="https://t.me/alinvd">
@@ -83,9 +84,11 @@ const About = () => {
           />
         </a>
       </div>
-      <a href="mailto:ali_navidi24@yahoo.com" id="email">
-        Email me
-      </a>
+     <a href="/My Resume.pdf" download={true}>
+     <div className="btn from-top resume">
+        Resume
+      </div>
+     </a>
     </div>
   );
 };

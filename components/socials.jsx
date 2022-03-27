@@ -82,6 +82,9 @@ const Socials = () => {
           />
         </a>
       </div>
+      <a href="mailto:ali_navidi24@yahoo.com" id="email">
+        Email me
+      </a>
     </div>
   );
 };
