@@ -65,11 +65,12 @@ a {
 
 .skills-list {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns:  auto auto auto auto;
   color: white;
   width: 100%;
   justify-content: space-evenly;
   row-gap: 50px;
+  column-gap: 10px;
   align-items: center;
 }
 
@@ -113,16 +114,6 @@ a {
   color: gray;
 }
 
-.reveal {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 2s all ease;
-}
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
-}
 
 .job-name {
   text-align: left;
@@ -213,6 +204,24 @@ html {
 
 #btn svg polygon:hover {
   fill: white;
+}
+
+.skill-item {
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+.skill-item p {
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+}
+
+.skill-item img {
+  width: 60px;
+  height: 60px;
 }
 
 @media only screen and (max-width: 600px) {

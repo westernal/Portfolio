@@ -2,79 +2,83 @@ import { useState } from "react";
 
 const Skills = () => {
   const [skill, Setskill] = useState([
-    "TypeScript",
-    "JavaScript",
-    "HTML",
-    "CSS",
-    "ReactJs",
-    "NextJs",
-    "Bootstrap",
-    "NodeJs",
-    "Express.js",
-    "MongoDB",
-    "Graphql",
-    "C",
-    "Java",
-    "Python",
-    "Git",
-    "SEO",
+    {
+      name: "TypeScript",
+      src: "/Images/typescript.svg",
+    },
+    {
+      name: "JavaScript",
+      src: "/Images/javascript.svg",
+    },
+    {
+      name: "HTML",
+      src: "/Images/html5.svg",
+    },
+    {
+      name: "CSS",
+      src: "/Images/css3.svg",
+    },
+    {
+      name: "React.js",
+      src: "/Images/react.svg",
+    },
+    {
+      name: "Next.js",
+      src: "/Images/311px-Nextjs-logo.svg.png",
+    },
+    {
+      name: "Bootstrap",
+      src: "/Images/bootstrap.svg",
+    },
+    {
+      name: "Node.js",
+      src: "/Images/node-js.svg",
+    },
+    {
+      name: "Express.js",
+      src: "/Images/express.svg",
+    },
+    {
+      name: "MongoDB",
+      src: "/Images/mongodb.svg",
+    },
+    {
+      name: "Graphql",
+      src: "/Images/graphql.svg",
+    },
+    {
+      name: "C",
+      src: "/Images/c.svg",
+    },
+    {
+      name: "Java",
+      src: "/Images/java.svg",
+    },
+    {
+      name: "Python",
+      src: "/Images/python.svg",
+    },
+    {
+      name: "Git",
+      src: "/Images/git.svg",
+    },
+    {
+      name: "SEO",
+      src: "/Images/seo.svg",
+    },
   ]);
 
   return (
-    <div className="skills reveal" id="skills">
+    <div className="skills" id="skills">
       <h2>Skills</h2>
       <div className="skills-list">
         {skill.map((item, i) => (
-          <p key={i}>{item}</p>
+          <div className="skill-item" key={i}>
+            <img src={item.src} alt="skill" />
+            <p>{item.name}</p>
+          </div>
         ))}
       </div>
-      <a href="#jobs" id="btn">
-        <svg
-          version="1.1"
-          id="Capa_1"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          viewBox="0 0 490 490"
-        >
-          <g>
-            <polygon
-              points="428.75,0 428.75,79.89 490,19.803 490,20.261 490,250.051 490,250.053 489.014,251.016 244.996,490 0.986,251.016 
-		0,250.053 0,250.051 0,20.261 0,19.803 61.25,79.892 61.25,0.003 244.995,179.906 	"
-            />
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-          </g>
-          <g></g>
-          <g></g>
-          <g></g>
-          <g></g>
-          <g></g>
-          <g></g>
-          <g></g>
-          <g></g>
-          <g></g>
-          <g></g>
-          <g></g>
-          <g></g>
-          <g></g>
-          <g></g>
-          <g></g>
-        </svg>
-      </a>
     </div>
   );
 };

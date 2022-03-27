@@ -1,21 +1,21 @@
 const About = () => {
-	function hover(e) {
-		if (e.target.querySelector("path")) {
-		  e.target.querySelector("path").style.fill = "white";
-		} else e.target.style.fill = "white";
-	  }
-	
-	  function endHover(e) {
-		if (e.target.querySelector("path")) {
-		  e.target.querySelector("path").style.fill = "grey";
-		} else e.target.style.fill = "grey";
-	  }
+  function hover(e) {
+    if (e.target.querySelector("path")) {
+      e.target.querySelector("path").style.fill = "white";
+    } else e.target.style.fill = "white";
+  }
 
-    return ( 
-        <div className="about" id="about">
-        <h1>Hi, i{"'"}m Ali Navidi</h1>
-        <p>Frontend Developer</p>
-		<div className="social-icons">
+  function endHover(e) {
+    if (e.target.querySelector("path")) {
+      e.target.querySelector("path").style.fill = "grey";
+    } else e.target.style.fill = "grey";
+  }
+
+  return (
+    <div className="about" id="about">
+      <h1>Hi, i{"'"}m Ali Navidi</h1>
+      <p>Frontend Developer</p>
+      <div className="social-icons">
         <a href="https://t.me/alinvd">
           <svg
             role="img"
@@ -83,76 +83,11 @@ const About = () => {
           />
         </a>
       </div>
-        <a href="mailto:ali_navidi24@yahoo.com" id="email">Email me</a>
-        <a href="#skills" id="btn"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
-	 viewBox="0 0 490 490"  >
-<g>
-	<polygon points="428.75,0 428.75,79.89 490,19.803 490,20.261 490,250.051 490,250.053 489.014,251.016 244.996,490 0.986,251.016 
-		0,250.053 0,250.051 0,20.261 0,19.803 61.25,79.892 61.25,0.003 244.995,179.906 	"/>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-	<g>
-	</g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg></a>
-      </div>
-     );
-}
- 
+      <a href="mailto:ali_navidi24@yahoo.com" id="email">
+        Email me
+      </a>
+    </div>
+  );
+};
+
 export default About;
