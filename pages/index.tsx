@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         <ParallaxLayer
           offset={1}
           speed={1}
-          style={{ backgroundColor: "#823bd4" }}
+          style={{ backgroundColor: "#87ceeb" }}
         />
 
         <ParallaxLayer
@@ -36,9 +36,9 @@ const Home: NextPage = () => {
           }}
         />
 
-        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
+        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.4 }}>
           <img
-            src={url("cloud")}
+            src={"/Images/sun-shining-in-the-sky-by-Vexels.svg"}
             style={{ display: "block", width: "20%", marginLeft: "55%" }}
           />
           <img
@@ -85,22 +85,25 @@ const Home: NextPage = () => {
         </ParallaxLayer>
 
         <ParallaxLayer offset={3} speed={0.4} style={{ opacity: 0.6 }}>
-        <p id="song">"Cause you're a sky, you're a sky full of stars"</p>
-          <img
-            src={url("bash")}
-            style={{ display: "block", width: "15%", marginLeft: "75%" }}
-          />
+        <p id="song">Cause you{"'"}re a sky, you{"'"}re a sky full of stars</p>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={0} speed={0.2} style={{ opacity: 0.2 }}>
-          <img
-            src={url("cloud")}
-            style={{ display: "block", width: "10%", marginLeft: "10%" }}
-          />
-          <img
-            src={url("cloud")}
+        <ParallaxLayer offset={0} speed={0.2} style={{ opacity: 0.6 }}>
+        <img
+            src={"/Images/32dc9e08-9167-4792-b7a1-119df97022e4.svg"}
             style={{ display: "block", width: "20%", marginLeft: "75%" }}
           />
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "10%", marginLeft: "10%",marginTop: "5%" }}
+          />
+
+<img
+            src={url("bash")}
+            style={{ display: "block", width: "15%", marginLeft: "5%", marginTop: "20%" }}
+          />
+
+          
         </ParallaxLayer>
 
 
