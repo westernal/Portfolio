@@ -223,9 +223,25 @@ html {
   scroll-behavior: smooth;
 }
 
+#dev svg path {
+  fill: black ;
+}
+
+#dev svg rect {
+  transition: 0.3s;
+}
+
+#dev svg rect:hover {
+  fill: white;
+}
+
+#dev svg path:hover {
+  fill: black;
+}
+
 .social-icons {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto;
   column-gap: 20px;
   justify-content: center;
   align-items: center;
@@ -311,4 +327,20 @@ html {
     font-size: 1.5em;
   }
 
+}
+
+@media only screen and (max-width: 400px) {
+.social-icons {
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+}
+
+.skill-item{
+  font-size: 13px;
+}
+
+.skill-item img {
+  width: 30px;
+  height: 30px;
+}
 }
