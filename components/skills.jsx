@@ -27,6 +27,14 @@ const Skills = () => {
       src: "/Images/311px-Nextjs-logo.svg.png",
     },
     {
+      name: "Remix",
+      src: "/Images/remix-seeklogo.com.svg",
+    },
+    {
+      name: "Tailwind",
+      src: "/Images/tailwind-svgrepo-com.svg",
+    },
+    {
       name: "Bootstrap",
       src: "/Images/bootstrap.svg",
     },
