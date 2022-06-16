@@ -31,6 +31,10 @@ const Skills = () => {
       src: "/Images/remix-seeklogo.com.svg",
     },
     {
+      name: "Svelte",
+      src: "/Images/1200px-Svelte_Logo.svg.png",
+    },
+    {
       name: "Tailwind",
       src: "/Images/tailwind-svgrepo-com.svg",
     },
