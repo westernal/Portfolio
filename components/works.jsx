@@ -1,6 +1,6 @@
 const Works = () => {
   return (
-    <div className="works" reveal>
+    <div className="works" reveal id="jobs">
       <h2>Recent Works</h2>
       <div className="work-list">
         <div className="work">

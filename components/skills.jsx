@@ -20,7 +20,7 @@ const Skills = () => {
     },
     {
       name: "React.js",
-      src: "/Images/react.svg",
+      src: "/Images/pngwing.com.png",
     },
     {
       name: "Next.js",
