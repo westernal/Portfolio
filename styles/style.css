@@ -406,11 +406,6 @@ html {
 }
 
 @media only screen and (max-width: 400px) {
-  .social-icons {
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
-  }
-
   .skill-item {
     font-size: 13px;
   }
