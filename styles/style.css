@@ -392,7 +392,8 @@ html {
     font-size: 1em;
   }
 
-  .about a {
+  .about a,
+  .blog-more a {
     font-size: 1.5em;
   }
 
