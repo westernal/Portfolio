@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           color="#5bbad5"
         />
         <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#030a17" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
