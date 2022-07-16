@@ -33,14 +33,16 @@ body {
   padding: 0 10%;
 }
 
-.about h1 {
-  color: #ededed;
+.about h1,
+h2 {
+  color: white;
 }
 
 .about p {
   font-size: 1.5em;
   line-height: 2em;
   color: white;
+  padding: 0 20%;
 }
 
 .socials a {
