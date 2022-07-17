@@ -39,8 +39,15 @@ const Blog = () => {
                       id="post-image"
                     />
                   </div>
-                  <h3>{post.title}</h3>
-                  <p> Ali Navidi</p>
+                  <div className="blog-avatar pl-10">
+                    <img
+                      src={post.user.profile_image}
+                      alt="avatar"
+                      id="avatar"
+                    />
+                    <p> Ali Navidi</p>
+                  </div>
+                  <h3 className="pl-10">{post.title}</h3>
                 </div>
               </a>
             );

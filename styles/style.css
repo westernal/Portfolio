@@ -343,7 +343,7 @@ html {
 }
 
 .blog-item {
-  padding: 10px;
+  text-align: left;
   background-color: #06132c;
   color: white;
   height: 100%;
@@ -352,6 +352,25 @@ html {
   justify-content: center;
   border-radius: 20px;
   transition: 0.2s;
+  padding-bottom: 10px;
+}
+
+.pl-10 {
+  padding: 0 20px;
+}
+
+.blog-avatar {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+#avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .blog-item:hover {
