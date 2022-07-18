@@ -27,6 +27,10 @@ const Skills = () => {
       src: "/Images/311px-Nextjs-logo.svg.png",
     },
     {
+      name: "Cypress",
+      src: "/Images/download-icon-cypress-1324440144114984250_512.png",
+    },
+    {
       name: "Remix",
       src: "/Images/remix-seeklogo.com.svg",
     },
