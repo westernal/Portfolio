@@ -430,4 +430,8 @@ html {
     width: 30px;
     height: 30px;
   }
+
+  .social-icons {
+    column-gap: 10px;
+  }
 }
