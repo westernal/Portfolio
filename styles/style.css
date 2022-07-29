@@ -396,6 +396,43 @@ html {
   height: 20px;
 }
 
+.project {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+  padding: 0 5%;
+}
+
+.project img {
+  width: 100%;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.project img:hover {
+  top: -10px;
+}
+
+.project-more {
+  margin-top: 50px;
+}
+
+.project-more a {
+  z-index: 100;
+}
+
+.mobile {
+  display: none;
+}
+
+.skills {
+  margin-top: 150px;
+}
+
 @media only screen and (max-width: 950px) {
   .blog-list {
     grid-template-columns: auto auto;
@@ -405,6 +442,22 @@ html {
 @media only screen and (max-width: 600px) {
   .about p {
     font-size: 1em;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .web {
+    display: none;
+  }
+
+  .projects {
+    margin-top: -80px;
+  }
+
+  .project {
+    gap: 40px;
   }
 
   .about a,
