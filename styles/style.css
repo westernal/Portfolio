@@ -472,6 +472,10 @@ html {
   #post-image {
     display: none;
   }
+
+  .blog .blog-more {
+    margin-top: -40px;
+  }
 }
 
 @media only screen and (max-width: 400px) {

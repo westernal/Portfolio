@@ -44,7 +44,7 @@ const Projects = () => {
 
         <a href="https://social-media-westernal.vercel.app/">
           <img
-            src="/Images/screenshot-rocks (2).svg"
+            src="/Images/screenshot-rocks (2).png"
             alt="Westernal website"
             className="web"
           />
