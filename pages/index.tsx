@@ -13,7 +13,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="home" style={{ width: "100%", height: "100%" }}>
-      <Parallax ref={parallax} pages={6}>
+      <Parallax ref={parallax} pages={7}>
         <ParallaxLayer
           offset={2.4}
           speed={1}

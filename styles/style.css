@@ -24,8 +24,8 @@ body {
 .about {
   text-align: center;
   position: relative;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -130,18 +130,9 @@ a {
   align-items: center;
   padding: 0 10%;
   color: #ededed;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
-}
-
-#song {
-  color: white;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
-    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
-  font-size: 1.5vw;
-  margin-left: 5%;
-  margin-top: 10%;
 }
 
 .skills-list {
@@ -162,8 +153,8 @@ a {
   align-items: center;
   padding: 0 10%;
   color: #ededed;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
@@ -172,10 +163,6 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-.job-profile img {
-  width: 9vw;
 }
 
 .job-profile {
@@ -210,8 +197,8 @@ a {
   align-items: center;
   padding: 0 10%;
   color: #ededed;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
@@ -238,6 +225,15 @@ html {
 
 #dev svg path:hover {
   fill: black;
+}
+
+#song {
+  color: white;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  font-size: 1.5vw;
+  margin-left: 5%;
+  margin-top: 10%;
 }
 
 .social-icons {
@@ -314,8 +310,8 @@ html {
   color: #ededed;
   text-align: center;
   padding: 50px;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
   display: grid;
   grid-template-columns: auto;
@@ -347,6 +343,7 @@ html {
   background-color: #06132c;
   color: white;
   height: 100%;
+  width: 400px;
   display: grid;
   grid-template-columns: auto;
   justify-content: center;
@@ -368,8 +365,6 @@ html {
 }
 
 #avatar {
-  width: 40px;
-  height: 40px;
   border-radius: 50%;
 }
 
@@ -378,8 +373,6 @@ html {
 }
 
 #post-image {
-  width: 100%;
-  height: 100%;
   border-radius: 20px 20px 0 0;
 }
 
@@ -402,7 +395,7 @@ html {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 0 5%;
 }
 
@@ -429,10 +422,6 @@ html {
   display: none;
 }
 
-.skills {
-  margin-top: 150px;
-}
-
 @media only screen and (max-width: 950px) {
   .blog-list {
     grid-template-columns: auto auto;
@@ -452,10 +441,6 @@ html {
     display: none;
   }
 
-  .projects {
-    margin-top: -80px;
-  }
-
   .project {
     gap: 40px;
   }
@@ -473,6 +458,10 @@ html {
     display: none;
   }
 
+  .blog {
+    margin-top: -140px;
+  }
+
   .blog .blog-more {
     margin-top: -40px;
   }
@@ -481,11 +470,6 @@ html {
 @media only screen and (max-width: 400px) {
   .skill-item {
     font-size: 13px;
-  }
-
-  .skill-item img {
-    width: 30px;
-    height: 30px;
   }
 
   .social-icons {

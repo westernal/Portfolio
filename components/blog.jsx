@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Blog = () => {
@@ -32,15 +33,20 @@ const Blog = () => {
               <a href={post.url} key={post.id}>
                 <div className="blog-item">
                   <div className="flex">
-                    {" "}
-                    <img
-                      src={post.cover_image}
-                      alt="post image"
-                      id="post-image"
-                    />
+                    <div className="web">
+                      <Image
+                        width={400}
+                        height={150}
+                        src={post.cover_image}
+                        alt="post image"
+                        id="post-image"
+                      />
+                    </div>
                   </div>
                   <div className="blog-avatar pl-10">
-                    <img
+                    <Image
+                      width={40}
+                      height={40}
                       src={post.user.profile_image}
                       alt="avatar"
                       id="avatar"

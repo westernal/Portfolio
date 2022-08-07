@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 
 const Skills = () => {
@@ -90,7 +91,7 @@ const Skills = () => {
       <div className="skills-list">
         {skill.map((item, i) => (
           <div className="skill-item" key={i}>
-            <img src={item.src} alt="skill" />
+            <Image width={30} height={30} src={item.src} alt="skill" />
             <p>{item.name}</p>
           </div>
         ))}
