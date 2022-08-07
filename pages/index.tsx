@@ -13,7 +13,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="home" style={{ width: "100%", height: "100%" }}>
-      <Parallax ref={parallax} pages={7}>
+      <Parallax ref={parallax} pages={6}>
         <ParallaxLayer
           offset={2.4}
           speed={1}
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         <ParallaxLayer
           offset={0}
           speed={0}
-          factor={5}
+          factor={6}
           style={{
             backgroundImage: "url(/Images/stars.svg)",
             backgroundSize: "cover",

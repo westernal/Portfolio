@@ -465,6 +465,10 @@ html {
   .blog .blog-more {
     margin-top: -40px;
   }
+
+  .blog-item {
+    width: 300px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
