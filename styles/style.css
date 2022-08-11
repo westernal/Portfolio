@@ -399,14 +399,14 @@ html {
   padding: 0 5%;
 }
 
-.project img {
+.project a {
   width: 100%;
   position: relative;
   top: 0;
   transition: top ease 0.5s;
 }
 
-.project img:hover {
+.project a:hover {
   top: -10px;
 }
 
