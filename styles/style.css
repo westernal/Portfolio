@@ -423,6 +423,19 @@ html {
   display: none;
 }
 
+.about img {
+  animation: ForceRedraw 4s infinite;
+}
+
+@keyframes forceRedraw {
+  from {
+    box-shadow: inset rgba(0, 0, 0, 0) 0 0 0;
+  }
+  to {
+    box-shadow: inset rgba(0, 0, 0, 0.0000001) 0 0 0 10px;
+  }
+}
+
 @media only screen and (max-width: 950px) {
   .blog-list {
     grid-template-columns: auto auto;
