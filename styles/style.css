@@ -424,7 +424,7 @@ html {
 }
 
 .about img {
-  animation: ForceRedraw 4s infinite;
+  animation: forceRedraw 4s infinite;
 }
 
 @keyframes forceRedraw {
