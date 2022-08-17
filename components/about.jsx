@@ -4,12 +4,14 @@ const About = () => {
   return (
     <div className="about" id="about">
       <h1>Ali Navidi</h1>
-      <h2>Frontend Developer</h2>
-      <p>
-        Hi, I{"'"}m a 21-year-old Frontend developer but I have some backend
-        knowledge and I{"'"}m currently studying my last year of software
-        engineering.
-      </p>
+
+      <a href="https://git.io/typing-svg">
+        <img
+          src="https://readme-typing-svg.herokuapp.com?font=Roboto+Condensed&size=28&pause=1000&color=FFFFFF&center=true&vCenter=true&width=435&lines=Full-stack+web+developer;Software+engineering+student;Always+learning+new+things;Working+hard+to+be+better"
+          alt="Typing SVG"
+        />
+      </a>
+
       <a href="/My Resume.pdf" download={true}>
         <div className="btn from-top resume">Resume</div>
       </a>
