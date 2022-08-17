@@ -7,6 +7,7 @@ import Blog from "../components/blog";
 import React, { useRef } from "react";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
 import Projects from "../components/projects";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   const parallax = useRef<IParallax>(null!);
@@ -31,58 +32,98 @@ const Home: NextPage = () => {
         />
 
         <ParallaxLayer offset={2.4} speed={0.8} style={{ opacity: 0.4 }}>
-          <img
-            src={"/Images/sun-shining-in-the-sky-by-Vexels.svg"}
-            style={{ display: "block", width: "20%", marginLeft: "55%" }}
-          />
-          <img
-            src={"/Images/cloud.svg"}
-            style={{ display: "block", width: "10%", marginLeft: "15%" }}
-          />
+          <div style={{ display: "block", width: "20%", marginLeft: "55%" }}>
+            <Image
+              src={"/Images/sun-shining-in-the-sky-by-Vexels.svg"}
+              alt={"sun"}
+              width={150}
+              height={150}
+            />
+          </div>
+          <div style={{ display: "block", width: "10%", marginLeft: "15%" }}>
+            <Image
+              src={"/Images/cloud.svg"}
+              alt="cloud"
+              width={120}
+              height={70}
+            />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={2.75} speed={0.5} style={{ opacity: 0.1 }}>
-          <img
-            src={"/Images/cloud.svg"}
-            style={{ display: "block", width: "20%", marginLeft: "70%" }}
-          />
-          <img
-            src={"/Images/cloud.svg"}
-            style={{ display: "block", width: "20%", marginLeft: "40%" }}
-          />
+          <div style={{ display: "block", marginLeft: "70%" }}>
+            <Image
+              src={"/Images/cloud.svg"}
+              alt="cloud"
+              width={120}
+              height={70}
+            />
+          </div>
+          <div style={{ display: "block", width: "20%", marginLeft: "40%" }}>
+            <Image
+              src={"/Images/cloud.svg"}
+              alt="cloud"
+              width={120}
+              height={70}
+            />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={2} speed={0.2} style={{ opacity: 0.2 }}>
-          <img
-            src={"/Images/cloud.svg"}
-            style={{ display: "block", width: "10%", marginLeft: "10%" }}
-          />
-          <img
-            src={"/Images/cloud.svg"}
-            style={{ display: "block", width: "20%", marginLeft: "75%" }}
-          />
+          <div style={{ display: "block", width: "10%", marginLeft: "10%" }}>
+            <Image
+              src={"/Images/cloud.svg"}
+              alt="cloud"
+              width={120}
+              height={70}
+            />
+          </div>
+          <div style={{ display: "block", width: "20%", marginLeft: "75%" }}>
+            <Image
+              src={"/Images/cloud.svg"}
+              alt="cloud"
+              width={120}
+              height={70}
+            />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={2.6} speed={-0.1} style={{ opacity: 0.4 }}>
-          <img
-            src={"/Images/cloud.svg"}
-            style={{ display: "block", width: "20%", marginLeft: "60%" }}
-          />
-          <img
-            src={"/Images/cloud.svg"}
-            style={{ display: "block", width: "25%", marginLeft: "30%" }}
-          />
-          <img
-            src={"/Images/server.svg"}
-            style={{ display: "block", width: "10%", marginLeft: "80%" }}
-          />
+          <div style={{ display: "block", width: "20%", marginLeft: "60%" }}>
+            <Image
+              src={"/Images/cloud.svg"}
+              alt="cloud"
+              width={120}
+              height={70}
+            />
+          </div>
+          <div style={{ display: "block", width: "25%", marginLeft: "30%" }}>
+            <Image
+              src={"/Images/cloud.svg"}
+              alt="cloud"
+              width={120}
+              height={70}
+            />
+          </div>
+          <div style={{ display: "block", width: "10%", marginLeft: "80%" }}>
+            <Image
+              src={"/Images/server.svg"}
+              alt="server"
+              width={120}
+              height={90}
+            />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={4.2} speed={-0.1} style={{ opacity: 0.4 }}>
-          <img
-            src={"/Images/cloud.svg"}
-            style={{ display: "block", width: "10%", marginLeft: "80%" }}
-          />
+          <div style={{ display: "block", width: "10%", marginLeft: "80%" }}>
+            <Image
+              src={"/Images/cloud.svg"}
+              alt="cloud"
+              width={120}
+              height={70}
+            />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={5} speed={0.4} style={{ opacity: 0.6 }}>
@@ -92,29 +133,52 @@ const Home: NextPage = () => {
         </ParallaxLayer>
 
         <ParallaxLayer offset={0} speed={0.2} style={{ opacity: 0.6 }}>
-          <img
-            src={"/Images/32dc9e08-9167-4792-b7a1-119df97022e4.svg"}
-            style={{ display: "block", width: "20%", marginLeft: "75%" }}
-          />
-          <img
-            src={"/Images/cloud.svg"}
+          <div
+            style={{
+              display: "block",
+              width: "20%",
+              marginLeft: "75%",
+              marginTop: "5%",
+            }}
+          >
+            <Image
+              src={"/Images/32dc9e08-9167-4792-b7a1-119df97022e4.svg"}
+              alt="moon"
+              width={150}
+              height={150}
+            />
+          </div>
+          <div
             style={{
               display: "block",
               width: "10%",
               marginLeft: "10%",
               marginTop: "5%",
             }}
-          />
+          >
+            <Image
+              src={"/Images/cloud.svg"}
+              alt="cloud"
+              width={120}
+              height={70}
+            />
+          </div>
 
-          <img
-            src={"/Images/bash.svg"}
+          <div
             style={{
               display: "block",
               width: "15%",
               marginLeft: "5%",
               marginTop: "20%",
             }}
-          />
+          >
+            <Image
+              src={"/Images/bash.svg"}
+              alt="bash"
+              width={120}
+              height={90}
+            />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer
