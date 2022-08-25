@@ -427,6 +427,17 @@ html {
   animation: forceRedraw 4s infinite;
 }
 
+.header {
+  position: absolute;
+  top: 0;
+  padding: 30px;
+}
+
+.header a {
+  color: white;
+  font-size: 16px;
+}
+
 @keyframes forceRedraw {
   from {
     box-shadow: inset rgba(0, 0, 0, 0) 0 0 0;

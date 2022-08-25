@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Projects = () => {
   return (
-    <div className="jobs reveal projects" id="jobs">
+    <div className="jobs reveal projects" id="projects">
       <h2>Projects</h2>
       <div className="project">
         <a href="https://github.com/westernal/Cinema">
