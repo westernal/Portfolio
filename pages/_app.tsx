@@ -12,8 +12,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
         />
-        <meta name="description" content="Web Developer" />
-        <meta name="keywords" content="Keywords" />
+        <meta name="description" content="Ali Navidi: Web Developer" />
+        <meta name="keywords" content="developer, frontend, reactjs, nextjs" />
         <title>Ali Navidi</title>
         <link
           rel="apple-touch-icon"
