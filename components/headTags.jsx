@@ -37,7 +37,7 @@ const HeadTags = () => {
       />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#030a17" />
-      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="shortcut icon" href="https://westernal.me/favicon.ico" />
     </Head>
   );
 };
