@@ -1,8 +1,10 @@
 import Image from "next/image";
+import HeadTags from "./headTags";
 
 const About = () => {
   return (
     <div className="about" id="about">
+      <HeadTags />
       <h1>Ali Navidi</h1>
 
       <Image
