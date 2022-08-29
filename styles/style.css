@@ -343,7 +343,7 @@ html {
   text-align: left;
   background-color: #06132c;
   color: white;
-  height: 100%;
+  height: 290px;
   width: 400px;
   display: grid;
   grid-template-columns: auto;
@@ -482,6 +482,7 @@ html {
 
   .blog-item {
     width: 300px;
+    height: 100%;
   }
 
   .skills {
