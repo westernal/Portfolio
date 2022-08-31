@@ -33,7 +33,7 @@ const Jobs = () => {
             />
           </div>
           <div className="job-name">
-            <h3>Web Developer</h3>
+            <h3>Client Side Software Engineer</h3>
             <p>Restarone Solutions Inc. - Toronto, Canada</p>
           </div>
         </div>
