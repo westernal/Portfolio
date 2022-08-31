@@ -447,6 +447,10 @@ html {
     font-size: 1em;
   }
 
+  .job-profile {
+    gap: 30px;
+  }
+
   .mobile {
     display: block;
   }
@@ -491,6 +495,8 @@ html {
 
   .jobs {
     margin-top: -200px;
+
+    padding: 0 40px;
   }
 
   .projects {
