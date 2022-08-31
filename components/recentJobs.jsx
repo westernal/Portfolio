@@ -7,12 +7,14 @@ const Jobs = () => {
 
       <div className="job">
         <div className="job-profile">
-          <Image
-            width={100}
-            height={100}
-            src="/Images/logo.svg"
-            alt="oben origin"
-          />
+          <div className="company-logo flex">
+            <Image
+              width={100}
+              height={100}
+              src="/Images/logo.svg"
+              alt="oben origin"
+            />
+          </div>
           <div className="job-name">
             <h3>Front-End Developer</h3>
             <p>Oben Origin co. - Tehran, Iran</p>
@@ -22,12 +24,14 @@ const Jobs = () => {
       </div>
       <div className="job">
         <div className="job-profile">
-          <Image
-            width={100}
-            height={100}
-            src="/Images/restarone.svg"
-            alt="oben origin"
-          />
+          <div className="company-logo flex">
+            <Image
+              width={75}
+              height={95}
+              src="/Images/Sticker-1-05 1.png"
+              alt="oben origin"
+            />
+          </div>
           <div className="job-name">
             <h3>Web Developer</h3>
             <p>Restarone Solutions Inc. - Toronto, Canada</p>
