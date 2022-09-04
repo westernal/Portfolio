@@ -88,6 +88,15 @@ const Skills = () => {
   return (
     <div className="skills" id="skills">
       <h2>Skills</h2>
+      <div className="sun">
+        <Image
+          src="/Images/sun-shining-in-the-sky-by-Vexels.svg"
+          alt="sun"
+          id="sun"
+          width={150}
+          height={150}
+        />
+      </div>
       <div className="skills-list">
         {skill.map((item, i) => (
           <div className="skill-item" key={i}>

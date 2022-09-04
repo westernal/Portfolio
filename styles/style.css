@@ -30,7 +30,11 @@ body {
 .socials {
   width: 100vw;
   min-height: 100vh;
-  padding: 100px 10%;
+  padding: 50px 10%;
+}
+
+#skills {
+  background-color: #87ceeb;
 }
 
 .about {
@@ -142,6 +146,18 @@ a {
   position: relative;
 }
 
+.sun,
+.moon {
+  position: absolute;
+  top: 50px;
+  right: 10%;
+  opacity: 0.8;
+}
+
+.moon {
+  z-index: -1;
+}
+
 .skills-list {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -169,6 +185,7 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-bottom: 50px;
 }
 
 .job-profile {
@@ -206,7 +223,8 @@ a {
   position: relative;
 }
 
-.socials h2 {
+.socials h2,
+.jobs h2 {
   color: #ededed;
   padding-bottom: 50px;
 }
@@ -236,8 +254,10 @@ html {
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
     0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
   font-size: 20px;
-  margin-left: 5%;
-  margin-top: 10%;
+  left: 5%;
+  top: 10%;
+  position: absolute;
+  opacity: 0.8;
 }
 
 .social-icons {
@@ -444,7 +464,16 @@ html {
   }
 
   .job-profile {
-    gap: 30px;
+    gap: 0;
+    grid-template-columns: auto;
+  }
+
+  .job-name {
+    text-align: center;
+  }
+
+  .job {
+    flex-direction: column;
   }
 
   .mobile {

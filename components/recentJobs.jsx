@@ -26,8 +26,8 @@ const Jobs = () => {
         <div className="job-profile">
           <div className="company-logo flex">
             <Image
-              width={75}
-              height={95}
+              width={55}
+              height={75}
               src="/Images/Sticker-1-05 1.png"
               alt="oben origin"
             />
