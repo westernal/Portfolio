@@ -33,15 +33,13 @@ const Blog = () => {
               <a href={post.url} key={post.id}>
                 <div className="blog-item">
                   <div className="flex">
-                    <div className="web">
-                      <Image
-                        width={400}
-                        height={150}
-                        src={post.cover_image}
-                        alt="post image"
-                        id="post-image"
-                      />
-                    </div>
+                    <Image
+                      width={400}
+                      height={150}
+                      src={post.cover_image}
+                      alt="post image"
+                      id="post-image"
+                    />
                   </div>
                   <div className="blog-avatar pl-10">
                     <Image

@@ -12,6 +12,7 @@ body {
   background-color: #030a17;
   margin: 0;
   font-family: robot;
+  background-image: url(../public/Images/stars.svg);
 }
 
 .flex {
@@ -21,16 +22,24 @@ body {
   gap: 10px;
 }
 
+.about,
+#projects,
+.blog,
+.jobs,
+#skills,
+.socials {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 100px 10%;
+}
+
 .about {
   text-align: center;
   position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 0 10%;
 }
 
 .about h1,
@@ -129,10 +138,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
   padding: 0 10%;
-  margin-top: 100px;
   color: #ededed;
-  width: 100%;
-  height: 100%;
   position: relative;
 }
 
@@ -143,6 +149,7 @@ a {
   width: 100%;
   justify-content: space-evenly;
   column-gap: 10px;
+  padding: 50px 0;
   align-items: center;
 }
 
@@ -154,8 +161,6 @@ a {
   align-items: center;
   padding: 0 10%;
   color: #ededed;
-  width: 100%;
-  height: 100%;
   position: relative;
 }
 
@@ -198,8 +203,6 @@ a {
   align-items: center;
   padding: 0 10%;
   color: #ededed;
-  width: 100%;
-  height: 100%;
   position: relative;
 }
 
@@ -311,8 +314,6 @@ html {
   color: #ededed;
   text-align: center;
   padding: 50px;
-  width: 100%;
-  height: 100%;
   position: relative;
   display: grid;
   grid-template-columns: auto;
@@ -396,8 +397,7 @@ html {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 20px;
-  padding: 0 5%;
+  padding: 50px;
 }
 
 .project a {
@@ -409,10 +409,6 @@ html {
 
 .project a:hover {
   top: -10px;
-}
-
-.project-more {
-  margin-top: 50px;
 }
 
 .project-more a {
@@ -438,7 +434,7 @@ html {
 
 @media only screen and (max-width: 950px) {
   .blog-list {
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
   }
 }
 
@@ -468,22 +464,6 @@ html {
     font-size: 1.5em;
   }
 
-  .blog-list {
-    grid-template-columns: auto;
-  }
-
-  #post-image {
-    display: none;
-  }
-
-  .blog {
-    margin-top: -140px;
-  }
-
-  .blog .blog-more {
-    margin-top: -40px;
-  }
-
   .blog-item {
     width: 300px;
     height: 100%;
@@ -494,13 +474,7 @@ html {
   }
 
   .jobs {
-    margin-top: -200px;
-
     padding: 0 40px;
-  }
-
-  .projects {
-    margin-top: -100px;
   }
 
   .blog {
