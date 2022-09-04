@@ -17,8 +17,8 @@ const Projects = () => {
           </div>
           <div className="mobile">
             <Image
-              width={100}
-              height={180}
+              width={150}
+              height={250}
               src="/Images/5279C0FE-F244-4B54-B9C6-BB18F7D07078_iphone13blue_portrait.png"
               alt="Cinema mobile"
               className="mobile"
@@ -38,8 +38,8 @@ const Projects = () => {
           </div>
           <div className="mobile">
             <Image
-              width={100}
-              height={180}
+              width={150}
+              height={250}
               src="/Images/A05D135D-6A5D-4210-AFB3-C35D4F73284F_iphone13red_portrait.png"
               alt="Dashboard"
               className="mobile"
@@ -59,8 +59,8 @@ const Projects = () => {
           </div>
           <div className="mobile">
             <Image
-              width={100}
-              height={180}
+              width={150}
+              height={250}
               src="/Images/DB43DA89_2874_487D_A50A_CBE7E281960F_iphone13starlight_portrait.png"
               alt="Sartel mobile"
               className="mobile"
@@ -80,8 +80,8 @@ const Projects = () => {
           </div>
           <div className="mobile">
             <Image
-              width={100}
-              height={180}
+              width={150}
+              height={250}
               src="/Images/467CC025_8F4E_48F5_8912_26EADF11976A_iphone13midnight_portrait.png"
               alt="Westernal mobile"
               className="mobile"

@@ -386,6 +386,12 @@ html {
   padding-bottom: 10px;
 }
 
+.blog-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 17px;
+}
+
 .pl-10 {
   padding: 0 20px;
 }
@@ -395,7 +401,6 @@ html {
   justify-content: left;
   align-items: center;
   gap: 10px;
-  padding-top: 10px;
 }
 
 #avatar {
@@ -497,7 +502,7 @@ html {
   }
 
   .project {
-    gap: 40px;
+    padding: 20px 0;
   }
 
   .about a,
@@ -512,14 +517,6 @@ html {
 
   .skills {
     margin-top: 0;
-  }
-
-  .jobs {
-    padding: 0 40px;
-  }
-
-  .blog {
-    padding: 0;
   }
 }
 

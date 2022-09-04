@@ -51,7 +51,7 @@ const Blog = () => {
                     />
                     <p> Ali Navidi</p>
                   </div>
-                  <h3 className="pl-10">{post.title}</h3>
+                  <p className="pl-10 blog-title">{post.title}</p>
                 </div>
               </a>
             );
