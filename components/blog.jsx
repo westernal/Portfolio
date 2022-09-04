@@ -24,7 +24,7 @@ const Blog = () => {
       .catch((err) => console.error(err));
   }, []);
   return (
-    <div className="blog" id="blog">
+    <div className="blog reveal" id="blog">
       <h2>Blog</h2>
       <div className="blog-list">
         {posts &&

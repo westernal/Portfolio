@@ -86,7 +86,7 @@ const Skills = () => {
   ]);
 
   return (
-    <div className="skills" id="skills">
+    <div className="skills reveal" id="skills">
       <h2>Skills</h2>
       <div className="sun">
         <Image
