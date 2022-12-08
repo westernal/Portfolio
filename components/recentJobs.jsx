@@ -37,7 +37,7 @@ const Jobs = () => {
             <p>Restarone Solutions Inc. - Toronto, Canada</p>
           </div>
         </div>
-        <div className="date">09/2022 - Now</div>
+        <div className="date">09/2022 - 12/2022</div>
       </div>
     </div>
   );
