@@ -21,7 +21,7 @@ const About = () => {
         height={50}
       />
 
-      <a href="/My Resume.pdf" download={true}>
+      <a href="/Ali Navidi Resume.pdf" download={true}>
         <div className="btn from-top resume">Resume</div>
       </a>
     </div>
