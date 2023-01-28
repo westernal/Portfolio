@@ -3,7 +3,7 @@ import Skills from "../components/Skills/skills";
 import Jobs from "../components/recentJobs";
 import Socials from "../components/socials";
 import Blog from "../components/blog";
-import Projects from "../components/projects";
+import Projects from "../components/Projects/projects";
 import { useEffect } from "react";
 
 const Home = () => {
