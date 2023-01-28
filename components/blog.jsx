@@ -24,7 +24,7 @@ const Blog = () => {
       .catch((err) => console.error(err));
   }, []);
   return (
-    <div className="blog reveal" id="blog">
+    <section className="blog reveal" id="blog">
       <h2>Blog</h2>
       <div className="blog-list">
         {posts &&
@@ -60,7 +60,7 @@ const Blog = () => {
       <div className="flex blog-more">
         <a href="https://dev.to/westernal">Read More</a>
       </div>
-    </div>
+    </section>
   );
 };
 

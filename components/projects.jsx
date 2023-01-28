@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Projects = () => {
   return (
-    <div className="jobs reveal projects" id="projects">
+    <section className="jobs reveal projects" id="projects">
       <h2>Projects</h2>
       <div className="project">
         <a href="https://github.com/westernal/Cinema">
@@ -92,7 +92,7 @@ const Projects = () => {
       <div className="flex .project-more blog-more">
         <a href="https://github.com/westernal">See More</a>
       </div>
-    </div>
+    </section>
   );
 };
 

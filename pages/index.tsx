@@ -27,14 +27,14 @@ const Home = () => {
     window.addEventListener("scroll", reveal);
   }, []);
   return (
-    <div className="home">
+    <main className="home">
       <About />
       <Projects />
       <Skills />
       <Jobs />
       <Blog />
       <Socials />
-    </div>
+    </main>
   );
 };
 

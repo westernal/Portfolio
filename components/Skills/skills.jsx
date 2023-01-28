@@ -3,7 +3,7 @@ import { skills, familiarSkills } from "./skillsList";
 
 const Skills = () => {
   return (
-    <div className="skills reveal" id="skills">
+    <section className="skills reveal" id="skills">
       <h2>Skills</h2>
       <div className="sun">
         <Image
@@ -31,7 +31,7 @@ const Skills = () => {
           </a>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

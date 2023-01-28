@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Jobs = () => {
   return (
-    <div className="jobs reveal" id="jobs">
+    <section className="jobs reveal" id="jobs">
       <h2>Recent Jobs</h2>
 
       <div className="job">
@@ -39,7 +39,7 @@ const Jobs = () => {
         </div>
         <div className="date">09/2022 - 12/2022</div>
       </div>
-    </div>
+    </section>
   );
 };
 

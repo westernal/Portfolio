@@ -3,7 +3,7 @@ import HeadTags from "./headTags";
 
 const About = () => {
   return (
-    <div className="about" id="about">
+    <section className="about" id="about">
       <HeadTags />
       <h1>Ali Navidi</h1>
       <div className="moon">
@@ -24,7 +24,7 @@ const About = () => {
       <a href="/Ali Navidi Resume.pdf" download={true}>
         <div className="btn from-top resume">Resume</div>
       </a>
-    </div>
+    </section>
   );
 };
 
