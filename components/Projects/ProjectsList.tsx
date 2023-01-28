@@ -16,6 +16,7 @@ interface Project {
     documentation?: string;
     gitHub: string;
   };
+  color: string;
 }
 
 export const projects: Project[] = [
@@ -40,6 +41,7 @@ export const projects: Project[] = [
         "https://dev.to/westernal/introducing-westernal-a-social-media-based-on-songs-1pa9",
       gitHub: "https://github.com/westernal/social-media-frontend",
     },
+    color: "#9d38fc",
   },
   {
     title: "Cinema",
@@ -58,6 +60,7 @@ export const projects: Project[] = [
     link: {
       gitHub: "https://github.com/westernal/Cinema",
     },
+    color: "#1e2130",
   },
   {
     title: "Sartel",
@@ -77,6 +80,7 @@ export const projects: Project[] = [
       website: "https://sari-sartel.com/",
       gitHub: "https://github.com/westernal/sari-sartel",
     },
+    color: "#212121",
   },
   {
     title: "Dashboard",
@@ -95,5 +99,6 @@ export const projects: Project[] = [
       website: "https://dashoard.vercel.app/",
       gitHub: "https://github.com/westernal/Dashboard",
     },
+    color: "linear-gradient(45deg, #365eff, #fc6ebc)",
   },
 ];
