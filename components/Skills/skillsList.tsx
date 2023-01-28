@@ -1,4 +1,10 @@
-export const skills = [
+interface Skill {
+  name: string;
+  src: string;
+  link: string;
+}
+
+export const skills: Skill[] = [
   {
     name: "JavaScript",
     src: "/Images/javascript.svg",
@@ -62,7 +68,7 @@ export const skills = [
   },
 ];
 
-export const familiarSkills = [
+export const familiarSkills: Skill[] = [
   {
     name: "TypeScript",
     src: "/Images/typescript.svg",
