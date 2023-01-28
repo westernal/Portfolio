@@ -16,12 +16,12 @@ export const skills = [
   },
   {
     name: "React.js",
-    src: "/Images/pngwing.com.png",
+    src: "/Images/react.svg",
     link: "https://reactjs.org/",
   },
   {
     name: "Next.js",
-    src: "/Images/311px-Nextjs-logo.svg.png",
+    src: "/Images/NextJS-Dark.svg",
     link: "https://nextjs.org/",
   },
   {
@@ -95,7 +95,7 @@ export const familiarSkills = [
   },
   {
     name: "Svelte",
-    src: "/Images/1200px-Svelte_Logo.svg.png",
+    src: "/Images/Svelte.svg",
     link: "https://svelte.dev/",
   },
   {
