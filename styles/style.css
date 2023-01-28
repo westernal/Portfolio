@@ -329,8 +329,15 @@ html {
 
 .skill-item {
   padding: 10px;
-
+  transition: top ease 0.5s;
   border-radius: 10px;
+  position: relative;
+  top: 0;
+  color: #06132c;
+}
+
+.skill-item:hover {
+  top: -10px;
 }
 
 #item-name {

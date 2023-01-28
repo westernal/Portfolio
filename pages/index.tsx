@@ -1,5 +1,5 @@
 import About from "../components/about";
-import Skills from "../components/skills";
+import Skills from "../components/Skills/skills";
 import Jobs from "../components/recentJobs";
 import Socials from "../components/socials";
 import Blog from "../components/blog";
