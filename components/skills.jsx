@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { skills, familiarSkills } from "./skillsList";
+import { skills, familiarSkills } from "../DataLists/skills";
 
 const Skills = () => {
   return (

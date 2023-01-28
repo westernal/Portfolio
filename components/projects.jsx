@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { projects } from "../DataLists/projects";
 
 const Projects = () => {
   return (
