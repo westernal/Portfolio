@@ -1,4 +1,4 @@
-import SocialIcons from "./socialIcons";
+import SocialIcons from "./Icons/socialIcons";
 
 const Socials = () => {
   return (
