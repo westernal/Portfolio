@@ -30,7 +30,6 @@ const Blog = () => {
       <section className="blog-list">
         {posts &&
           posts.map((post) => {
-            console.log(post);
             return (
               <a href={post.url} key={post.id}>
                 <article className="blog-item">

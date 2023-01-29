@@ -362,6 +362,7 @@ html {
   align-items: center;
   gap: 20px;
   padding: 0 10%;
+  overflow: hidden;
 }
 
 .blog-more a {
@@ -541,6 +542,7 @@ html {
 @media only screen and (max-width: 950px) {
   .blog-list {
     grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 }
 
