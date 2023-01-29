@@ -435,24 +435,82 @@ html {
   height: 20px;
 }
 
-.project {
+.my-projects {
   display: grid;
-  grid-template-columns: auto auto;
-  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.project {
+  width: 100vw;
+  padding: 20px;
+  grid-area: 1 / 1 / 2 / 2;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  top: 0;
+  justify-content: space-evenly;
   align-items: center;
   gap: 30px;
-  padding: 50px;
+  opacity: 0;
+  transition: 0.3s;
 }
 
-.project a {
-  width: 100%;
+.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.project-color {
+  width: 200px;
+  height: 10px;
   position: relative;
   top: 0;
-  transition: top ease 0.5s;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
-.project a:hover {
+#role {
+  opacity: 0.7;
+}
+
+#project-description {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.next-button {
+  animation: glow 1s infinite;
+}
+
+.project-links {
+  justify-content: space-evenly;
+}
+
+.project-links a {
+  color: white;
+  font-size: 18px;
+  transition: top ease 0.5s;
+  top: 0;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.project-links a:hover {
   top: -10px;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .project-more a {
@@ -487,6 +545,10 @@ html {
     font-size: 1em;
   }
 
+  .project {
+    grid-template-columns: auto;
+  }
+
   .job-profile {
     gap: 0;
     grid-template-columns: auto;
@@ -506,10 +568,6 @@ html {
 
   .web {
     display: none;
-  }
-
-  .project {
-    padding: 20px 0;
   }
 
   .about a,

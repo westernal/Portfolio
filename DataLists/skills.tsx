@@ -1,8 +1,4 @@
-interface Skill {
-  name: string;
-  src: string;
-  link: string;
-}
+import { Skill } from "../Interfaces/Interfaces";
 
 export const skills: Skill[] = [
   {
