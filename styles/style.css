@@ -356,7 +356,7 @@ html {
 
 .blog-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 310px 310px 310px;
   grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
@@ -378,7 +378,6 @@ html {
 
 .blog-list a {
   height: 100%;
-  width: 100%;
 }
 
 .blog-item {
@@ -386,7 +385,6 @@ html {
   background-color: #06132c;
   color: white;
   height: 100%;
-  width: 100%;
   border-radius: 10px;
   transition: top ease 0.5s;
   top: 0;
@@ -540,7 +538,7 @@ html {
 
 @media only screen and (max-width: 950px) {
   .blog-list {
-    grid-template-columns: auto;
+    grid-template-columns: 310px;
     grid-template-rows: 1fr 1fr 1fr;
     padding: 0 20px;
   }
@@ -549,6 +547,11 @@ html {
 @media only screen and (max-width: 600px) {
   .about p {
     font-size: 1em;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 20px;
   }
 
   .project {

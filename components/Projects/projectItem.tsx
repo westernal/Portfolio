@@ -51,20 +51,20 @@ const ProjectItem = ({ project }: { project: Project }) => {
           <a href={project.link.gitHub} style={{ background: project.color }}>
             GitHub
           </a>
-          {project.link.website && (
-            <a
-              href={project.link.website}
-              style={{ background: project.color }}
-            >
-              Website
-            </a>
-          )}
           {project.link.documentation && (
             <a
               href={project.link.documentation}
               style={{ background: project.color }}
             >
               Documentation
+            </a>
+          )}
+          {project.link.website && (
+            <a
+              href={project.link.website}
+              style={{ background: project.color }}
+            >
+              Website
             </a>
           )}
         </section>
