@@ -347,7 +347,7 @@ html {
 .blog {
   color: #ededed;
   text-align: center;
-  padding: 50px;
+  padding: 50px 0;
   position: relative;
   display: grid;
   grid-template-columns: auto;
@@ -380,7 +380,6 @@ html {
 .blog-list a {
   height: 100%;
   width: 100%;
-  padding: 0 20px;
 }
 
 .blog-item {
@@ -545,6 +544,7 @@ html {
   .blog-list {
     grid-template-columns: auto;
     grid-template-rows: 1fr 1fr 1fr;
+    padding: 0 20px;
   }
 }
 
