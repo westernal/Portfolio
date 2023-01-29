@@ -51,11 +51,10 @@ h2 {
   padding: 0 20%;
 }
 
-.socials a {
+#email {
   color: gray;
   transition: 0.3s;
   font-size: 1.5em;
-  margin-top: 50px;
 }
 
 .socials a:hover {
@@ -214,14 +213,13 @@ a {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0 10%;
   color: #ededed;
   position: relative;
 }
 
-.socials h2,
 .jobs h2 {
   color: #ededed;
   padding-bottom: 50px;
