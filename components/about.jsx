@@ -17,7 +17,7 @@ const About = () => {
       <Image
         src="/Images/readme-typing-svg_herokuapp_default.svg"
         alt="Typing SVG"
-        width={435}
+        width={300}
         height={50}
       />
 
