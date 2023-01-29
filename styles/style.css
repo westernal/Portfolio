@@ -540,7 +540,7 @@ html {
   .blog-list {
     grid-template-columns: 310px;
     grid-template-rows: 1fr 1fr 1fr;
-    padding: 0 20px;
+    padding: 0;
   }
 }
 
