@@ -41,9 +41,9 @@ const ProjectItem = ({ project }: { project: Project }) => {
         <div className="project-title">
           <h3>{project.title}</h3>
           <p id="role">
-            {project.myRole.frontEnd && "Front-End"}
-            {project.myRole.backEnd && ", Back-End"}
-            {project.myRole.designer && ", Design"}
+            {project.myRole.frontEnd && "FRONTEND"}
+            {project.myRole.backEnd && " | BACKEND"}
+            {project.myRole.designer && " | DESIGN"}
           </p>
         </div>
         <p id="project-description">{project.description}</p>

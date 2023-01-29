@@ -1,17 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 * {
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: robot;
-  src: url("../public/Fonts/RobotoCondensed-Regular.ttf");
 }
 
 body {
   overflow-x: hidden;
   background-color: #030a17;
   margin: 0;
-  font-family: robot;
+  font-family: "Montserrat", sans-serif;
   background-image: url(../public/Images/stars.svg);
 }
 
@@ -479,8 +476,8 @@ html {
 }
 
 #project-description {
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin: 40px 0;
+  line-height: 25px;
 }
 
 .next-button {
@@ -496,7 +493,7 @@ html {
   font-size: 18px;
   transition: top ease 0.5s;
   top: 0;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
   position: relative;
 }
