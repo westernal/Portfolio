@@ -76,6 +76,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
           width={100}
           height={100}
           onClick={nextProject}
+          alt="right-arrow"
           className="next-button"
         />
       </div>

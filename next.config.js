@@ -8,3 +8,9 @@ module.exports = {
     domains: ["localhost", "res.cloudinary.com"],
   },
 };
+
+const nextConfig = {
+  experimental: {
+    appDir: true,
+  },
+};
