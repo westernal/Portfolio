@@ -37,7 +37,7 @@ const Blog = () => {
                   <div className="flex blog-image">
                     <Image
                       width={200}
-                      height={200}
+                      height={400}
                       src={post.cover_image}
                       alt="post image"
                       id="post-image"
