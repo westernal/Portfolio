@@ -34,7 +34,7 @@ export const projects: Project[] = [
       "Cinema is a platform for watching and downloading movies. I made it using Next.js.",
     image: {
       mobile:
-        "/Images/A05D135D-6A5D-4210-AFB3-C35D4F73284F_iphone13red_portrait.png",
+        "/Images/5279C0FE-F244-4B54-B9C6-BB18F7D07078_iphone13blue_portrait.png",
     },
     link: {
       gitHub: "https://github.com/westernal/Cinema",
