@@ -358,10 +358,12 @@ html {
 
 .blog-list {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 0 10%;
 }
 
 .blog-more a {
@@ -376,28 +378,34 @@ html {
   color: white;
 }
 
+.blog-list a {
+  height: 100%;
+  width: 100%;
+}
+
 .blog-item {
   text-align: left;
   background-color: #06132c;
   color: white;
-  height: 290px;
-  width: 400px;
-  display: grid;
-  grid-template-columns: auto;
-  justify-content: center;
-  border-radius: 20px;
-  transition: 0.2s;
-  padding-bottom: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  transition: top ease 0.5s;
+  top: 0;
+  padding: 10px;
+  position: relative;
 }
-
-.blog-title {
-  margin: 0;
-  font-weight: 600;
-  font-size: 17px;
+#blog-title {
+  line-height: 15px;
 }
 
 .pl-10 {
   padding: 0 20px;
+}
+
+#blog-date {
+  opacity: 0.6;
+  font-size: 14px;
 }
 
 .blog-avatar {
@@ -412,11 +420,11 @@ html {
 }
 
 .blog-item:hover {
-  box-shadow: rgba(94, 93, 93, 0.35) 0px -50px 36px -28px inset;
+  top: -10px;
 }
 
 #post-image {
-  border-radius: 20px 20px 0 0;
+  border-radius: 5px;
 }
 
 .reactions {

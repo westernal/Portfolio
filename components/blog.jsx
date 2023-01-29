@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import formatDate from "../Functions/formatDate";
 
 const Blog = () => {
   const [posts, SetPosts] = useState([]);
@@ -26,22 +27,23 @@ const Blog = () => {
   return (
     <section className="blog reveal" id="blog">
       <h2>Blog</h2>
-      <div className="blog-list">
+      <section className="blog-list">
         {posts &&
           posts.map((post) => {
+            console.log(post);
             return (
               <a href={post.url} key={post.id}>
-                <div className="blog-item">
-                  <div className="flex">
+                <article className="blog-item">
+                  <div className="flex blog-image">
                     <Image
-                      width={400}
-                      height={150}
+                      width={200}
+                      height={200}
                       src={post.cover_image}
                       alt="post image"
                       id="post-image"
                     />
                   </div>
-                  <div className="blog-avatar pl-10">
+                  <div className="blog-avatar ">
                     <Image
                       width={40}
                       height={40}
@@ -51,12 +53,13 @@ const Blog = () => {
                     />
                     <p> Ali Navidi</p>
                   </div>
-                  <p className="pl-10 blog-title">{post.title}</p>
-                </div>
+                  <p id="blog-date">{formatDate(post.published_at)}</p>
+                  <strong id="blog-title">{post.title}</strong>
+                </article>
               </a>
             );
           })}
-      </div>
+      </section>
       <div className="flex blog-more">
         <a href="https://dev.to/westernal">Read More</a>
       </div>
