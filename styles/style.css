@@ -9,6 +9,7 @@ body {
   background-color: #030a17;
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  background-image: url(../public/Images/stars.svg);
 }
 
 .flex {
