@@ -57,7 +57,7 @@ h2 {
   font-size: 1.5em;
 }
 
-.socials a:hover {
+#email:hover {
   color: white;
 }
 
@@ -381,7 +381,7 @@ html {
 
 .blog-item {
   text-align: left;
-  background-color: #06132c;
+  background-color: indianred;
   color: white;
   height: 100%;
   border-radius: 10px;
@@ -390,8 +390,14 @@ html {
   padding: 10px;
   position: relative;
 }
+
 #blog-title {
   line-height: 15px;
+  transition: ease 0.5s;
+}
+
+.blog-item:hover #blog-title {
+  opacity: 0.7;
 }
 
 .pl-10 {
