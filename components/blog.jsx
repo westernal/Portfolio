@@ -54,6 +54,7 @@ const Blog = () => {
                   </div>
                   <p id="blog-date">{formatDate(post.published_at)}</p>
                   <strong id="blog-title">{post.title}</strong>
+                  <p id="blog-description">{post.description}</p>
                 </article>
               </a>
             );

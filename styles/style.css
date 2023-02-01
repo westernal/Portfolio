@@ -404,9 +404,14 @@ html {
   padding: 0 20px;
 }
 
-#blog-date {
+#blog-date,
+#blog-description {
   opacity: 0.6;
   font-size: 14px;
+}
+
+#blog-date {
+  margin-top: 0;
 }
 
 .blog-avatar {
