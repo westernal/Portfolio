@@ -8,7 +8,7 @@ const Socials = () => {
         Cause you{"'"}re a sky, you{"'"}re a sky full of stars
       </p>
       <SocialIcons />
-      <a href="mailto:ali_navidi24@yahoo.com" id="email">
+      <a href="mailto:ali_navidi24@yahoo.com" className="btn from-top">
         Email me
       </a>
     </section>

@@ -60,8 +60,10 @@ const Blog = () => {
             );
           })}
       </section>
-      <div className="flex blog-more">
-        <a href="https://dev.to/westernal">Read More</a>
+      <div className="flex ">
+        <a href="https://dev.to/westernal" className="btn from-top more-button">
+          Read More
+        </a>
       </div>
     </section>
   );
