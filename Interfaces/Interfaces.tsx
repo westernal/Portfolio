@@ -24,3 +24,19 @@ export interface Skill {
   src: string;
   link: string;
 }
+
+export interface Job {
+  id: number;
+  title: string;
+  company: string;
+  location: string;
+  duration: {
+    from: string;
+    to: string;
+  };
+  companyLogo: {
+    url: string;
+    width: number;
+    height: number;
+  };
+}
