@@ -1,3 +1,5 @@
+import { Interface } from "readline";
+
 export interface Project {
   id: number;
   title: string;
@@ -39,4 +41,14 @@ export interface Job {
     width: number;
     height: number;
   };
+}
+
+export interface Blog {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  user: { profile_image: string };
+  cover_image: string;
+  published_at: Date;
 }
