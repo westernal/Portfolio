@@ -10,7 +10,7 @@ export const projects: Project[] = [
       designer: true,
     },
     description:
-      "Westernal is a social media based on songs, you can share posts that includes part of a song, the whole song or music videos with your followers and let the music talk for you! built with Next.js for frontend, Node.js and Express.js for backend, MongoDB for database and Cypress for testing.",
+      "Westernal is a social media based on songs, you can share posts that includes part of a song, the whole song or music videos with your followers and let the music talk for you! It's a website, PWA and TWA(android app on google play) built with Next.js for frontend, Node.js and Express.js for backend, MongoDB for database, Cypress for testing and BubbleWrap for TWA.",
     image: {
       mobile: "/Images/mobile.png",
     },
@@ -31,7 +31,7 @@ export const projects: Project[] = [
       designer: true,
     },
     description:
-      "Cinema is a platform for watching and downloading movies. built with Next.js.",
+      "Cinema is a platform for watching and downloading movies. It's a website and PWA built with Next.js.",
     image: {
       mobile:
         "/Images/5279C0FE-F244-4B54-B9C6-BB18F7D07078_iphone13blue_portrait.png",
@@ -50,7 +50,7 @@ export const projects: Project[] = [
       designer: true,
     },
     description:
-      "Sartel is a website selling mobile phones and accessories. built with Next.js and TypeScript.",
+      "Sartel is a website and PWA selling mobile phones and accessories. built with Next.js and TypeScript.",
     image: {
       mobile:
         "/Images/DB43DA89_2874_487D_A50A_CBE7E281960F_iphone13starlight_portrait.png",
