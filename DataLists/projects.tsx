@@ -10,7 +10,7 @@ export const projects: Project[] = [
       designer: true,
     },
     description:
-      "Westernal is a social media based on songs, you can share posts that includes part of a song, the whole song or music videos with your followers and let the music talk for you! It's a website, PWA and TWA(android app on google play) built with Next.js for frontend, Node.js and Express.js for backend, MongoDB for database, Cypress for testing and BubbleWrap for TWA.",
+      "Westernal is a social media based on songs, you can share posts that includes part of a song, the whole song or music videos with your followers and let the music talk for you! It's a website and PWA built with Next.js for frontend, Node.js and Express.js for backend, MongoDB for database and Cypress for testing.",
     image: {
       mobile: "/Images/mobile.png",
     },
