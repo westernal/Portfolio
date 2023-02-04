@@ -43,7 +43,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
           <p id="role">
             {project.myRole.frontEnd && "FRONTEND"}
             {project.myRole.backEnd && " | BACKEND"}
-            {project.myRole.designer && " | DESIGN"}
+            {project.myRole.design && " | DESIGN"}
           </p>
         </div>
         <p id="project-description">{project.description}</p>
