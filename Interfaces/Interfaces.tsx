@@ -6,7 +6,7 @@ export interface Project {
   myRole: {
     frontEnd: boolean;
     backEnd: boolean;
-    designer: boolean;
+    design: boolean;
   };
   description: string;
   image: {

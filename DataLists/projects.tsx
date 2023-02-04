@@ -7,7 +7,7 @@ export const projects: Project[] = [
     myRole: {
       frontEnd: true,
       backEnd: true,
-      designer: true,
+      design: true,
     },
     description:
       "Westernal is a social media based on songs, you can share posts that includes part of a song, the whole song or music videos with your followers and let the music talk for you! It's a website and PWA built with Next.js for frontend, Node.js and Express.js for backend, MongoDB for database and Cypress for testing.",
@@ -28,7 +28,7 @@ export const projects: Project[] = [
     myRole: {
       frontEnd: true,
       backEnd: false,
-      designer: true,
+      design: true,
     },
     description:
       "Cinema is a platform for watching and downloading movies. It's a website and PWA built with Next.js.",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     myRole: {
       frontEnd: true,
       backEnd: false,
-      designer: true,
+      design: true,
     },
     description:
       "Sartel is a website and PWA selling mobile phones and accessories. built with Next.js and TypeScript.",
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     myRole: {
       frontEnd: true,
       backEnd: false,
-      designer: true,
+      design: true,
     },
     description: "An admin dashboard built with Next.js.",
     image: {
