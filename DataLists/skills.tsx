@@ -27,6 +27,11 @@ export const skills: Skill[] = [
     link: "https://nextjs.org/",
   },
   {
+    name: "TypeScript",
+    src: "/Images/typescript.svg",
+    link: "https://www.typescriptlang.org/",
+  },
+  {
     name: "Cypress",
     src: "/Images/download-icon-cypress-1324440144114984250_512.png",
     link: "https://www.cypress.io/",
@@ -65,11 +70,6 @@ export const skills: Skill[] = [
 ];
 
 export const familiarSkills: Skill[] = [
-  {
-    name: "TypeScript",
-    src: "/Images/typescript.svg",
-    link: "https://www.typescriptlang.org/",
-  },
   {
     name: "Graphql",
     src: "/Images/graphql.svg",
