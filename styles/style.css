@@ -382,14 +382,13 @@ html {
 .blog-item {
   text-align: left;
   background: rgba(255, 255, 255, 0);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: white;
   height: 100%;
   border-radius: 10px;
-  transition: top ease 0.5s;
+  transition: ease 0.3s;
   top: 0;
   padding: 10px;
   position: relative;
@@ -397,11 +396,6 @@ html {
 
 #blog-title {
   line-height: 15px;
-  transition: ease 0.5s;
-}
-
-.blog-item:hover #blog-title {
-  opacity: 0.7;
 }
 
 .pl-10 {
@@ -432,6 +426,8 @@ html {
 
 .blog-item:hover {
   top: -10px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 #post-image {
