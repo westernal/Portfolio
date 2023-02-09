@@ -25,7 +25,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
   };
   return (
     <div className="project" id={`project${project.id}`}>
-      <section className="project-images ">
+      <section className="project-images reveal">
         <Image
           src={project.image.mobile}
           width={200}
@@ -33,7 +33,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
           alt={`${project.title}'s mobile version`}
         />
       </section>
-      <section className="project-info">
+      <section className="project-info reveal">
         <div
           className="project-color"
           style={{ background: project.color }}
@@ -77,7 +77,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
           height={100}
           onClick={nextProject}
           alt="right-arrow"
-          className="next-button"
+          className="next-button reveal"
         />
       </div>
     </div>

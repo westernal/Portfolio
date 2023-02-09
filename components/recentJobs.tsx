@@ -7,7 +7,7 @@ const Jobs = () => {
       <h2>Recent Jobs</h2>
 
       {jobs.map((job) => (
-        <div className="job" key={job.id}>
+        <div className="job reveal" key={job.id}>
           <div className="job-profile">
             <div className="company-logo flex">
               <Image

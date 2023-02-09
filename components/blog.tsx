@@ -32,8 +32,8 @@ const Blog = () => {
         {posts &&
           posts.map((post) => {
             return (
-              <a href={post.url} key={post.id}>
-                <article className="blog-item">
+              <a href={post.url} key={post.id} className="reveal">
+                <article className="blog-item ">
                   <div className="flex blog-image">
                     <Image
                       width={300}
