@@ -3,7 +3,7 @@ import { skills, familiarSkills } from "../DataLists/skills";
 
 const Skills = () => {
   return (
-    <section className="skills" id="skills">
+    <section className="skills reveal" id="skills">
       <h2>Skills</h2>
       <div className="sun">
         <Image
