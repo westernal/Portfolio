@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section className="about" id="about">
       <HeadTags />
-      <h1>Ali Navidi</h1>
+      <h1 id="name">Ali Navidi</h1>
       <div className="moon">
         <Image
           src={"/Images/32dc9e08-9167-4792-b7a1-119df97022e4.svg"}

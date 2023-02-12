@@ -3,28 +3,8 @@ import { useEffect, useState } from "react";
 import formatDate from "../Functions/formatDate";
 import { Blog } from "../Interfaces/Interfaces";
 
-const Blog = () => {
-  const [posts, SetPosts] = useState<Blog[]>();
-
-  useEffect(() => {
-    const options = {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    };
-
-    fetch(
-      "https://dev.to/api/articles/latest?username=westernal&per_page=3",
-      options
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        let result = response.filter(() => {
-          return;
-        });
-        SetPosts(response);
-      })
-      .catch((err) => console.error(err));
-  }, []);
+const Blog = ({ posts }: { posts: Blog[] }) => {
+  useEffect(() => {}, []);
   return (
     <section className="blog reveal" id="blog">
       <h2>Blog</h2>

@@ -5,26 +5,29 @@ import Socials from "../components/Socials/socials";
 import Blog from "../components/blog";
 import Projects from "../components/Projects/projects";
 import { useEffect } from "react";
+import { Blog as BlogType } from "../Interfaces/Interfaces";
 
-const Home = () => {
-  useEffect(() => {
-    function reveal() {
-      var reveals = document.querySelectorAll(".reveal");
-
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 50;
-
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
+const Home = ({ posts }: { posts: BlogType[] }) => {
+  function reveal() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
         } else {
-          reveals[i].classList.remove("active");
+          entry.target.classList.remove("active");
         }
-      }
-    }
+      });
+    });
 
-    window.addEventListener("scroll", reveal);
+    var hiddenElements = document.querySelectorAll(".reveal");
+
+    hiddenElements.forEach((element) => {
+      observer.observe(element);
+    });
+  }
+
+  useEffect(() => {
+    reveal();
   }, []);
   return (
     <main className="home">
@@ -32,10 +35,25 @@ const Home = () => {
       <Projects />
       <Skills />
       <Jobs />
-      <Blog />
+      <Blog posts={posts} />
       <Socials />
     </main>
   );
 };
+
+export async function getServerSideProps() {
+  const options = {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  };
+
+  const res = await fetch(
+    "https://dev.to/api/articles/latest?username=westernal&per_page=3",
+    options
+  );
+  const posts = await res.json();
+
+  return { props: { posts } };
+}
 
 export default Home;

@@ -10,7 +10,6 @@ const ProjectItem = ({ project }: { project: Project }) => {
   }, []);
 
   const nextProject = () => {
-    console.log("object");
     if (project.id === 3) {
       document.getElementById("project3")?.classList.remove("active");
       document.getElementById("project0")?.classList.add("active");

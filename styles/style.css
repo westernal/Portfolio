@@ -534,6 +534,18 @@ html {
   animation: forceRedraw 4s infinite;
 }
 
+.blog-list .reveal:nth-child(1) {
+  transition-delay: 200ms;
+}
+
+.blog-list .reveal:nth-child(2) {
+  transition-delay: 400ms;
+}
+
+.blog-list .reveal:nth-child(3) {
+  transition-delay: 600ms;
+}
+
 @keyframes forceRedraw {
   from {
     box-shadow: inset rgba(0, 0, 0, 0) 0 0 0;
