@@ -8,12 +8,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-spring/parallax": "^9.4.4",
     "next": "^13.1.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-spring": "^9.4.4",
-    "use-sound": "^4.0.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "17.0.5",
