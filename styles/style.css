@@ -595,9 +595,11 @@ nav a#selected {
 }
 
 .burger {
-  width: 32px;
+  width: 45px;
   height: 24px;
   cursor: pointer;
+  background: transparent;
+  border: 0;
   position: fixed;
   left: 30px;
   top: 40px;

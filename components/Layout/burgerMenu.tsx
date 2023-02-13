@@ -4,9 +4,9 @@ const BurgerMenu = () => {
     document.getElementById("navbar")?.classList.toggle("show");
   };
   return (
-    <div className="burger" onClick={openNavBar}>
+    <button className="burger" onClick={openNavBar}>
       <span></span>
-    </div>
+    </button>
   );
 };
 
