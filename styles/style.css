@@ -674,6 +674,10 @@ nav a#selected {
     gap: 20px;
   }
 
+  .about p {
+    padding: 0 20px;
+  }
+
   .project {
     grid-template-columns: auto;
   }
