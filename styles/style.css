@@ -27,7 +27,6 @@ body {
 .socials {
   width: 100vw;
   min-height: 100vh;
-  padding: 50px 10%;
 }
 
 .about {
@@ -561,7 +560,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: sticky;
   top: 20px;
   z-index: 4;
   gap: 10px;
@@ -663,6 +662,10 @@ nav a#selected {
     padding: 0;
   }
 
+  .project {
+    grid-template-columns: auto;
+  }
+
   .about p {
     padding: 0 10%;
   }
@@ -682,10 +685,6 @@ nav a#selected {
   .project-links {
     flex-direction: column;
     gap: 20px;
-  }
-
-  .project {
-    grid-template-columns: auto;
   }
 
   .job-profile {

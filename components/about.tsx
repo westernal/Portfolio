@@ -4,7 +4,7 @@ import NavBar from "./Layout/navbar";
 
 const About = () => {
   return (
-    <section className="about" id="about">
+    <section className="about center" id="about">
       <HeadTags />
       <NavBar />
       <h1 id="name">Hi, I&apos;m Ali Navidi</h1>
