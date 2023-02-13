@@ -575,7 +575,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #9b9494;
+  color: grey;
   width: 100%;
   flex-basis: 100%;
   background: linear-gradient(
