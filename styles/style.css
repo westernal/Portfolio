@@ -560,7 +560,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 20px;
   z-index: 4;
   gap: 10px;
