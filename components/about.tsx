@@ -1,10 +1,12 @@
 import Image from "next/image";
 import HeadTags from "./headTags";
+import NavBar from "./Layout/navbar";
 
 const About = () => {
   return (
     <section className="about" id="about">
       <HeadTags />
+      <NavBar />
       <h1 id="name">Ali Navidi</h1>
       <div className="moon">
         <Image
@@ -21,7 +23,7 @@ const About = () => {
         height={50}
       />
 
-      <a href="/Ali Navidi Resume.pdf" download={true}>
+      <a href="/Ali Navidi Resume.pdf" download={true} id="resume">
         <div className="btn from-top resume">Resume</div>
       </a>
     </section>

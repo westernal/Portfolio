@@ -76,7 +76,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
           height={100}
           onClick={nextProject}
           alt="right-arrow"
-          className="next-button reveal"
+          className="next-button "
         />
       </div>
     </div>

@@ -149,6 +149,17 @@ a {
 
 .moon {
   z-index: -1;
+  animation: appear 2s;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .skills-list {
@@ -546,6 +557,96 @@ html {
   transition-delay: 600ms;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  z-index: 4;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 5px;
+  border-radius: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #9b9494;
+  width: 100%;
+  flex-basis: 100%;
+  background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.15) 50%
+    )
+    right;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: ease-out 0.5s;
+  background-size: 200%;
+}
+
+nav a#selected {
+  background-position: left;
+  backdrop-filter: blur(3px);
+}
+
+.burger {
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+  position: fixed;
+  left: 50px;
+  top: 50px;
+  display: none;
+  z-index: 20;
+}
+
+.burger span {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 12px;
+  display: block;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.burger span::before,
+.burger span::after {
+  content: "";
+  width: 100%;
+  background-color: white;
+  display: block;
+  transition: all 0.5s ease-in-out;
+  border-radius: 12px;
+  height: 4px;
+}
+
+.burger span::before {
+  transform: translateY(-10px);
+}
+
+.burger span::after {
+  transform: translateY(10px);
+  margin-top: -4px;
+}
+
+.burger.active span {
+  background-color: transparent;
+}
+
+.burger.active span::before {
+  transform: rotateZ(45deg) translateY(0);
+}
+
+.burger.active span::after {
+  transform: rotateZ(-45deg) translateY(0);
+}
+
 @keyframes forceRedraw {
   from {
     box-shadow: inset rgba(0, 0, 0, 0) 0 0 0;
@@ -598,13 +699,40 @@ html {
     display: none;
   }
 
-  .about a,
+  #resume,
   .blog-more a {
     font-size: 1.5em;
   }
 
   .skills {
     margin-top: 0;
+  }
+
+  nav {
+    top: 20px;
+    left: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    padding-top: 60px;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    transform: translateX(-200%);
+    transition: 0.5s;
+  }
+
+  nav a {
+    border-radius: 5px;
+    flex-basis: 0;
+    flex: 1 1 0px;
+  }
+
+  .show {
+    transform: translateX(0);
+  }
+
+  .burger {
+    display: block;
   }
 }
 
