@@ -600,8 +600,8 @@ nav a#selected {
   height: 24px;
   cursor: pointer;
   position: fixed;
-  left: 50px;
-  top: 50px;
+  left: 30px;
+  top: 40px;
   display: none;
   z-index: 20;
 }
@@ -662,20 +662,25 @@ nav a#selected {
     grid-template-rows: 1fr 1fr 1fr;
     padding: 0;
   }
+
+  .about p {
+    padding: 0 10%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .about p {
     font-size: 1em;
+    padding: 0 20px;
+  }
+
+  .btn {
+    font-size: 1.2rem;
   }
 
   .project-links {
     flex-direction: column;
     gap: 20px;
-  }
-
-  .about p {
-    padding: 0 20px;
   }
 
   .project {

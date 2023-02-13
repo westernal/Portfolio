@@ -7,7 +7,7 @@ const About = () => {
     <section className="about" id="about">
       <HeadTags />
       <NavBar />
-      <h1 id="name">Hi, I'm Ali Navidi</h1>
+      <h1 id="name">Hi, I&apos;m Ali Navidi</h1>
       <div className="moon">
         <Image
           src={"/Images/32dc9e08-9167-4792-b7a1-119df97022e4.svg"}
@@ -24,10 +24,10 @@ const About = () => {
       /> */}
 
       <p>
-        I'm a 22 years old frontend developer and nearly computer engineering
-        graduate, I've been coding since 2018 and I have 2 years of experience
-        in developing websites, I love to learn more everyday and be a better
-        human/developer.
+        I&apos;m a 22 years old frontend developer and nearly computer
+        engineering graduate, I&apos;ve been coding since 2018 and I have 2
+        years of experience in developing websites, I love to learn more
+        everyday and be a better human/developer.
       </p>
 
       <div className="flex">
@@ -35,7 +35,7 @@ const About = () => {
           <div className="btn from-top resume">Resume</div>
         </a>
         <a href="#socials">
-          <div className="btn from-top resume">Let's Talk</div>
+          <div className="btn from-top resume">Let&apos;s Talk</div>
         </a>
       </div>
     </section>
