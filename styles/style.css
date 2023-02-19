@@ -245,10 +245,11 @@ html {
 
 #dev svg rect {
   transition: 0.3s;
+  fill: white;
 }
 
 #dev svg rect:hover {
-  fill: white;
+  fill: grey;
 }
 
 #dev svg path:hover {
@@ -280,18 +281,18 @@ html {
 
 .social-icons {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
   column-gap: 20px;
   justify-content: center;
   align-items: center;
 }
 
 .social-icons a:hover {
-  color: white;
+  color: grey;
 }
 
 .social-icons svg path {
-  fill: grey;
+  fill: white;
   transition: 0.3s;
 }
 
@@ -301,13 +302,13 @@ html {
 }
 
 #stackoverflow {
-  opacity: 0.5;
+  opacity: 1;
   width: 30px;
   transition: 0.3s;
 }
 
 #stackoverflow:hover {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .social-icons svg path:hover {
@@ -652,6 +653,21 @@ nav a#selected {
   transform: rotateZ(-45deg) translateY(0);
 }
 
+#westernal-logo {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  transition: 0.3s;
+  filter: grayscale(100%);
+}
+
+#westernal-logo:hover {
+  background-color: grey;
+}
+
 @keyframes forceRedraw {
   from {
     box-shadow: inset rgba(0, 0, 0, 0) 0 0 0;
@@ -754,6 +770,10 @@ nav a#selected {
 @media only screen and (max-width: 400px) {
   .skill-item {
     font-size: 13px;
+  }
+
+  .skills-list {
+    column-gap: 0;
   }
 
   .social-icons {
