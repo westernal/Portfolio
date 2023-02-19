@@ -517,6 +517,10 @@ html {
   padding: 10px;
   border-radius: 5px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .project-links a:hover {

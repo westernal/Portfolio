@@ -48,6 +48,12 @@ const ProjectItem = ({ project }: { project: Project }) => {
         <p id="project-description">{project.description}</p>
         <section className="project-links flex">
           <a href={project.link.gitHub} style={{ background: project.color }}>
+            <Image
+              src={"/Images/github.svg"}
+              width={20}
+              height={20}
+              alt="GitHub"
+            />
             GitHub
           </a>
           {project.link.documentation && (
@@ -55,6 +61,12 @@ const ProjectItem = ({ project }: { project: Project }) => {
               href={project.link.documentation}
               style={{ background: project.color }}
             >
+              <Image
+                src={"/Images/docs.svg"}
+                width={20}
+                height={20}
+                alt="Documentation"
+              />
               Documentation
             </a>
           )}
@@ -63,6 +75,12 @@ const ProjectItem = ({ project }: { project: Project }) => {
               href={project.link.website}
               style={{ background: project.color }}
             >
+              <Image
+                src={"/Images/Website.svg"}
+                width={20}
+                height={20}
+                alt="Website"
+              />
               Website
             </a>
           )}
