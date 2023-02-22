@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 const socialIcons = () => {
-  function hover(e) {
+  function hover(e: any) {
     if (e.target.querySelector("path")) {
       e.target.querySelector("path").style.fill = "grey";
     } else e.target.style.fill = "grey";
   }
 
-  function endHover(e) {
+  function endHover(e: any) {
     if (e.target.querySelector("path")) {
       e.target.querySelector("path").style.fill = "white";
     } else e.target.style.fill = "white";
