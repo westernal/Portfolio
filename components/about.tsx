@@ -24,10 +24,10 @@ const About = () => {
       /> */}
 
       <p>
-        I&apos;m a 22 years old frontend developer and nearly computer
-        engineering graduate, I&apos;ve been coding since 2018 and I have 2
-        years of experience in developing websites, I love to learn more
-        everyday and be a better human/developer.
+        I&apos;m a 22 years old frontend developer and a recently computer
+        {"("}software{")"} engineering graduate, I&apos;ve been coding since
+        2018 and I have 2 years of experience in developing websites, I love to
+        learn more everyday and be a better human/developer.
       </p>
 
       <div className="flex">
