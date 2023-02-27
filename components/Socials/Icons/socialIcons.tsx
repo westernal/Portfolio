@@ -77,6 +77,7 @@ const socialIcons = () => {
         <img
           src="/Images/stack-overflow.png"
           alt="stackoverflow"
+          title="StackOverflow"
           id="stackoverflow"
         />
       </a>
@@ -87,6 +88,7 @@ const socialIcons = () => {
           role="img"
           viewBox="0 0 512 512"
         >
+          <title>Dev Community</title>
           <rect width="512" height="512" rx="15%" fill="grey" />
           <path
             fill="black"
@@ -99,6 +101,7 @@ const socialIcons = () => {
           src={"/Images/westernal logo.png"}
           width={30}
           height={30}
+          title="Westernal"
           alt="westernal"
         />
       </a>
