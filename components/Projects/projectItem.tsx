@@ -62,7 +62,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
               style={{ background: project.color }}
             >
               <Image
-                src={"/Images/docs.svg"}
+                src={"/Images/Docs.svg"}
                 width={20}
                 height={20}
                 alt="Documentation"
