@@ -735,6 +735,10 @@ nav a#selected {
     padding: 0;
   }
 
+  .shooting-star {
+    left: 5%;
+  }
+
   .about-card {
     margin: 0 10%;
   }
@@ -748,6 +752,10 @@ nav a#selected {
   .btn {
     font-size: 1.2rem;
     padding: 1.2rem;
+  }
+
+  .shooting-star {
+    left: 10px;
   }
 
   .about-card {
