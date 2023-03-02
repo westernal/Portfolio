@@ -669,7 +669,7 @@ nav a#selected {
 .shooting-star {
   position: absolute;
   top: 0;
-  left: 10%;
+  right: 10%;
 }
 
 .about-card {
@@ -736,7 +736,7 @@ nav a#selected {
   }
 
   .shooting-star {
-    left: 5%;
+    right: 5%;
   }
 
   .about-card {
@@ -755,7 +755,7 @@ nav a#selected {
   }
 
   .shooting-star {
-    left: 10px;
+    right: 0;
   }
 
   .about-card {
