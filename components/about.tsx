@@ -1,6 +1,8 @@
 import Image from "next/image";
 import HeadTags from "./headTags";
 import NavBar from "./Layout/navbar";
+import Lottie from "react-lottie-player";
+import jsonFile from "../public/Images/shooting star.json";
 
 const About = () => {
   return (
@@ -16,12 +18,14 @@ const About = () => {
           height={150}
         />
       </div>
-      {/* <Image
-        src="/Images/readme-typing-svg_herokuapp_default.svg"
-        alt="Typing SVG"
-        width={350}
-        height={50}
-      /> */}
+      <div className="shooting-star">
+        <Lottie
+          loop
+          animationData={jsonFile}
+          play
+          style={{ width: 600, height: 600 }}
+        />
+      </div>
 
       <p>
         I&apos;m a 22 years old frontend developer and a recently computer

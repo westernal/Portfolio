@@ -668,6 +668,12 @@ nav a#selected {
   background-color: grey;
 }
 
+.shooting-star {
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+
 @keyframes forceRedraw {
   from {
     box-shadow: inset rgba(0, 0, 0, 0) 0 0 0;
