@@ -9,7 +9,6 @@ const About = () => {
     <section className="about center" id="about">
       <HeadTags />
       <NavBar />
-      <h1 id="name">Hi, I&apos;m Ali Navidi</h1>
       <div className="moon">
         <Image
           src={"/Images/32dc9e08-9167-4792-b7a1-119df97022e4.svg"}
@@ -26,22 +25,44 @@ const About = () => {
           style={{ width: 600, height: 600 }}
         />
       </div>
+      <section className="about-card ">
+        <div className="about-me flex">
+          <div className="about-img">
+            <Image
+              src={"/Images/unnamed.jpg"}
+              width={60}
+              height={60}
+              alt="my picture"
+            />
+          </div>
+          <div className="about-title">
+            <h1 id="name"> Ali Navidi</h1>
+            <p className="titles">
+              Frontend Developer - Studied Software Engineering at{" "}
+              <a href="https://nit.ac.ir/" id="university">
+                BNUT
+              </a>
+            </p>
+          </div>
+        </div>
+        <div className="about-info">
+          <p>
+            I&apos;m a 22 years old frontend developer and a recently computer
+            {" ("}software{")"} engineering graduate, I&apos;ve been coding
+            since 2018 and I have 2 years of experience in developing websites,
+            I love to learn more everyday and be a better human/developer.
+          </p>
 
-      <p>
-        I&apos;m a 22 years old frontend developer and a recently computer
-        {" ("}software{")"} engineering graduate, I&apos;ve been coding since
-        2018 and I have 2 years of experience in developing websites, I love to
-        learn more everyday and be a better human/developer.
-      </p>
-
-      <div className="flex">
-        <a href="/Ali Navidi Resume.pdf" download={true} id="resume">
-          <div className="btn from-top resume">Resume</div>
-        </a>
-        <a href="#socials">
-          <div className="btn from-top resume">Let&apos;s Talk</div>
-        </a>
-      </div>
+          <div className="flex about-btns">
+            <a href="/Ali Navidi Resume.pdf" download={true} id="resume">
+              <button className="btn from-top resume">Resume</button>
+            </a>
+            <a href="#socials">
+              <button className="btn from-top resume">Let&apos;s Talk</button>
+            </a>
+          </div>
+        </div>
+      </section>
     </section>
   );
 };
