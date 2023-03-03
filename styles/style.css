@@ -543,10 +543,6 @@ html {
   display: none;
 }
 
-.about img {
-  animation: forceRedraw 4s infinite;
-}
-
 .blog-list .reveal:nth-child(1) {
   transition-delay: 200ms;
 }
@@ -788,15 +784,6 @@ nav a#selected {
 .job {
   padding: 10px;
   margin-top: 10px;
-}
-
-@keyframes forceRedraw {
-  from {
-    box-shadow: inset rgba(0, 0, 0, 0) 0 0 0;
-  }
-  to {
-    box-shadow: inset rgba(0, 0, 0, 0.0000001) 0 0 0 10px;
-  }
 }
 
 @media only screen and (max-width: 950px) {
