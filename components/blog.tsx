@@ -43,7 +43,7 @@ const Blog = ({ posts }: { posts: Blog[] }) => {
       </section>
       <div className="flex ">
         <a href="https://dev.to/westernal" className="btn from-top more-button">
-          Read More
+          More Blogs
         </a>
       </div>
     </section>
