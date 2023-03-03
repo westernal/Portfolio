@@ -666,10 +666,81 @@ nav a#selected {
   background-color: grey;
 }
 
-.shooting-star {
+.shooting-stars {
   position: absolute;
   top: 0;
-  right: 10%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.shooting-stars span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+  animation: animateStars 8s linear infinite;
+}
+
+.shooting-stars span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes animateStars {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-1500px);
+    opacity: 0;
+  }
+}
+
+.shooting-stars span:nth-child(1) {
+  top: 0;
+  right: 25%;
+  left: initial;
+  animation-delay: 0;
+  animation-duration: 3s;
+}
+
+.shooting-stars span:nth-child(2) {
+  top: 0;
+  right: 75%;
+  left: initial;
+  animation-delay: 0.2s;
+  animation-duration: 5s;
+}
+
+.shooting-stars span:nth-child(3) {
+  top: 80px;
+  right: 0px;
+  left: initial;
+  animation-delay: 0.4s;
+  animation-duration: 7s;
+}
+
+.shooting-stars span:nth-child(4) {
+  top: 0;
+  right: 50%;
+  left: initial;
+  animation-delay: 0.6s;
+  animation-duration: 8;
 }
 
 .about-card {
@@ -735,10 +806,6 @@ nav a#selected {
     padding: 0;
   }
 
-  .shooting-star {
-    right: 5%;
-  }
-
   .about-card {
     margin: 0 10%;
   }
@@ -752,10 +819,6 @@ nav a#selected {
   .btn {
     font-size: 1.2rem;
     padding: 1.2rem;
-  }
-
-  .shooting-star {
-    right: 0;
   }
 
   .about-card {

@@ -1,8 +1,7 @@
 import Image from "next/image";
 import HeadTags from "./headTags";
 import NavBar from "./Layout/navbar";
-import Lottie from "react-lottie-player";
-import jsonFile from "../public/Images/shooting star.json";
+import ShootingStars from "./Layout/Effects/shootingStars";
 
 const About = () => {
   return (
@@ -17,14 +16,7 @@ const About = () => {
           height={150}
         />
       </div>
-      <div className="shooting-star">
-        <Lottie
-          loop
-          animationData={jsonFile}
-          play
-          style={{ width: 600, height: 600 }}
-        />
-      </div>
+      <ShootingStars />
       <section className="about-card ">
         <div className="about-me flex">
           <div className="about-img">
