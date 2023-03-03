@@ -74,11 +74,13 @@ const socialIcons = () => {
         </svg>
       </a>
       <a href="https://stackoverflow.com/users/15353979/ali-navidi">
-        <img
+        <Image
           src="/Images/stack-overflow.png"
           alt="stackoverflow"
           title="StackOverflow"
           id="stackoverflow"
+          width={30}
+          height={30}
         />
       </a>
       <a href="https://dev.to/westernal" id="dev">
