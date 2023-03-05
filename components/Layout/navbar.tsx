@@ -1,33 +1,43 @@
 import BurgerMenu from "./burgerMenu";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
-  const selectNavItem = (event: any) => {
-    const lastSelectedNavItem = document.getElementById("selected");
-    lastSelectedNavItem?.removeAttribute("id");
-    event.target.setAttribute("id", "selected");
-  };
   return (
     <>
       <BurgerMenu />
       <nav id="navbar">
-        <a href="#about" id="selected" onClick={selectNavItem}>
-          About
-        </a>
-        <a href="#projects" onClick={selectNavItem}>
-          Projects
-        </a>
-        <a href="#skills" onClick={selectNavItem}>
-          Skills
-        </a>
-        <a href="#jobs" onClick={selectNavItem}>
-          Jobs
-        </a>
-        <a href="#blog" onClick={selectNavItem}>
-          Blog
-        </a>
-        <a href="#socials" onClick={selectNavItem}>
-          Contact
-        </a>
+        <ul>
+          <li>
+            <Link to="about" spy activeClass="selected">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="projects" spy activeClass="selected">
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link to="skills" spy activeClass="selected">
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link to="jobs" spy activeClass="selected">
+              Jobs
+            </Link>
+          </li>
+          <li>
+            <Link to="blog" spy activeClass="selected">
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link to="socials" spy activeClass="selected">
+              Contact
+            </Link>
+          </li>
+        </ul>
       </nav>
     </>
   );

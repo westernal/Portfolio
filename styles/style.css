@@ -544,9 +544,6 @@ html {
 }
 
 nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   top: 20px;
   z-index: 4;
@@ -555,15 +552,25 @@ nav {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 5px;
+  padding: 10px 5px;
   border-radius: 30px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  display: inline;
 }
 
 nav a {
   text-decoration: none;
+  cursor: pointer;
   color: grey;
   width: 100%;
-  flex-basis: 100%;
   background: linear-gradient(
       to left,
       rgba(255, 255, 255, 0) 50%,
@@ -576,13 +583,13 @@ nav a {
   background-size: 200%;
 }
 
-nav a#selected {
+nav a.selected {
   background-position: left;
   backdrop-filter: blur(3px);
 }
 
 .burger {
-  width: 55px;
+  width: 45px;
   height: 24px;
   cursor: pointer;
   background: transparent;
@@ -828,6 +835,11 @@ nav a#selected {
     border-radius: 5px;
     flex-basis: 0;
     flex: 1 1 0px;
+  }
+
+  nav li {
+    display: block;
+    margin: 20px 0;
   }
 
   .show {
