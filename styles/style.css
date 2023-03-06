@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
   background-color: #030a17;
@@ -250,13 +254,13 @@ html {
 
 .reveal {
   position: relative;
-  transform: translateY(150px);
+  transform: translateX(150px);
   opacity: 0;
   transition: 2s all ease;
 }
 
 .reveal.active {
-  transform: translateY(0);
+  transform: translateX(0);
   opacity: 1;
 }
 

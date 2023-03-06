@@ -11,7 +11,10 @@ const Home = ({ posts }: { posts: BlogType[] }) => {
   function reveal() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (
+          entry.isIntersecting &&
+          !entry.target.classList.contains("active")
+        ) {
           entry.target.classList.add("active");
         } else {
           entry.target.classList.remove("active");
