@@ -6,13 +6,13 @@ import { Blog } from "../Interfaces/Interfaces";
 const Blog = ({ posts }: { posts: Blog[] }) => {
   useEffect(() => {}, []);
   return (
-    <section className="blog reveal" id="blog">
+    <section className="blog" id="blog">
       <h2>Blog</h2>
       <section className="blog-list">
         {posts &&
           posts.map((post) => {
             return (
-              <a href={post.url} key={post.id} className="reveal">
+              <a href={post.url} key={post.id} className="reveal right-reveal">
                 <article className="blog-item ">
                   <div className="flex blog-image">
                     <Image

@@ -13,7 +13,7 @@ const socialIcons = () => {
     } else e.target.style.fill = "white";
   }
   return (
-    <section className="social-icons">
+    <section className="social-icons reveal right-reveal">
       <a href="https://t.me/alinvd">
         <svg
           role="img"

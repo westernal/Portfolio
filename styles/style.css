@@ -252,14 +252,26 @@ html {
   opacity: 0.8;
 }
 
-.reveal {
+.right-reveal {
   position: relative;
   transform: translateX(150px);
   opacity: 0;
   transition: 2s all ease;
 }
 
-.reveal.active {
+.right-reveal.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.left-reveal {
+  position: relative;
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.left-reveal.active {
   transform: translateX(0);
   opacity: 1;
 }
@@ -530,15 +542,15 @@ html {
   display: none;
 }
 
-.blog-list .reveal:nth-child(1) {
+.blog-list .right-reveal:nth-child(1) {
   transition-delay: 200ms;
 }
 
-.blog-list .reveal:nth-child(2) {
+.blog-list .right-reveal:nth-child(2) {
   transition-delay: 400ms;
 }
 
-.blog-list .reveal:nth-child(3) {
+.blog-list .right-reveal:nth-child(3) {
   transition-delay: 600ms;
 }
 

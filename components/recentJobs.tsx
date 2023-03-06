@@ -3,11 +3,16 @@ import { jobs } from "../DataLists/jobs";
 
 const Jobs = () => {
   return (
-    <section className="jobs reveal" id="jobs">
+    <section className="jobs" id="jobs">
       <h2>Recent Jobs</h2>
 
-      {jobs.map((job) => (
-        <div className="job reveal" key={job.id}>
+      {jobs.map((job, index) => (
+        <div
+          className={`job reveal ${
+            index == 1 ? "right-reveal" : "left-reveal"
+          }`}
+          key={job.id}
+        >
           <div className="job-profile">
             <div className="company-logo flex">
               <Image
