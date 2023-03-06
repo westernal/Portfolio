@@ -56,7 +56,7 @@ export const projects: Project[] = [
         "/Images/DB43DA89_2874_487D_A50A_CBE7E281960F_iphone13starlight_portrait.png",
     },
     link: {
-      website: "https://sari-sartel.com/",
+      website: "https://sari-sartel-westernal.vercel.app/",
       gitHub: "https://github.com/westernal/sari-sartel",
     },
     color: "#212121",
