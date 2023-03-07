@@ -256,7 +256,7 @@ html {
   position: relative;
   transform: translateX(150px);
   opacity: 0;
-  transition: 2s all ease;
+  transition: 2s all;
 }
 
 .right-reveal.active {
@@ -268,7 +268,7 @@ html {
   position: relative;
   transform: translateX(-150px);
   opacity: 0;
-  transition: 2s all ease;
+  transition: 2s all;
 }
 
 .left-reveal.active {
