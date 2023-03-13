@@ -1,12 +1,10 @@
 import Image from "next/image";
-import HeadTags from "./headTags";
 import NavBar from "./Layout/navbar";
 import ShootingStars from "./Layout/Effects/shootingStars";
 
 const About = () => {
   return (
     <section className="about center" id="about">
-      <HeadTags />
       <NavBar />
       <div className="moon">
         <Image

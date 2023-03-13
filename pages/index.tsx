@@ -6,6 +6,7 @@ import Blog from "../components/blog";
 import Projects from "../components/Projects/projects";
 import { useEffect } from "react";
 import { Blog as BlogType } from "../Interfaces/Interfaces";
+import HeadTags from "../components/headTags";
 
 const Home = ({ posts }: { posts: BlogType[] }) => {
   function reveal() {
@@ -34,6 +35,7 @@ const Home = ({ posts }: { posts: BlogType[] }) => {
   }, []);
   return (
     <main className="home">
+      <HeadTags />
       <About />
       <Projects />
       <Skills />
