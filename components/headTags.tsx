@@ -23,6 +23,10 @@ const HeadTags = () => {
         sizes="32x32"
         href="/images/favicon-32x32.png"
       />
+      <meta
+        name="google-site-verification"
+        content="YLuaosUg6yxkQ9Gx8jXCn9wS54jjWRv6fMq_Y0Uln8c"
+      />
       <link
         rel="icon"
         type="image/png"
