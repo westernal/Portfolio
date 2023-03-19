@@ -16,9 +16,8 @@ export const projects: Project[] = [
     },
     link: {
       website: "https://www.westernal.net/",
-      documentation:
-        "https://github.com/westernal/social-media-frontend#readme",
-      gitHub: "https://github.com/westernal/social-media-frontend",
+      documentation: "https://github.com/westernal/Westernal-Frontend#readme",
+      gitHub: "https://github.com/westernal/Westernal-Frontend",
     },
     color: "#9d38fc",
   },
