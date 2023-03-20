@@ -98,15 +98,6 @@ const socialIcons = () => {
           />
         </svg>
       </a>
-      <a href="https://www.westernal.net/ali" id="westernal-logo">
-        <Image
-          src={"/Images/westernal logo.png"}
-          width={30}
-          height={30}
-          title="Westernal"
-          alt="westernal"
-        />
-      </a>
     </section>
   );
 };
