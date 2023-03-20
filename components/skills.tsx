@@ -4,16 +4,6 @@ import { skills, familiarSkills } from "../DataLists/skills";
 const Skills = () => {
   return (
     <section className="skills" id="skills">
-      <h2>Skills</h2>
-      <div className="sun">
-        <Image
-          src="/Images/sun-shining-in-the-sky-by-Vexels.svg"
-          alt="sun"
-          id="sun"
-          width={150}
-          height={150}
-        />
-      </div>
       <div className="skills-list reveal left-reveal">
         {skills.map((item, i) => (
           <a href={item.link} className="skill-item" key={i}>

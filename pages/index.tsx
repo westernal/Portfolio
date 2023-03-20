@@ -4,45 +4,35 @@ import Jobs from "../components/recentJobs";
 import Socials from "../components/Socials/socials";
 import Blog from "../components/blog";
 import Projects from "../components/Projects/projects";
-import { useEffect } from "react";
 import { Blog as BlogType } from "../Interfaces/Interfaces";
 import HeadTags from "../components/headTags";
+import NavBar from "../components/Layout/navbar";
+import Image from "next/image";
+import ShootingStars from "../components/Layout/Effects/shootingStars";
 
 const Home = ({ posts }: { posts: BlogType[] }) => {
-  function reveal() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (
-          entry.isIntersecting &&
-          !entry.target.classList.contains("active")
-        ) {
-          entry.target.classList.add("active");
-        } else {
-          entry.target.classList.remove("active");
-        }
-      });
-    });
-
-    var hiddenElements = document.querySelectorAll(".reveal");
-
-    hiddenElements.forEach((element) => {
-      observer.observe(element);
-    });
-  }
-
-  useEffect(() => {
-    reveal();
-  }, []);
   return (
-    <main className="home">
-      <HeadTags />
-      <About />
-      <Projects />
-      <Skills />
-      <Jobs />
-      <Blog posts={posts} />
-      <Socials />
-    </main>
+    <>
+      <NavBar />
+      <main className="home">
+        <div className="moon">
+          <Image
+            src={"/Images/32dc9e08-9167-4792-b7a1-119df97022e4.svg"}
+            alt="moon"
+            width={150}
+            height={150}
+          />
+        </div>
+        <ShootingStars />
+        <HeadTags />
+        <About />
+        <Projects />
+        <Skills />
+        <Jobs />
+        <Blog posts={posts} />
+        <Socials />
+      </main>
+    </>
   );
 };
 

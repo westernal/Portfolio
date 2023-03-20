@@ -7,7 +7,6 @@ const Blog = ({ posts }: { posts: Blog[] }) => {
   useEffect(() => {}, []);
   return (
     <section className="blog" id="blog">
-      <h2>Blog</h2>
       <section className="blog-list">
         {posts &&
           posts.map((post) => {

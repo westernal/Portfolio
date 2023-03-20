@@ -4,8 +4,7 @@ import { Project } from "../../Interfaces/Interfaces";
 
 const Projects = () => {
   return (
-    <section className="jobs projects" id="projects">
-      <h2>Projects</h2>
+    <section className=" projects" id="projects">
       <section className="my-projects">
         {projects.map((project: Project) => (
           <ProjectItem project={project} key={project.id} />

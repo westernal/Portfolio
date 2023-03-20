@@ -24,22 +24,21 @@ body {
 }
 
 .about,
-#projects,
+.projects,
 .blog,
 .jobs,
-#skills,
+.skills,
 .socials {
   width: 100vw;
-  min-height: 100vh;
-}
-
-.about {
-  text-align: center;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  max-height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+  overflow-y: hidden;
+  color: white;
 }
 
 .about h1,
@@ -47,14 +46,20 @@ h2 {
   color: white;
 }
 
+.active-page {
+  opacity: 1;
+  visibility: visible;
+  max-height: unset;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  place-items: center;
+}
+
 #email {
   color: gray;
   transition: 0.3s;
   font-size: 1.5em;
-}
-
-#email:hover {
-  color: white;
 }
 
 a {
@@ -123,15 +128,8 @@ a {
 }
 
 .skills {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0 10%;
-  color: #06132c;
-  background-color: #87ceeb;
-  position: relative;
+  padding: 100px 10%;
+  color: white;
 }
 
 .sun,
@@ -147,28 +145,33 @@ a {
 }
 
 .skills-list {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   display: grid;
+  border-radius: 10px;
   grid-template-columns: auto auto auto auto;
   width: 100%;
   justify-content: space-evenly;
   column-gap: 10px;
-  padding: 50px 0;
+  padding: 20px;
+  font-size: 0.9rem;
   align-items: center;
+  color: white;
 }
 
-.skills h2 {
-  color: #06132c;
+.skills-list p {
+  margin: 10px 0 0 0;
 }
 
 .jobs {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0 10%;
   color: #ededed;
-  position: relative;
+}
+
+.job-list {
+  width: 100vw;
+  padding: 0 10%;
 }
 
 .job {
@@ -206,13 +209,8 @@ a {
 
 .socials {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   padding: 0 10%;
   color: #ededed;
-  position: relative;
 }
 
 .jobs h2 {
@@ -233,14 +231,6 @@ html {
   fill: white;
 }
 
-#dev svg rect:hover {
-  fill: grey;
-}
-
-#dev svg path:hover {
-  fill: black;
-}
-
 #song {
   color: white;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
@@ -250,18 +240,6 @@ html {
   top: 10%;
   position: absolute;
   opacity: 0.8;
-}
-
-.social-icons {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto;
-  column-gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-icons a:hover {
-  color: grey;
 }
 
 .social-icons svg path {
@@ -279,12 +257,8 @@ html {
   transition: 0.3s;
 }
 
-#stackoverflow:hover {
-  opacity: 0.5;
-}
-
-.social-icons svg path:hover {
-  fill: grey !important;
+.social-icon a {
+  color: white;
 }
 
 #btn {
@@ -306,16 +280,19 @@ html {
   fill: white;
 }
 
-.skill-item {
+.skill-item,
+.social-icon {
   padding: 10px;
   transition: top ease 0.5s;
   border-radius: 10px;
+  text-align: center;
   position: relative;
   top: 0;
-  color: #06132c;
+  color: white;
 }
 
-.skill-item:hover {
+.skill-item:hover,
+.social-icon:hover {
   top: -10px;
 }
 
@@ -331,8 +308,7 @@ html {
 .blog {
   color: #ededed;
   text-align: center;
-  margin: 50px 0;
-  position: relative;
+  margin: 100px 0 0 0;
   display: grid;
   grid-template-columns: auto;
   gap: 50px;
@@ -438,19 +414,22 @@ html {
   width: 100vw;
   padding: 20px;
   grid-area: 1 / 1 / 2 / 2;
-  display: grid;
   grid-template-columns: 2fr 2fr 1fr;
   top: 0;
+  display: grid;
   justify-content: space-evenly;
   align-items: center;
   gap: 30px;
   opacity: 0;
+  visibility: hidden;
   transition: 0.3s;
+  text-align: center;
 }
 
 .active {
   opacity: 1;
   z-index: 2;
+  visibility: visible;
 }
 
 .project-color {
@@ -531,8 +510,8 @@ html {
 }
 
 nav {
-  position: fixed;
-  top: 20px;
+  margin-top: 20px;
+  text-align: center;
   z-index: 4;
   gap: 10px;
   background: #06132c;
@@ -549,9 +528,6 @@ ul {
 
 ul li {
   display: inline;
-}
-
-nav a {
   text-decoration: none;
   cursor: pointer;
   color: white;
@@ -568,7 +544,7 @@ nav a {
   background-size: 200%;
 }
 
-nav a.selected {
+ul li.selected {
   background-position: left;
   backdrop-filter: blur(3px);
 }
@@ -579,7 +555,7 @@ nav a.selected {
   cursor: pointer;
   background: transparent;
   border: 0;
-  position: fixed;
+  position: absolute;
   left: 30px;
   top: 40px;
   display: none;
@@ -697,7 +673,7 @@ nav a.selected {
     transition: 2s all;
   }
 
-  .right-reveal.active {
+  .active-page .right-reveal {
     transform: translateX(0);
     opacity: 1;
   }
@@ -709,7 +685,7 @@ nav a.selected {
     transition: 2s all;
   }
 
-  .left-reveal.active {
+  .active-page .left-reveal {
     transform: translateX(0);
     opacity: 1;
   }
@@ -723,7 +699,8 @@ nav a.selected {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    overflow-y: hidden;
   }
 
   .shooting-stars span {
@@ -763,8 +740,7 @@ nav a.selected {
     }
   }
 
-  .shooting-stars span:nth-child(1) {
-    top: 0;
+  .shooting-stars span {
     right: 25%;
     left: initial;
     animation-delay: 0;
@@ -834,6 +810,8 @@ nav a.selected {
   }
 
   nav {
+    position: absolute;
+    margin-top: 0;
     top: 20px;
     left: 20px;
     border-radius: 10px;
@@ -846,7 +824,7 @@ nav a.selected {
     transition: 0.5s;
   }
 
-  nav a {
+  ul li {
     border-radius: 5px;
     flex-basis: 0;
     flex: 1 1 0px;
@@ -864,6 +842,15 @@ nav a.selected {
   .burger {
     display: block;
   }
+
+  .skills-list {
+    grid-template-columns: auto auto auto;
+    margin: 20px;
+  }
+
+  .social-icons {
+    grid-template-columns: auto auto;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -873,9 +860,5 @@ nav a.selected {
 
   .skills-list {
     column-gap: 0;
-  }
-
-  .social-icons {
-    column-gap: 10px;
   }
 }
