@@ -56,17 +56,6 @@ export const skills: Skill[] = [
     src: "/Images/mongodb.svg",
     link: "https://www.mongodb.com/",
   },
-
-  {
-    name: "Git",
-    src: "/Images/git.svg",
-    link: "https://git-scm.com/",
-  },
-  {
-    name: "SEO",
-    src: "/Images/seo.svg",
-    link: "https://en.wikipedia.org/wiki/Search_engine_optimization",
-  },
 ];
 
 export const familiarSkills: Skill[] = [
