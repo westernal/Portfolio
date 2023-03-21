@@ -414,7 +414,7 @@ html {
   width: 100vw;
   padding: 20px;
   grid-area: 1 / 1 / 2 / 2;
-  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   top: 0;
   display: grid;
   justify-content: space-evenly;
