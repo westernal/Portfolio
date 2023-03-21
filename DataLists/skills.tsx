@@ -33,7 +33,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Cypress",
-    src: "/Images/download-icon-cypress-1324440144114984250_512.png",
+    src: "/Images/cypress.svg",
     link: "https://www.cypress.io/",
   },
   {
