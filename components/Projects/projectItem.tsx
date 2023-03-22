@@ -1,43 +1,25 @@
 import Image from "next/image";
 import { Project } from "../../Interfaces/Interfaces";
-import { useEffect } from "react";
 
 const ProjectItem = ({ project }: { project: Project }) => {
-  useEffect(() => {
-    if (project.id === 0) {
-      document.getElementById("project0")?.classList.add("active");
-    }
-  }, []);
-
-  const nextProject = () => {
-    if (project.id === 3) {
-      document.getElementById("project3")?.classList.remove("active");
-      document.getElementById("project0")?.classList.add("active");
-    } else {
-      document
-        .getElementById(`project${project.id}`)
-        ?.classList.remove("active");
-      document
-        .getElementById(`project${project.id + 1}`)
-        ?.classList.add("active");
-    }
-  };
   return (
-    <div className="project" id={`project${project.id}`}>
-      <section className="project-images reveal right-reveal">
-        <Image
-          src={project.image.mobile}
-          width={200}
-          height={400}
-          alt={`${project.title}'s mobile version`}
-        />
-      </section>
-      <section className="project-info reveal right-reveal">
-        <div
-          className="project-color"
-          style={{ background: project.color }}
-        ></div>
+    <article
+      className="project blog-item reveal right-reveal"
+      id={`project${project.id}`}
+    >
+      <Image
+        src={project.image.website}
+        width={400}
+        height={200}
+        id="project-image"
+        alt={`${project.title}'s mobile version`}
+      />
+      <div className="project-info">
         <div className="project-title">
+          <div
+            className="project-color"
+            style={{ background: project.color }}
+          ></div>
           <h3>{project.title}</h3>
           <p id="role">
             {project.myRole.frontEnd && "FRONTEND"}
@@ -85,19 +67,8 @@ const ProjectItem = ({ project }: { project: Project }) => {
             </a>
           )}
         </section>
-      </section>
-
-      <div>
-        <Image
-          src="/Images/right arrow.svg"
-          width={100}
-          height={100}
-          onClick={nextProject}
-          alt="right-arrow"
-          className="next-button "
-        />
       </div>
-    </div>
+    </article>
   );
 };
 

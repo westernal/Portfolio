@@ -323,6 +323,14 @@ html {
   gap: 20px;
 }
 
+.projects {
+  padding: 100px 20px;
+}
+
+.my-projects {
+  grid-template-columns: 450px 450px;
+}
+
 .blog-more a {
   color: gray;
   -webkit-transition: 0.3s;
@@ -380,7 +388,7 @@ html {
   border-radius: 50%;
 }
 
-.blog-item:hover {
+.blog .blog-item:hover {
   top: -10px;
   background: rgba(255, 255, 255, 0.02);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -403,40 +411,21 @@ html {
   height: 20px;
 }
 
-.my-projects {
-  display: grid;
-  overflow: hidden;
-  width: 100vw;
-  min-height: 100vh;
-}
-
-.project {
-  width: 100vw;
-  padding: 20px;
-  grid-area: 1 / 1 / 2 / 2;
-  grid-template-columns: 1fr 2fr 1fr;
-  top: 0;
-  display: grid;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 30px;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-  text-align: center;
-}
-
 .active {
   opacity: 1;
   z-index: 2;
   visibility: visible;
 }
 
+.project {
+  text-align: center;
+}
+
 .project-color {
   width: 200px;
   height: 5px;
   position: relative;
-  top: 0;
+  top: 10px;
   margin-left: auto;
   border-radius: 10px;
   margin-right: auto;
@@ -450,8 +439,13 @@ html {
 }
 
 #project-description {
-  margin: 40px 0;
+  margin: 10px 0;
+  max-width: 400px;
   line-height: 25px;
+}
+
+#project-image {
+  border-radius: 10px;
 }
 
 .next-button {
@@ -459,8 +453,15 @@ html {
   cursor: pointer;
 }
 
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .project-links {
   justify-content: space-evenly;
+  margin-top: 10px;
 }
 
 .project-links a {
@@ -650,7 +651,6 @@ ul li.selected {
   color: #87ceeb;
 }
 
-.project-info,
 .job {
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(3px);
@@ -670,7 +670,7 @@ ul li.selected {
     position: relative;
     transform: translateX(150px);
     opacity: 0;
-    transition: 2s all;
+    transition: 2s transform;
   }
 
   .active-page .right-reveal {
@@ -682,7 +682,7 @@ ul li.selected {
     position: relative;
     transform: translateX(-150px);
     opacity: 0;
-    transition: 2s all;
+    transition: 2s transform;
   }
 
   .active-page .left-reveal {
@@ -759,8 +759,13 @@ ul li.selected {
     margin: 0 10%;
   }
 
-  .project {
+  .my-projects {
     grid-template-columns: auto;
+    grid-template-rows: unset;
+  }
+
+  .project {
+    height: unset;
   }
 }
 
