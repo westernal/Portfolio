@@ -510,6 +510,10 @@ html {
   transition-delay: 600ms;
 }
 
+.blog-list .right-reveal:nth-child(4) {
+  transition-delay: 800ms;
+}
+
 nav {
   margin-top: 20px;
   text-align: center;
