@@ -33,7 +33,7 @@ const NavBar = () => {
             Jobs
           </li>
           <li aria-valuetext="blog" onClick={selectNavItem}>
-            Blog
+            Blogs
           </li>
           <li aria-valuetext="socials" onClick={selectNavItem}>
             Contact
