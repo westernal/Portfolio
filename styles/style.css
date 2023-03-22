@@ -531,6 +531,19 @@ ul {
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #06132c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rebeccapurple;
+  border-radius: 10px;
+}
+
 ul li {
   display: inline;
   text-decoration: none;
