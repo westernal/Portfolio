@@ -445,10 +445,6 @@ html {
   text-align: center;
 }
 
-.project img {
-  object-fit: cover;
-}
-
 .project-color {
   width: 200px;
   height: 5px;
