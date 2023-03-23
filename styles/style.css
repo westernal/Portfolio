@@ -468,6 +468,10 @@ html {
   line-height: 25px;
 }
 
+#project-image {
+  border-radius: 10px;
+}
+
 .next-button {
   animation: glow 1s infinite;
   cursor: pointer;
