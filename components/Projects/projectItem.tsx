@@ -7,14 +7,15 @@ const ProjectItem = ({ project }: { project: Project }) => {
       className="project blog-item reveal right-reveal"
       id={`project${project.id}`}
     >
-      <Image
-        src={project.image.website}
-        width={300}
-        height={150}
-        id="project-image"
-        alt={`${project.title}'s image`}
-        fill
-      />
+      <div className="project-image">
+        <Image
+          src={project.image.website}
+          width={300}
+          height={150}
+          id="project-image"
+          alt={`${project.title}'s image`}
+        />
+      </div>
       <div className="project-info">
         <div className="project-title">
           <div
