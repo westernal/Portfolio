@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Project } from "../../Interfaces/Interfaces";
 
 const ProjectItem = ({ project }: { project: Project }) => {
