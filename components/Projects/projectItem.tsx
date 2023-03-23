@@ -9,8 +9,8 @@ const ProjectItem = ({ project }: { project: Project }) => {
     >
       <Image
         src={project.image.website}
-        width={400}
-        height={200}
+        width={300}
+        height={150}
         id="project-image"
         alt={`${project.title}'s mobile version`}
       />
@@ -27,7 +27,9 @@ const ProjectItem = ({ project }: { project: Project }) => {
             {project.myRole.design && " | DESIGN"}
           </p>
         </div>
-        <p id="project-description">{project.description}</p>
+        <div className="flex">
+          <p id="project-description">{project.description}</p>
+        </div>
         <section className="project-links flex">
           <a href={project.link.gitHub} style={{ background: "darkslateblue" }}>
             <Image
@@ -38,20 +40,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
             />
             GitHub
           </a>
-          {project.link.documentation && (
-            <a
-              href={project.link.documentation}
-              style={{ background: "darkslateblue" }}
-            >
-              <Image
-                src={"/Images/Docs.svg"}
-                width={20}
-                height={20}
-                alt="Documentation"
-              />
-              Documentation
-            </a>
-          )}
+
           {project.link.website && (
             <a
               href={project.link.website}
