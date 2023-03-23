@@ -795,8 +795,8 @@ ul li.selected {
   }
 
   .my-projects {
-    grid-template-columns: auto;
-    grid-template-rows: unset;
+    display: block;
+    margin-top: 20px;
   }
 
   .project {
