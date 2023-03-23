@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 * {
   box-sizing: border-box;
@@ -16,11 +17,27 @@ body {
   background-image: url(/Images/stars.svg);
 }
 
+#fullname {
+  font-family: "Orbitron", sans-serif;
+  font-size: 28px;
+  color: white;
+}
+
+#last-name {
+  color: darkslateblue;
+}
+
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
 }
 
 .about,
@@ -148,7 +165,7 @@ a {
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid darkslateblue;
   display: grid;
   border-radius: 10px;
   grid-template-columns: auto auto auto auto;
@@ -353,7 +370,7 @@ html {
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid darkslateblue;
   color: white;
   height: 100%;
   border-radius: 10px;
@@ -516,12 +533,10 @@ html {
 }
 
 nav {
-  margin-top: 20px;
   text-align: center;
   z-index: 4;
   gap: 10px;
-  background: #06132c;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: darkslateblue;
   padding: 10px 5px;
   border-radius: 30px;
 }
@@ -541,11 +556,7 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 10px;
+  background-color: darkslateblue;
 }
 
 ul li {
@@ -577,9 +588,6 @@ ul li.selected {
   cursor: pointer;
   background: transparent;
   border: 0;
-  position: absolute;
-  left: 30px;
-  top: 40px;
   display: none;
   z-index: 20;
 }
@@ -644,7 +652,7 @@ ul li.selected {
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid darkslateblue;
   max-width: 600px;
   gap: 20px;
   border-radius: 20px;
@@ -669,14 +677,14 @@ ul li.selected {
 }
 
 #university {
-  color: #87ceeb;
+  color: darkslateblue;
 }
 
 .job {
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid darkslateblue;
   padding: 20px;
   border-radius: 20px;
 }
@@ -796,6 +804,20 @@ ul li.selected {
     padding: 1.2rem;
   }
 
+  #fullname {
+    font-size: 25px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .header-icons {
+    display: none;
+  }
+
   .about-card {
     margin: 0 20px;
   }
@@ -838,7 +860,7 @@ ul li.selected {
   nav {
     position: absolute;
     margin-top: 0;
-    top: 20px;
+    top: 10px;
     left: 20px;
     border-radius: 10px;
     padding: 5px;

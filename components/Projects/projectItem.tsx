@@ -18,7 +18,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
         <div className="project-title">
           <div
             className="project-color"
-            style={{ background: project.color }}
+            style={{ background: "darkslateblue" }}
           ></div>
           <h3>{project.title}</h3>
           <p id="role">
@@ -29,7 +29,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
         </div>
         <p id="project-description">{project.description}</p>
         <section className="project-links flex">
-          <a href={project.link.gitHub} style={{ background: project.color }}>
+          <a href={project.link.gitHub} style={{ background: "darkslateblue" }}>
             <Image
               src={"/Images/github.svg"}
               width={20}
@@ -41,7 +41,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
           {project.link.documentation && (
             <a
               href={project.link.documentation}
-              style={{ background: project.color }}
+              style={{ background: "darkslateblue" }}
             >
               <Image
                 src={"/Images/Docs.svg"}
@@ -55,7 +55,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
           {project.link.website && (
             <a
               href={project.link.website}
-              style={{ background: project.color }}
+              style={{ background: "darkslateblue" }}
             >
               <Image
                 src={"/Images/Website.svg"}

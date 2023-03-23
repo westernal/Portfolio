@@ -1,4 +1,5 @@
 import BurgerMenu from "./burgerMenu";
+import Image from "next/image";
 
 const NavBar = () => {
   const selectNavItem = (e: any) => {
@@ -12,8 +13,43 @@ const NavBar = () => {
     e.target.classList.add("selected");
   };
   return (
-    <header className="flex">
+    <header>
       <BurgerMenu />
+      <div className="header-icons flex">
+        <a href="mailto:ali_navidi24@yahoo.com" className="social-icon">
+          <Image
+            src="/Images/email.svg"
+            alt="Email"
+            title="Email"
+            id="Email"
+            width={25}
+            height={25}
+          />
+        </a>
+        <a href="https://github.com/westernal" className="social-icon">
+          <Image
+            src="/Images/github.svg"
+            alt="Github"
+            title="Github"
+            id="Github"
+            width={25}
+            height={25}
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ali-navidi/"
+          className="social-icon"
+        >
+          <Image
+            src="/Images/linkedin.svg"
+            alt="LinkedIn"
+            title="LinkedIn"
+            id="LinkedIn"
+            width={25}
+            height={25}
+          />
+        </a>
+      </div>
       <nav id="navbar">
         <ul>
           <li
@@ -40,6 +76,9 @@ const NavBar = () => {
           </li>
         </ul>
       </nav>
+      <h1 id="fullname">
+        ALI <span id="last-name">NAVIDI</span>
+      </h1>
     </header>
   );
 };
