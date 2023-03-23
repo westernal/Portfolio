@@ -10,6 +10,14 @@ const Projects = () => {
           <ProjectItem project={project} key={project.id} />
         ))}
       </section>
+      <div className="flex ">
+        <a
+          href="https://github.com/westernal"
+          className="btn from-top more-button"
+        >
+          More Projects
+        </a>
+      </div>
     </section>
   );
 };
