@@ -12,8 +12,8 @@ const ProjectItem = ({ project }: { project: Project }) => {
         width={300}
         height={150}
         id="project-image"
-        alt={`${project.title}'s mobile version`}
-        fill={false}
+        alt={`${project.title}'s image`}
+        fill
       />
       <div className="project-info">
         <div className="project-title">
