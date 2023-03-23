@@ -13,6 +13,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
         height={150}
         id="project-image"
         alt={`${project.title}'s mobile version`}
+        fill={false}
       />
       <div className="project-info">
         <div className="project-title">
@@ -51,7 +52,6 @@ const ProjectItem = ({ project }: { project: Project }) => {
                 width={20}
                 height={20}
                 alt="Website"
-                fill={false}
               />
               Website
             </a>
