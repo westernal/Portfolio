@@ -341,12 +341,12 @@ html {
 }
 
 .projects {
-  padding: 100px 20px;
+  padding: 100px 20px 0 20px;
   gap: 50px;
 }
 
 .my-projects {
-  grid-template-columns: 350px 350px;
+  grid-template-columns: auto auto;
 }
 
 .blog-more a {
@@ -437,6 +437,10 @@ html {
 
 .project {
   text-align: center;
+}
+
+.project img {
+  object-fit: contain;
 }
 
 .project-color {
