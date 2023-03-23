@@ -29,6 +29,10 @@ body {
   color: white;
 }
 
+.pages {
+  position: relative;
+}
+
 #last-name {
   color: darkslateblue;
 }
@@ -795,8 +799,8 @@ ul li.selected {
   }
 
   .my-projects {
-    display: block;
-    margin-top: 20px;
+    grid-template-columns: auto;
+    grid-template-rows: unset;
   }
 
   .project {

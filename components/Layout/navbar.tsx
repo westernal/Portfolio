@@ -15,6 +15,13 @@ const NavBar = () => {
   return (
     <header>
       <BurgerMenu />
+      <Image
+        src={"/Images/westernal-web.svg"}
+        width={300}
+        height={150}
+        id="project-image"
+        alt="hi"
+      />
       <div className="header-icons flex">
         <a href="mailto:ali_navidi24@yahoo.com" className="social-icon">
           <Image
