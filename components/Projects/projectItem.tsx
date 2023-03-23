@@ -51,7 +51,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
                 width={20}
                 height={20}
                 alt="Website"
-                fill
+                fill={false}
               />
               Website
             </a>
