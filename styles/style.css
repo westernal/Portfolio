@@ -462,6 +462,10 @@ html {
   opacity: 0.7;
 }
 
+.header-icons {
+  z-index: 4;
+}
+
 #project-description {
   margin: 10px 0;
   max-width: 300px;
