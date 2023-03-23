@@ -325,6 +325,7 @@ html {
 
 .projects {
   padding: 100px 20px;
+  gap: 50px;
 }
 
 .my-projects {
@@ -540,7 +541,10 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rebeccapurple;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
 }
 
