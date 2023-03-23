@@ -10,7 +10,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
       <div className="project-image">
         <Image
           src={project.image.website}
-          width={300}
+          width={322.8}
           height={150}
           id="project-image"
           alt={`${project.title}'s image`}
