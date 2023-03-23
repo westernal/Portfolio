@@ -15,24 +15,22 @@ const Home = ({ posts }: { posts: BlogType[] }) => {
     <>
       <NavBar />
       <main className="home">
-        <div className="pages">
-          <div className="moon">
-            <Image
-              src={"/Images/32dc9e08-9167-4792-b7a1-119df97022e4.svg"}
-              alt="moon"
-              width={150}
-              height={150}
-            />
-          </div>
-          <ShootingStars />
-          <HeadTags />
-          <About />
-          <Projects />
-          <Skills />
-          <Jobs />
-          <Blog posts={posts} />
-          <Socials />
+        <div className="moon">
+          <Image
+            src={"/Images/32dc9e08-9167-4792-b7a1-119df97022e4.svg"}
+            alt="moon"
+            width={150}
+            height={150}
+          />
         </div>
+        <ShootingStars />
+        <HeadTags />
+        <About />
+        <Projects />
+        <Skills />
+        <Jobs />
+        <Blog posts={posts} />
+        <Socials />
       </main>
     </>
   );
