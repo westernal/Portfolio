@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  img[loading="lazy"] {
+    clip-path: inset(0.6px);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -440,7 +446,7 @@ html {
 }
 
 .project img {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .project-color {
