@@ -576,6 +576,7 @@ ul {
 
 ::-webkit-scrollbar-thumb {
   background-color: darkslateblue;
+  border-radius: 10px;
 }
 
 ul li {
