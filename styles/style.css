@@ -117,7 +117,7 @@ a {
 }
 
 .btn:hover {
-  color: black;
+  color: white;
   transition-delay: 0.5s;
 }
 
@@ -126,7 +126,7 @@ a {
 }
 
 .btn:hover:after {
-  background: white;
+  background: darkslateblue;
   transition-delay: 0.35s;
 }
 
@@ -139,7 +139,7 @@ a {
 
 .from-top:before {
   bottom: 0;
-  border: 1px solid white;
+  border: 1px solid darkslateblue;
   border-top: 0;
   border-bottom: 0;
 }
