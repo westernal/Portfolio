@@ -474,6 +474,7 @@ html {
   margin: 10px 0;
   max-width: 300px;
   line-height: 25px;
+  text-align: justify;
 }
 
 #project-image {
