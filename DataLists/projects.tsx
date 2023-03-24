@@ -32,7 +32,7 @@ export const projects: Project[] = [
     description:
       "Cinema is a platform for watching and downloading movies. It's a website and PWA built with Next.js and TypeScript.",
     image: {
-      website: "/Images/screenshot-rocks.svg",
+      website: "/Images/cinema-web.png",
     },
     link: {
       gitHub: "https://github.com/westernal/Cinema",
