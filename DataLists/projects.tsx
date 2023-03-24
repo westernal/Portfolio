@@ -30,7 +30,7 @@ export const projects: Project[] = [
       design: true,
     },
     description:
-      "Cinema is a platform for watching and downloading movies. It's a website and PWA built with Next.js and TypeScript.",
+      "Cinema is a platform for watching and downloading movies. A user can login and buy subscriptions to watch latest movies and series and learn more about cinema. It's a website and PWA built with Next.js and TypeScript.",
     image: {
       website: "/Images/cinema-web.png",
     },
