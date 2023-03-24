@@ -816,16 +816,7 @@ ul li.selected {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .btn {
-    font-size: 1.2rem;
-    padding: 1.2rem;
-  }
-
-  #fullname {
-    font-size: 25px;
-  }
-
+@media only screen and (max-width: 800px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -834,6 +825,36 @@ ul li.selected {
 
   .header-icons {
     display: none;
+  }
+
+  nav {
+    position: absolute;
+    margin-top: 0;
+    top: 10px;
+    left: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    padding-top: 60px;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    transform: translateX(-200%);
+    transition: 0.5s;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .btn {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+  }
+
+  #fullname {
+    font-size: 25px;
   }
 
   .about-card {
@@ -875,21 +896,6 @@ ul li.selected {
     margin-top: 0;
   }
 
-  nav {
-    position: absolute;
-    margin-top: 0;
-    top: 10px;
-    left: 20px;
-    border-radius: 10px;
-    padding: 5px;
-    padding-top: 60px;
-    flex-direction: column;
-    gap: 20px;
-    overflow: hidden;
-    transform: translateX(-200%);
-    transition: 0.5s;
-  }
-
   ul li {
     border-radius: 5px;
     flex-basis: 0;
@@ -903,10 +909,6 @@ ul li.selected {
 
   .show {
     transform: translateX(0);
-  }
-
-  .burger {
-    display: block;
   }
 
   .skills-list {
