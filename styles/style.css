@@ -845,6 +845,21 @@ ul li.selected {
   .burger {
     display: block;
   }
+
+  .show {
+    transform: translateX(0);
+  }
+
+  ul li {
+    border-radius: 5px;
+    flex-basis: 0;
+    flex: 1 1 0px;
+  }
+
+  nav li {
+    display: block;
+    margin: 20px 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -894,21 +909,6 @@ ul li.selected {
 
   .skills {
     margin-top: 0;
-  }
-
-  ul li {
-    border-radius: 5px;
-    flex-basis: 0;
-    flex: 1 1 0px;
-  }
-
-  nav li {
-    display: block;
-    margin: 20px 0;
-  }
-
-  .show {
-    transform: translateX(0);
   }
 
   .skills-list {
