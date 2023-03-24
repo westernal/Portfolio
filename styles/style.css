@@ -44,6 +44,10 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  transition: 0.3s;
 }
 
 .about,
@@ -507,6 +511,10 @@ html {
 
 .project-links a:hover {
   top: -10px;
+}
+
+.header-scrolled {
+  background-color: #030a17;
 }
 
 @keyframes glow {

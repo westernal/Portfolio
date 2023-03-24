@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BurgerMenu from "./burgerMenu";
 import Image from "next/image";
 
@@ -12,8 +13,26 @@ const NavBar = () => {
     selectedPage?.classList.add("active-page");
     e.target.classList.add("selected");
   };
+
+  useEffect(() => {
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    const navbar: any = document.getElementById("header");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        navbar.classList.add("header-scrolled");
+      } else {
+        navbar.classList.remove("header-scrolled");
+      }
+    }
+  }, []);
+
   return (
-    <header>
+    <header id="header">
       <BurgerMenu />
 
       <div className="header-icons flex">
