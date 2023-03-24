@@ -12,6 +12,8 @@ const NavBar = () => {
     prevPage?.classList.remove("active-page");
     selectedPage?.classList.add("active-page");
     e.target.classList.add("selected");
+    document.getElementsByClassName("burger")[0].classList.toggle("active");
+    document.getElementById("navbar")?.classList.toggle("show");
   };
 
   useEffect(() => {
