@@ -30,7 +30,7 @@ export const projects: Project[] = [
       design: true,
     },
     description:
-      "Cinema is a platform for watching and downloading movies. A user can login and buy subscriptions to watch latest movies and series and learn more about cinema. It's a website and PWA built with Next.js and TypeScript.",
+      "Cinema is a platform for watching and downloading movies. A user can login and buy subscriptions to watch latest movies and series and learn more about cinema, actors/actresses and more. It's a website and PWA built with Next.js and TypeScript.",
     image: {
       website: "/Images/cinema-web.png",
     },
@@ -66,7 +66,8 @@ export const projects: Project[] = [
       backEnd: false,
       design: true,
     },
-    description: "An admin dashboard built with Next.js.",
+    description:
+      "An admin dashboard website and PWA built with Next.js to manage website data and content.",
     image: {
       website: "/Images/dashboard-web.png",
     },
