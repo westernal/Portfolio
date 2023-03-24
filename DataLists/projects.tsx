@@ -12,7 +12,7 @@ export const projects: Project[] = [
     description:
       "Westernal is a social media based on songs, you can share posts that includes part of a song, the whole song or music videos with your followers and let the music talk for you! It's a website and PWA built with Next.js for frontend, Node.js and Express.js for backend, MongoDB for database and Cypress for testing.",
     image: {
-      website: "/Images/screenshot-rocks (2).png",
+      website: "/Images/westernal-web.png",
     },
     link: {
       website: "https://www.westernal.net/",
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     description:
       "Sartel is a website and PWA selling mobile phones and accessories. built with Next.js and TypeScript.",
     image: {
-      website: "/Images/screenshot-rocks (3).svg",
+      website: "/Images/sartel-web.png",
     },
     link: {
       website: "https://sari-sartel-westernal.vercel.app/",
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     },
     description: "An admin dashboard built with Next.js.",
     image: {
-      website: "/Images/screenshot-rocks (1).svg",
+      website: "/Images/dashboard-web.png",
     },
     link: {
       website: "https://dashoard.vercel.app/",
