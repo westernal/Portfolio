@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import formatDate from "../Functions/formatDate";
 import { Blog } from "../Interfaces/Interfaces";
 
 const Blog = ({ posts }: { posts: Blog[] }) => {
-  useEffect(() => {}, []);
   return (
     <section className="blog" id="blog">
       <section className="blog-list">
