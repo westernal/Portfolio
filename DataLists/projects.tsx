@@ -67,7 +67,7 @@ export const projects: Project[] = [
       design: true,
     },
     description:
-      "An admin dashboard website and PWA built with Next.js to manage website data and content.",
+      "An admin dashboard website and PWA built with Next.js and Chart.js to manage website data and content.",
     image: {
       website: "/Images/dashboard-web.png",
     },
