@@ -55,7 +55,8 @@ header {
 .blog,
 .jobs,
 .skills,
-.socials {
+.socials,
+.error-page {
   width: 100vw;
   max-height: 0;
   position: absolute;
@@ -73,7 +74,8 @@ h2 {
   color: white;
 }
 
-.active-page {
+.active-page,
+.error-page {
   opacity: 1;
   visibility: visible;
   max-height: unset;
@@ -81,6 +83,12 @@ h2 {
   display: grid;
   justify-content: center;
   place-items: center;
+}
+
+.error-page .blog-item {
+  height: unset;
+  text-align: center;
+  padding: 30px;
 }
 
 #email {
