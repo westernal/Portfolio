@@ -14,6 +14,7 @@ const Blog = ({ posts }: { posts: Blog[] }) => {
                 key={post.id}
                 className="reveal right-reveal"
                 target="_blank"
+                rel="noreferrer"
               >
                 <article className="blog-item ">
                   <div className="flex blog-image">

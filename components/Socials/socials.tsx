@@ -12,6 +12,7 @@ const Socials = () => {
               className="social-icon"
               key={index}
               target="_blank"
+              rel="noreferrer"
             >
               <Image
                 src={socialMedia.imageUrl}
