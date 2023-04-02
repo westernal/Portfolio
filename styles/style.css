@@ -7,6 +7,13 @@
   }
 }
 
+:root {
+  --main-color: #030a17;
+  --secondary-color: darkslateblue;
+  --text-main-color: white;
+  --text-secondary-color: #ededed;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,7 +24,7 @@ html {
 
 body {
   overflow-x: hidden;
-  background-color: #030a17;
+  background-color: var(--main-color);
   margin: 0;
   font-family: "Montserrat", sans-serif;
   background-image: url(/Images/stars.svg);
@@ -26,11 +33,11 @@ body {
 #fullname {
   font-family: "Orbitron", sans-serif;
   font-size: 28px;
-  color: white;
+  color: var(--text-main-color);
 }
 
 #last-name {
-  color: darkslateblue;
+  color: var(--secondary-color);
 }
 
 .flex {
@@ -66,12 +73,12 @@ header {
   opacity: 0;
   transition: opacity 0.5s;
   overflow-y: hidden;
-  color: white;
+  color: var(--text-main-color);
 }
 
 .about h1,
 h2 {
-  color: white;
+  color: var(--text-main-color);
 }
 
 .active-page,
@@ -125,7 +132,7 @@ a {
 }
 
 .btn:hover {
-  color: white;
+  color: var(--text-main-color);
   transition-delay: 0.5s;
 }
 
@@ -134,7 +141,7 @@ a {
 }
 
 .btn:hover:after {
-  background: darkslateblue;
+  background: var(--secondary-color);
   transition-delay: 0.35s;
 }
 
@@ -147,7 +154,7 @@ a {
 
 .from-top:before {
   bottom: 0;
-  border: 1px solid darkslateblue;
+  border: 1px solid var(--secondary-color);
   border-top: 0;
   border-bottom: 0;
 }
@@ -164,7 +171,7 @@ a {
 
 .skills {
   padding: 100px 10%;
-  color: white;
+  color: var(--text-main-color);
 }
 
 .sun,
@@ -183,7 +190,7 @@ a {
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  border: 1px solid darkslateblue;
+  border: 1px solid var(--secondary-color);
   display: grid;
   border-radius: 10px;
   grid-template-columns: auto auto auto auto;
@@ -193,7 +200,7 @@ a {
   padding: 20px;
   font-size: 0.9rem;
   align-items: center;
-  color: white;
+  color: var(--text-main-color);
 }
 
 .skills-list p {
@@ -201,7 +208,7 @@ a {
 }
 
 .jobs {
-  color: #ededed;
+  color: var(--text-secondary-color);
 }
 
 .job-list {
@@ -226,7 +233,7 @@ a {
 }
 
 .job-name h3 {
-  color: white;
+  color: var(--text-main-color);
 }
 
 .job-name p {
@@ -245,11 +252,11 @@ a {
 .socials {
   text-align: center;
   padding: 0 10%;
-  color: #ededed;
+  color: var(--text-secondary-color);
 }
 
 .jobs h2 {
-  color: #ededed;
+  color: var(--text-secondary-color);
   padding-bottom: 50px;
 }
 
@@ -263,11 +270,11 @@ html {
 
 #dev svg rect {
   transition: 0.3s;
-  fill: white;
+  fill: var(--text-main-color);
 }
 
 #song {
-  color: white;
+  color: var(--text-main-color);
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
     0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
   font-size: 20px;
@@ -278,7 +285,7 @@ html {
 }
 
 .social-icons svg path {
-  fill: white;
+  fill: var(--text-main-color);
   transition: 0.3s;
 }
 
@@ -293,26 +300,12 @@ html {
 }
 
 .social-icon a {
-  color: white;
+  color: var(--text-main-color);
 }
 
 #btn {
   position: absolute;
   bottom: 5px;
-}
-
-#btn svg {
-  width: 40px;
-  height: 40px;
-}
-
-#btn svg polygon {
-  fill: grey;
-  transition: 0.3s;
-}
-
-#btn svg polygon:hover {
-  fill: white;
 }
 
 .skill-item,
@@ -323,7 +316,7 @@ html {
   text-align: center;
   position: relative;
   top: 0;
-  color: white;
+  color: var(--text-main-color);
 }
 
 .skill-item:hover,
@@ -341,7 +334,7 @@ html {
 }
 
 .blog {
-  color: #ededed;
+  color: var(--text-secondary-color);
   text-align: center;
   margin: 100px 0 0 0;
   display: grid;
@@ -376,7 +369,7 @@ html {
 }
 
 .blog-more a:hover {
-  color: white;
+  color: var(--text-main-color);
 }
 
 .blog-list a {
@@ -388,8 +381,8 @@ html {
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  border: 1px solid darkslateblue;
-  color: white;
+  border: 1px solid var(--secondary-color);
+  color: var(--text-main-color);
   height: 100%;
   border-radius: 10px;
   transition: ease 0.3s;
@@ -436,7 +429,7 @@ html {
 
 .reactions {
   display: flex;
-  border-top: 1px solid #030a17;
+  border-top: 1px solid var(--main-color);
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -506,7 +499,7 @@ html {
 }
 
 .project-links a {
-  color: white;
+  color: var(--text-main-color);
   transition: top ease 0.5s;
   top: 0;
   padding: 10px;
@@ -523,7 +516,7 @@ html {
 }
 
 .header-scrolled {
-  background-color: #030a17;
+  background-color: var(--main-color);
   box-shadow: 0px 0px 20px 0px black;
 }
 
@@ -564,7 +557,7 @@ nav {
   text-align: center;
   z-index: 4;
   gap: 10px;
-  background: darkslateblue;
+  background: var(--secondary-color);
   padding: 10px 5px;
   border-radius: 30px;
 }
@@ -584,7 +577,7 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: darkslateblue;
+  background-color: var(--secondary-color);
   border-radius: 10px;
 }
 
@@ -592,7 +585,7 @@ ul li {
   display: inline;
   text-decoration: none;
   cursor: pointer;
-  color: white;
+  color: var(--text-main-color);
   width: 100%;
   background: linear-gradient(
       to left,
@@ -624,7 +617,7 @@ ul li.selected {
 .burger span {
   width: 100%;
   height: 4px;
-  background-color: white;
+  background-color: var(--text-main-color);
   border-radius: 12px;
   display: block;
   transition: background-color 0.5s ease-in-out;
@@ -634,7 +627,7 @@ ul li.selected {
 .burger span::after {
   content: "";
   width: 100%;
-  background-color: white;
+  background-color: var(--text-main-color);
   display: block;
   transition: all 0.5s ease-in-out;
   border-radius: 12px;
@@ -666,27 +659,23 @@ ul li.selected {
   border-radius: 5px;
   width: 30px;
   height: 30px;
-  background-color: white;
+  background-color: var(--text-main-color);
   display: grid;
   place-items: center;
   transition: 0.3s;
   filter: grayscale(100%);
 }
 
-#westernal-logo:hover {
-  background-color: grey;
-}
-
 .about-card {
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  border: 1px solid darkslateblue;
+  border: 1px solid var(--secondary-color);
   max-width: 600px;
   gap: 20px;
   border-radius: 20px;
   padding: 20px;
-  color: white;
+  color: var(--text-main-color);
   text-align: justify;
 }
 
@@ -706,14 +695,14 @@ ul li.selected {
 }
 
 #university {
-  color: darkslateblue;
+  color: var(--secondary-color);
 }
 
 .job {
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  border: 1px solid darkslateblue;
+  border: 1px solid var(--secondary-color);
   padding: 20px;
   border-radius: 20px;
 }
