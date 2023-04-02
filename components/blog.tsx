@@ -9,7 +9,12 @@ const Blog = ({ posts }: { posts: Blog[] }) => {
         {posts &&
           posts.map((post) => {
             return (
-              <a href={post.url} key={post.id} className="reveal right-reveal">
+              <a
+                href={post.url}
+                key={post.id}
+                className="reveal right-reveal"
+                target="_blank"
+              >
                 <article className="blog-item ">
                   <div className="flex blog-image">
                     <Image
