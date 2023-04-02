@@ -1,6 +1,6 @@
 import Image from "next/image";
-import formatDate from "../Functions/formatDate";
-import { Blog } from "../Interfaces/Interfaces";
+import formatDate from "../../Functions/formatDate";
+import { Blog } from "../../Interfaces/Interfaces";
 
 const Blog = ({ posts }: { posts: Blog[] }) => {
   return (

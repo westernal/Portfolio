@@ -1,8 +1,8 @@
-import About from "../components/about";
-import Skills from "../components/skills";
-import Jobs from "../components/recentJobs";
+import About from "../components/About/about";
+import Skills from "../components/Skills/skills";
+import Jobs from "../components/Jobs/recentJobs";
 import Socials from "../components/Socials/socials";
-import Blog from "../components/blog";
+import Blog from "../components/Blog/blog";
 import Projects from "../components/Projects/projects";
 import { Blog as BlogType } from "../Interfaces/Interfaces";
 import HeadTags from "../components/headTags";
