@@ -5,7 +5,7 @@ import Socials from "../components/Socials/socials";
 import Blog from "../components/Blog/blog";
 import Projects from "../components/Projects/projects";
 import { Blog as BlogType } from "../Interfaces/Interfaces";
-import HeadTags from "../components/headTags";
+import HeadTags from "../components/Utils/headTags";
 import NavBar from "../components/Layout/navbar";
 import Image from "next/image";
 import ShootingStars from "../components/Layout/Effects/shootingStars";
