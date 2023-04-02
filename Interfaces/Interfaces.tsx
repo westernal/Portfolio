@@ -1,5 +1,3 @@
-import { Interface } from "readline";
-
 export interface Project {
   id: number;
   title: string;
@@ -51,4 +49,10 @@ export interface Blog {
   user: { profile_image: string };
   cover_image: string;
   published_at: Date;
+}
+
+export interface Social {
+  name: string;
+  url: string;
+  imageUrl: string;
 }
