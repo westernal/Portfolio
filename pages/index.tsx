@@ -6,14 +6,14 @@ import Blog from "../components/Blog/blog";
 import Projects from "../components/Projects/projects";
 import { Blog as BlogType } from "../Interfaces/Interfaces";
 import HeadTags from "../components/Utils/headTags";
-import NavBar from "../components/Layout/navbar";
+import Header from "../components/Layout/Header/header";
 import Image from "next/image";
 import ShootingStars from "../components/Layout/Effects/shootingStars";
 
 const Home = ({ posts }: { posts: BlogType[] }) => {
   return (
     <>
-      <NavBar />
+      <Header />
       <main className="home">
         <div className="moon">
           <Image

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import BurgerMenu from "./burgerMenu";
 import Image from "next/image";
 
-const NavBar = () => {
+const Header = () => {
   const selectNavItem = (e: any) => {
     const prevItem: any = document.getElementsByClassName("selected")[0];
     const selectedPage = document.getElementById(e.target.ariaValueText);
@@ -38,7 +38,12 @@ const NavBar = () => {
       <BurgerMenu />
 
       <div className="header-icons flex">
-        <a href="mailto:ali_navidi24@yahoo.com" className="social-icon">
+        <a
+          href="mailto:ali_navidi24@yahoo.com"
+          className="social-icon"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Image
             src="/Images/email.svg"
             alt="Email"
@@ -48,7 +53,12 @@ const NavBar = () => {
             height={25}
           />
         </a>
-        <a href="https://github.com/westernal" className="social-icon">
+        <a
+          href="https://github.com/westernal"
+          className="social-icon"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Image
             src="/Images/github.svg"
             alt="Github"
@@ -61,6 +71,8 @@ const NavBar = () => {
         <a
           href="https://www.linkedin.com/in/ali-navidi/"
           className="social-icon"
+          target="_blank"
+          rel="noreferrer"
         >
           <Image
             src="/Images/linkedin.svg"
@@ -105,4 +117,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Header;
