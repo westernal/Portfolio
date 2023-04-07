@@ -101,7 +101,7 @@ export const familiarSkills: Skill[] = [
   },
   {
     name: "Django",
-    src: "/Images/Django.svg",
+    src: "/Images/django.svg",
     link: "https://www.djangoproject.com/",
   },
 ];
