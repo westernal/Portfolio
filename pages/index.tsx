@@ -36,7 +36,7 @@ const Home = ({ posts }: { posts: BlogType[] }) => {
   );
 };
 
-export async function getServerSideProps() {
+const getStaticProps = async () => {
   const options = {
     method: "GET",
     headers: { "Content-Type": "application/json" },
@@ -49,6 +49,6 @@ export async function getServerSideProps() {
   const posts = await res.json();
 
   return { props: { posts } };
-}
+};
 
 export default Home;
