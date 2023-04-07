@@ -36,7 +36,7 @@ const Home = ({ posts }: { posts: BlogType[] }) => {
   );
 };
 
-const getStaticProps = async () => {
+export const getStaticProps = async () => {
   const options = {
     method: "GET",
     headers: { "Content-Type": "application/json" },
