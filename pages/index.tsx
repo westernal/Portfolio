@@ -15,14 +15,16 @@ const Home = ({ posts }: { posts: BlogType[] }) => {
     <>
       <Header />
       <main className="home">
-        <div className="moon">
-          <Image
-            src={"/Images/32dc9e08-9167-4792-b7a1-119df97022e4.svg"}
-            alt="moon"
-            width={150}
-            height={150}
-          />
-        </div>
+        <section className="background-animations">
+          <div className="moon">
+            <Image
+              src={"/Images/32dc9e08-9167-4792-b7a1-119df97022e4.svg"}
+              alt="moon"
+              width={150}
+              height={150}
+            />
+          </div>
+        </section>
         <ShootingStars />
         <HeadTags />
         <About />
