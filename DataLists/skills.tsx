@@ -94,4 +94,14 @@ export const familiarSkills: Skill[] = [
     src: "/Images/tailwind-svgrepo-com.svg",
     link: "https://tailwindcss.com/",
   },
+  {
+    name: "PostgreSQL",
+    src: "/Images/PostgreSQL-Dark.svg",
+    link: "https://www.postgresql.org/",
+  },
+  {
+    name: "Django",
+    src: "/Images/Django.svg",
+    link: "https://www.djangoproject.com/",
+  },
 ];
