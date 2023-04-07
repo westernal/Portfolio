@@ -4,7 +4,7 @@ import { Project } from "../../Interfaces/Interfaces";
 const ProjectItem = ({ project }: { project: Project }) => {
   return (
     <article
-      className="project blog-item reveal right-reveal"
+      className="project blog-item reveal left-reveal"
       id={`project${project.id}`}
     >
       <div className="project-image">

@@ -3,7 +3,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <section className="about center active-page" id="about">
-      <section className="about-card ">
+      <section className="about-card reveal left-reveal">
         <div className="about-me flex">
           <div className="about-img">
             <Image

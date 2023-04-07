@@ -12,7 +12,7 @@ const Blog = ({ posts }: { posts: Blog[] }) => {
               <a
                 href={post.url}
                 key={post.id}
-                className="reveal right-reveal"
+                className="reveal left-reveal"
                 target="_blank"
                 rel="noreferrer"
               >

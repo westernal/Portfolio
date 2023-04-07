@@ -4,7 +4,7 @@ import Image from "next/image";
 const Socials = () => {
   return (
     <section className="socials" id="socials">
-      <section className="social-icons skills-list reveal right-reveal">
+      <section className="social-icons skills-list reveal left-reveal">
         {socialMedias.map((socialMedia, index) => {
           return (
             <a

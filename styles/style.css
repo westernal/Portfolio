@@ -537,19 +537,23 @@ html {
   display: none;
 }
 
-.blog-list .right-reveal:nth-child(1) {
+.blog-list .left-reveal:nth-child(4),
+.jobs .left-reveal:nth-child(2),
+.skills .left-reveal:nth-child(2) {
   transition-delay: 200ms;
 }
 
-.blog-list .right-reveal:nth-child(2) {
+.blog-list .left-reveal:nth-child(3),
+.jobs .left-reveal:nth-child(1),
+.skills .left-reveal:nth-child(1) {
   transition-delay: 400ms;
 }
 
-.blog-list .right-reveal:nth-child(3) {
+.blog-list .left-reveal:nth-child(2) {
   transition-delay: 600ms;
 }
 
-.blog-list .right-reveal:nth-child(4) {
+.blog-list .left-reveal:nth-child(1) {
   transition-delay: 800ms;
 }
 
