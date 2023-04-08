@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { jobs } from "../../DataLists/jobs";
+import { jobs } from "../../data/jobs";
 
 const Jobs = () => {
   return (

@@ -1,4 +1,4 @@
-import { socialMedias } from "../../DataLists/contacts";
+import { socialMedias } from "../../data/contacts";
 import Image from "next/image";
 
 const Socials = () => {

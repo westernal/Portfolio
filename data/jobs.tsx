@@ -1,4 +1,4 @@
-import { Job } from "../Interfaces/Interfaces";
+import { Job } from "../interfaces/Interfaces";
 
 export const jobs: Job[] = [
   {

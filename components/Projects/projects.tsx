@@ -1,6 +1,6 @@
-import { projects } from "../../DataLists/projects";
+import { projects } from "../../data/projects";
 import ProjectItem from "./projectItem";
-import { Project } from "../../Interfaces/Interfaces";
+import { Project } from "../../interfaces/Interfaces";
 
 const Projects = () => {
   return (

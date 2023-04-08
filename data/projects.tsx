@@ -1,4 +1,4 @@
-import { Project } from "../Interfaces/Interfaces";
+import { Project } from "../interfaces/Interfaces";
 
 export const projects: Project[] = [
   {

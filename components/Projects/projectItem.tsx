@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Project } from "../../Interfaces/Interfaces";
+import { Project } from "../../interfaces/Interfaces";
 
 const ProjectItem = ({ project }: { project: Project }) => {
   return (

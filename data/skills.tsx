@@ -1,4 +1,4 @@
-import { Skill } from "../Interfaces/Interfaces";
+import { Skill } from "../interfaces/Interfaces";
 
 export const skills: Skill[] = [
   {
