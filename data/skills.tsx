@@ -63,7 +63,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Redux",
-    src: "/Images/redux.svg",
+    src: "/Images/Redux.svg",
     link: "https://redux-toolkit.js.org/",
   },
 ];
