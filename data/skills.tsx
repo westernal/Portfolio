@@ -56,6 +56,16 @@ export const skills: Skill[] = [
     src: "/Images/mongodb.svg",
     link: "https://www.mongodb.com/",
   },
+  {
+    name: "Tailwind",
+    src: "/Images/tailwind-svgrepo-com.svg",
+    link: "https://tailwindcss.com/",
+  },
+  {
+    name: "Redux",
+    src: "/Images/redux.svg",
+    link: "https://redux-toolkit.js.org/",
+  },
 ];
 
 export const familiarSkills: Skill[] = [
@@ -89,11 +99,7 @@ export const familiarSkills: Skill[] = [
     src: "/Images/Svelte.svg",
     link: "https://svelte.dev/",
   },
-  {
-    name: "Tailwind",
-    src: "/Images/tailwind-svgrepo-com.svg",
-    link: "https://tailwindcss.com/",
-  },
+
   {
     name: "PostgreSQL",
     src: "/Images/PostgreSQL-Dark.svg",
