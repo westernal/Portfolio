@@ -77,4 +77,23 @@ export const projects: Project[] = [
     },
     color: "linear-gradient(45deg, #365eff, #fc6ebc)",
   },
+  {
+    id: 4,
+    title: "Tic Tac Toe",
+    myRole: {
+      frontEnd: true,
+      backEnd: false,
+      design: false,
+    },
+    description:
+      "Tic Tac Toe single player game against cpu using React.js, TailwindCSS and Redux-toolkit.",
+    image: {
+      website: "/Images/tic-tac-toe.png",
+    },
+    link: {
+      website: "https://tick-tac-toe-five.vercel.app/",
+      gitHub: "https://github.com/westernal/Tick-Tac-Toe",
+    },
+    color: "rgb(30 41 59)",
+  },
 ];
