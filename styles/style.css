@@ -13,6 +13,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: var(--font-main);
 }
 
 html {
@@ -23,7 +24,6 @@ body {
   overflow-x: hidden;
   background-color: var(--main-color);
   margin: 0;
-  font-family: var(--font-main);
   background-image: url(/Images/stars.svg);
 }
 
