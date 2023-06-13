@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
-
 @supports (font: -apple-system-body) and (-webkit-appearance: none) {
   img[loading="lazy"] {
     clip-path: inset(0.6px);
@@ -26,12 +23,12 @@ body {
   overflow-x: hidden;
   background-color: var(--main-color);
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-main);
   background-image: url(/Images/stars.svg);
 }
 
 #fullname {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--font-logo);
   font-size: 28px;
   color: var(--text-main-color);
 }
@@ -119,7 +116,7 @@ a {
   user-select: none;
   background-color: inherit;
   border: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-main);
   z-index: 1;
 }
 
