@@ -1,8 +1,8 @@
 import Image from "next/image";
 import formatDate from "../../functions/formatDate";
-import { Blog } from "../../interfaces/Interfaces";
+import posts from "../../data/blogs.json" assert { type: "json" };
 
-const Blog = ({ posts }: { posts: Blog[] }) => {
+const Blog = () => {
   return (
     <section className="blog" id="blog">
       <section className="blog-list">

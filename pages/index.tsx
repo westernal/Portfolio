@@ -4,13 +4,12 @@ import Jobs from "../components/Jobs/recentJobs";
 import Socials from "../components/Socials/socials";
 import Blog from "../components/Blog/blog";
 import Projects from "../components/Projects/projects";
-import { Blog as BlogType } from "../interfaces/Interfaces";
 import HeadTags from "../utils/headTags";
 import Header from "../components/Layout/Header/header";
 import Image from "next/image";
 import ShootingStars from "../components/Layout/Effects/shootingStars";
 
-const Home = ({ posts }: { posts: BlogType[] }) => {
+const Home = () => {
   return (
     <>
       <Header />
@@ -31,26 +30,11 @@ const Home = ({ posts }: { posts: BlogType[] }) => {
         <Projects />
         <Skills />
         <Jobs />
-        <Blog posts={posts} />
+        <Blog />
         <Socials />
       </main>
     </>
   );
-};
-
-export const getStaticProps = async () => {
-  const options = {
-    method: "GET",
-    headers: { "Content-Type": "application/json" },
-  };
-
-  const res = await fetch(
-    "https://dev.to/api/articles/latest?username=westernal&per_page=3",
-    options
-  );
-  const posts = await res.json();
-
-  return { props: { posts } };
 };
 
 export default Home;

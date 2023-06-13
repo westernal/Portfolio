@@ -1,5 +1,5 @@
-export default function formatDate(date: Date) {
-  date = new Date(date);
+export default function formatDate(dateProp: string) {
+  const date = new Date(dateProp);
 
   var seconds = Math.floor((new Date().getTime() - date.getTime()) / 1000);
 
