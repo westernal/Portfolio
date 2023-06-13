@@ -932,5 +932,12 @@ ul li.selected {
 
   .skills-list {
     column-gap: 0;
+    grid-template-columns: auto auto;
+  }
+
+  .about-card,
+  .job-list,
+  .social-icons {
+    margin: 30% 20px;
   }
 }
