@@ -75,6 +75,11 @@ export const familiarSkills: Skill[] = [
     link: "https://graphql.org/",
   },
   {
+    name: "Jest",
+    src: "/Images/jest.svg",
+    link: "https://jestjs.io/",
+  },
+  {
     name: "C",
     src: "/Images/c.svg",
     link: "https://en.wikipedia.org/wiki/C_(programming_language)",
