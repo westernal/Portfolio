@@ -1,5 +1,5 @@
 import { projects } from "../../data/projects";
-import ProjectItem from "./projectItem";
+import ProjectItem from "../../components/Projects/projectItem";
 import { Project } from "../../interfaces/Interfaces";
 
 const Projects = () => {

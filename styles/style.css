@@ -61,14 +61,12 @@ header {
 .skills,
 .socials,
 .error-page {
-  width: 100vw;
-  max-height: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.5s;
+  visibility: visible;
+  max-height: unset;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  place-items: center;
   overflow-y: hidden;
   color: var(--text-main-color);
 }
@@ -78,7 +76,6 @@ h2 {
   color: var(--text-main-color);
 }
 
-.active-page,
 .error-page {
   opacity: 1;
   visibility: visible;
@@ -333,7 +330,7 @@ html {
 .blog {
   color: var(--text-secondary-color);
   text-align: center;
-  margin: 100px 0 0 0;
+  padding: 100px 0 0 0;
   display: grid;
   grid-template-columns: auto;
   gap: 20px;
@@ -567,6 +564,7 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
 }
 
 ::-webkit-scrollbar {
@@ -582,7 +580,7 @@ ul {
   border-radius: 10px;
 }
 
-ul li {
+ul a {
   display: inline;
   text-decoration: none;
   cursor: pointer;
@@ -600,7 +598,7 @@ ul li {
   background-size: 200%;
 }
 
-ul li.selected {
+ul a.selected {
   background-position: left;
   backdrop-filter: blur(3px);
 }
@@ -721,21 +719,19 @@ ul li.selected {
     transition: 2s transform;
   }
 
-  .active-page .right-reveal {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
   .left-reveal {
     position: relative;
-    transform: translateX(-150px);
+    transform: translateX(-100%);
     opacity: 0;
-    transition: 2s transform;
+    filter: blur(5px);
+    transition: 1.5s all ease-in-out;
   }
 
-  .active-page .left-reveal {
+  .show {
     transform: translateX(0);
     opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
   }
 
   .next-button {
@@ -851,15 +847,16 @@ ul li.selected {
     transform: translateX(0);
   }
 
-  ul li {
+  ul {
+    flex-direction: column;
+  }
+
+  ul a {
     border-radius: 5px;
     flex-basis: 0;
     flex: 1 1 0px;
-  }
-
-  nav li {
+    margin: 10px 0;
     display: block;
-    margin: 20px 0;
   }
 }
 

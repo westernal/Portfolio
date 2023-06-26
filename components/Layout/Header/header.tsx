@@ -1,16 +1,15 @@
 import { useEffect } from "react";
 import BurgerMenu from "./burgerMenu";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
+
   const selectNavItem = (e: any) => {
     const prevItem: any = document.getElementsByClassName("selected")[0];
-    const selectedPage = document.getElementById(e.target.ariaValueText);
-    const prevPage = document.getElementById(prevItem.ariaValueText);
-
-    prevItem.classList.remove("selected");
-    prevPage?.classList.remove("active-page");
-    selectedPage?.classList.add("active-page");
+    prevItem?.classList.remove("selected");
     e.target.classList.add("selected");
     document.getElementsByClassName("burger")[0].classList.toggle("active");
     document.getElementById("navbar")?.classList.toggle("show");
@@ -32,6 +31,15 @@ const Header = () => {
       }
     }
   }, []);
+
+  useEffect(() => {
+    if (router.isReady) {
+      const activePage = document.getElementById(router.pathname.split("/")[1]);
+      activePage?.classList.add("selected");
+      if (!activePage)
+        document.getElementById("about")?.classList.add("selected");
+    }
+  }, [router.isReady]);
 
   return (
     <header id="header">
@@ -86,27 +94,35 @@ const Header = () => {
       </div>
       <nav id="navbar">
         <ul>
-          <li
-            onClick={selectNavItem}
-            aria-valuetext="about"
-            className="selected"
-          >
-            About
+          <li>
+            <Link href="/" onClick={selectNavItem} id="about">
+              About
+            </Link>
           </li>
-          <li onClick={selectNavItem} aria-valuetext="projects">
-            Projects
+          <li>
+            <Link href="/projects" onClick={selectNavItem} id="projects">
+              Projects
+            </Link>
           </li>
-          <li aria-valuetext="skills" onClick={selectNavItem}>
-            Skills
+          <li>
+            <Link href="/skills" id="skills" onClick={selectNavItem}>
+              Skills
+            </Link>
           </li>
-          <li aria-valuetext="jobs" onClick={selectNavItem}>
-            Jobs
+          <li>
+            <Link href="/jobs" id="jobs" onClick={selectNavItem}>
+              Jobs
+            </Link>
           </li>
-          <li aria-valuetext="blog" onClick={selectNavItem}>
-            Blogs
+          <li>
+            <Link href="/blogs" id="blog" onClick={selectNavItem}>
+              Blogs
+            </Link>
           </li>
-          <li aria-valuetext="socials" onClick={selectNavItem}>
-            Contact
+          <li>
+            <Link href="/contact" id="socials" onClick={selectNavItem}>
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
