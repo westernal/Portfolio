@@ -45,7 +45,7 @@ const Header = () => {
     <header id="header">
       <BurgerMenu />
 
-      <div className="header-icons flex">
+      <div className="header-icons flex reveal">
         <a
           href="mailto:ali_navidi24@yahoo.com"
           className="social-icon"
@@ -126,7 +126,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <h1 id="fullname">
+      <h1 className="reveal" id="fullname">
         ALI <span id="last-name">NAVIDI</span>
       </h1>
     </header>

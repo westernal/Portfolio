@@ -10,7 +10,7 @@ const Layout = ({ children }: { children: ReactElement }) => {
       <Header />
       <main className="home">
         <section className="background-animations">
-          <div className="moon">
+          <div className="moon reveal">
             <Image
               src={"/Images/32dc9e08-9167-4792-b7a1-119df97022e4.svg"}
               alt="moon"

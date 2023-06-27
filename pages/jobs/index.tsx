@@ -6,7 +6,12 @@ const Jobs = () => {
     <section className="jobs" id="jobs">
       <div className="job-list">
         {jobs.map((job, index) => (
-          <div className="job reveal left-reveal" key={job.id}>
+          <div
+            className={`job reveal  ${
+              job.id % 2 == 0 ? "left-reveal" : "right-reveal"
+            }`}
+            key={job.id}
+          >
             <div className="job-profile">
               <div className="company-logo flex">
                 <Image

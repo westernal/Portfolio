@@ -4,7 +4,7 @@ import { skills, familiarSkills } from "../../data/skills";
 const Skills = () => {
   return (
     <section className="skills" id="skills">
-      <div className="skills-list reveal left-reveal">
+      <div className="skills-list reveal">
         {skills.map((item, i) => (
           <a href={item.link} className="skill-item" key={i}>
             <Image width={35} height={35} src={item.src} alt={item.name} />
@@ -13,7 +13,7 @@ const Skills = () => {
         ))}
       </div>
       <h3>Also familiar with:</h3>
-      <div className="skills-list reveal left-reveal">
+      <div className="skills-list reveal">
         {familiarSkills.map((item, i) => (
           <a href={item.link} className="skill-item" key={i}>
             <Image width={35} height={35} src={item.src} alt={item.name} />

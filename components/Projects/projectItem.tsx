@@ -4,7 +4,9 @@ import { Project } from "../../interfaces/Interfaces";
 const ProjectItem = ({ project }: { project: Project }) => {
   return (
     <article
-      className="project blog-item reveal left-reveal"
+      className={`project blog-item reveal ${
+        project.id % 2 == 0 ? "left-reveal" : "right-reveal"
+      }`}
       id={`project${project.id}`}
     >
       <div className="project-image">
