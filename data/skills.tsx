@@ -80,6 +80,11 @@ export const familiarSkills: Skill[] = [
     link: "https://jestjs.io/",
   },
   {
+    name: "Webpack",
+    src: "/Images/webpack.svg",
+    link: "https://webpack.js.org/",
+  },
+  {
     name: "C",
     src: "/Images/c.svg",
     link: "https://en.wikipedia.org/wiki/C_(programming_language)",
