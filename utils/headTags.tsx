@@ -11,7 +11,7 @@ const HeadTags = () => {
       />
       <meta name="description" content="Ali Navidi - Frontend Developer" />
       <meta name="keywords" content="developer, frontend, reactjs, nextjs" />
-      <title>Ali Navidi</title>
+      <title>Ali Navidi | Frontend Developer</title>
       <link
         rel="apple-touch-icon"
         sizes="180x180"
