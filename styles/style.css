@@ -757,8 +757,8 @@ ul a.selected {
   margin-top: 10px;
 }
 
-#home {
-  max-height: 100vh;
+html:has(#home-page) {
+  overflow: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {

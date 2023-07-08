@@ -1,6 +1,6 @@
 const HomePage = () => {
   return (
-    <section className="about center active-page" id="home">
+    <section className="about center active-page" id="home-page">
       <section className="info ">
         <div className="flex name">
           <span className="first-name">
