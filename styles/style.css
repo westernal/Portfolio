@@ -757,6 +757,10 @@ ul a.selected {
   margin-top: 10px;
 }
 
+.home {
+  height: 100vh;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
     opacity: 0;
