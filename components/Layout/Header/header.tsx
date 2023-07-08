@@ -8,8 +8,8 @@ const Header = () => {
   const router = useRouter();
 
   const closeMenus = () => {
-    document.getElementsByClassName("burger")[0].classList.toggle("active");
-    document.getElementById("navbar")?.classList.toggle("show");
+    document.getElementsByClassName("burger")[0].classList.remove("active");
+    document.getElementById("navbar")?.classList.remove("show");
   };
 
   const disablePreviousNavItem = () => {
