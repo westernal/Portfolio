@@ -758,8 +758,7 @@ ul a.selected {
 }
 
 #home {
-  overflow: hidden;
-  position: relative;
+  max-height: 100vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
