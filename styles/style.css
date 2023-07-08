@@ -862,9 +862,6 @@ html:has(#home-page) {
   .project {
     height: unset;
   }
-}
-
-@media only screen and (max-width: 800px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -897,7 +894,6 @@ html:has(#home-page) {
   .show {
     transform: translateX(0);
   }
-
   ul,
   .info {
     flex-direction: column;
