@@ -3,11 +3,16 @@ import Header from "./Header/header";
 import Image from "next/image";
 import ShootingStars from "./Effects/shootingStars";
 import HeadTags from "../../utils/headTags";
+import dynamic from "next/dynamic";
+const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+  ssr: false,
+});
 
 const Layout = ({ children }: { children: ReactElement }) => {
   return (
     <>
       <Header />
+      <AnimatedCursor color="255,255,255" />
       <main className="home">
         <section className="background-animations">
           <div className="moon reveal">
