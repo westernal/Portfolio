@@ -37,7 +37,7 @@ const Header = () => {
       const activePage = document.getElementById(router.pathname.split("/")[1]);
       activePage?.classList.add("selected");
       if (!activePage)
-        document.getElementById("about")?.classList.add("selected");
+        document.getElementById("home")?.classList.add("selected");
     }
   }, [router.isReady]);
 
@@ -95,7 +95,12 @@ const Header = () => {
       <nav id="navbar">
         <ul>
           <li>
-            <Link href="/" onClick={selectNavItem} id="about">
+            <Link href="/" onClick={selectNavItem} id="home">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" onClick={selectNavItem} id="about">
               About
             </Link>
           </li>
@@ -127,7 +132,7 @@ const Header = () => {
         </ul>
       </nav>
       <h1 className="reveal" id="fullname">
-        ALI <span id="last-name">NAVIDI</span>
+        ALI
       </h1>
     </header>
   );

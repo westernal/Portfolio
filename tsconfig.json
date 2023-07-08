@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/About/about.tsx", "components/Socials/Icons/socialIcons.tsx", "components/Socials/socials.tsx", "pages/_app.tsx", "functions/formatDate.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Home/about.tsx", "components/Socials/Icons/socialIcons.tsx", "components/Socials/socials.tsx", "pages/_app.tsx", "functions/formatDate.ts"],
   "exclude": ["node_modules"]
 }

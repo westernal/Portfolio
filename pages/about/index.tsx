@@ -7,7 +7,7 @@ const About = () => {
         <div className="about-me flex">
           <div className="about-img">
             <Image
-              src={"/Images/unnamed.jpg"}
+              src={"/Images/unnamed2.jpg"}
               width={60}
               height={60}
               alt="my picture"

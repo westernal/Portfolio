@@ -1,4 +1,4 @@
-import { ReactChildren, ReactElement } from "react";
+import { ReactElement } from "react";
 import Header from "./Header/header";
 import Image from "next/image";
 import ShootingStars from "./Effects/shootingStars";
@@ -19,8 +19,11 @@ const Layout = ({ children }: { children: ReactElement }) => {
             />
           </div>
         </section>
+
         <ShootingStars />
+
         <HeadTags />
+
         {children}
       </main>
     </>

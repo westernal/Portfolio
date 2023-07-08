@@ -109,13 +109,18 @@ a {
   font-size: 1.1rem;
   color: gray;
   text-transform: uppercase;
-  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1) !important;
   cursor: pointer;
   user-select: none;
   background-color: inherit;
   border: 0;
   font-family: var(--font-main);
   z-index: 1;
+  margin-top: 10px;
+}
+
+.resume-btn {
+  transition-delay: 2.5s !important;
 }
 
 .btn:before,
@@ -532,16 +537,43 @@ html {
   display: none;
 }
 
-.blog-list .left-reveal:nth-child(1) {
+.blog-list .left-reveal:nth-child(1),
+.first-name span:nth-child(1) {
   transition-delay: 0.5s;
 }
 
-.blog-list .left-reveal:nth-child(2) {
+.blog-list .left-reveal:nth-child(2),
+.first-name span:nth-child(2) {
   transition-delay: 0.7s;
 }
 
-.blog-list .left-reveal:nth-child(3) {
+.blog-list .left-reveal:nth-child(3),
+.first-name span:nth-child(3) {
   transition-delay: 0.9s;
+}
+
+.last-name span:nth-child(1) {
+  transition-delay: 1.1s;
+}
+
+.last-name span:nth-child(2) {
+  transition-delay: 1.3s;
+}
+
+.last-name span:nth-child(3) {
+  transition-delay: 1.5s;
+}
+
+.last-name span:nth-child(4) {
+  transition-delay: 1.7s;
+}
+
+.last-name span:nth-child(5) {
+  transition-delay: 1.9s;
+}
+
+.last-name span:nth-child(6) {
+  transition-delay: 2.1s;
 }
 
 nav {
@@ -704,6 +736,27 @@ ul a.selected {
   margin-top: 10px;
 }
 
+.name {
+  gap: 20px;
+}
+
+.name span {
+  font-size: 4rem;
+  font-family: var(--font-logo);
+}
+
+.last-name {
+  color: var(--secondary-color);
+}
+
+.title {
+  color: var(--text-secondary-color);
+  transition-delay: 2.3s !important;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
     opacity: 0;
@@ -738,7 +791,7 @@ ul a.selected {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow-y: hidden;
+    overflow: hidden;
   }
 
   .shooting-stars span {
@@ -841,7 +894,8 @@ ul a.selected {
     transform: translateX(0);
   }
 
-  ul {
+  ul,
+  .info {
     flex-direction: column;
   }
 
@@ -858,6 +912,10 @@ ul a.selected {
   .btn {
     font-size: 1.2rem;
     padding: 1.2rem;
+  }
+
+  .name span {
+    font-size: 3rem;
   }
 
   #fullname {
