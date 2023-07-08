@@ -39,7 +39,7 @@ const Header = () => {
       if (!activePage)
         document.getElementById("home")?.classList.add("selected");
     }
-  }, [router.isReady]);
+  }, [router.isReady, router.query]);
 
   return (
     <header id="header">
@@ -131,9 +131,12 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <h1 className="reveal" id="fullname">
-        ALI
-      </h1>
+
+      <Link href={"/"} onClick={selectNavItem}>
+        <h1 className="reveal" id="fullname">
+          ALI
+        </h1>
+      </Link>
     </header>
   );
 };
