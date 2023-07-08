@@ -757,8 +757,9 @@ ul a.selected {
   margin-top: 10px;
 }
 
-.home {
+#home {
   overflow: hidden;
+  position: relative;
 }
 
 @media (prefers-reduced-motion: no-preference) {
