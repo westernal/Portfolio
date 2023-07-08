@@ -7,12 +7,20 @@ import { useRouter } from "next/router";
 const Header = () => {
   const router = useRouter();
 
-  const selectNavItem = (e: any) => {
-    const prevItem: any = document.getElementsByClassName("selected")[0];
-    prevItem?.classList.remove("selected");
-    e.target.classList.add("selected");
+  const closeMenus = () => {
     document.getElementsByClassName("burger")[0].classList.toggle("active");
     document.getElementById("navbar")?.classList.toggle("show");
+  };
+
+  const disablePreviousNavItem = () => {
+    const navItem: any = document.getElementsByClassName("selected")[0];
+    navItem?.classList.remove("selected");
+  };
+
+  const selectNavItem = () => {
+    const activePage = document.getElementById(router.pathname.split("/")[1]);
+    activePage?.classList.add("selected");
+    if (!activePage) document.getElementById("home")?.classList.add("selected");
   };
 
   useEffect(() => {
@@ -34,10 +42,9 @@ const Header = () => {
 
   useEffect(() => {
     if (router.isReady) {
-      const activePage = document.getElementById(router.pathname.split("/")[1]);
-      activePage?.classList.add("selected");
-      if (!activePage)
-        document.getElementById("home")?.classList.add("selected");
+      disablePreviousNavItem();
+      selectNavItem();
+      closeMenus();
     }
   }, [router.isReady, router.query]);
 
@@ -95,44 +102,44 @@ const Header = () => {
       <nav id="navbar">
         <ul>
           <li>
-            <Link href="/" onClick={selectNavItem} id="home">
+            <Link href="/" id="home">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about" onClick={selectNavItem} id="about">
+            <Link href="/about" id="about">
               About
             </Link>
           </li>
           <li>
-            <Link href="/projects" onClick={selectNavItem} id="projects">
+            <Link href="/projects" id="projects">
               Projects
             </Link>
           </li>
           <li>
-            <Link href="/skills" id="skills" onClick={selectNavItem}>
+            <Link href="/skills" id="skills">
               Skills
             </Link>
           </li>
           <li>
-            <Link href="/jobs" id="jobs" onClick={selectNavItem}>
+            <Link href="/jobs" id="jobs">
               Jobs
             </Link>
           </li>
           <li>
-            <Link href="/blogs" id="blog" onClick={selectNavItem}>
+            <Link href="/blogs" id="blogs">
               Blogs
             </Link>
           </li>
           <li>
-            <Link href="/contact" id="socials" onClick={selectNavItem}>
+            <Link href="/contact" id="contact">
               Contact
             </Link>
           </li>
         </ul>
       </nav>
 
-      <Link href={"/"} onClick={selectNavItem}>
+      <Link href={"/"}>
         <h1 className="reveal" id="fullname">
           ALI
         </h1>
