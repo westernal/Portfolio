@@ -839,7 +839,7 @@ html:has(#home-page) {
     right: 25%;
     left: initial;
     animation-delay: 0;
-    animation-duration: 3s;
+    animation-duration: 5s;
   }
 }
 
