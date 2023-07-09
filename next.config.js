@@ -3,11 +3,15 @@ module.exports = {
   reactStrictMode: true,
 };
 
-module.exports = {
+const withPWA = require("next-pwa")({
+  dest: "public",
+});
+
+module.exports = withPWA({
   images: {
     domains: ["localhost", "res.cloudinary.com", "westernal.me"],
   },
-};
+});
 
 const nextConfig = {
   experimental: {
