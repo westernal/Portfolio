@@ -37,6 +37,11 @@ export const skills: Skill[] = [
     link: "https://www.cypress.io/",
   },
   {
+    name: "Jest",
+    src: "/Images/jest.svg",
+    link: "https://jestjs.io/",
+  },
+  {
     name: "Bootstrap",
     src: "/Images/bootstrap.svg",
     link: "https://getbootstrap.com/",
@@ -75,9 +80,9 @@ export const familiarSkills: Skill[] = [
     link: "https://graphql.org/",
   },
   {
-    name: "Jest",
-    src: "/Images/jest.svg",
-    link: "https://jestjs.io/",
+    name: "React Native",
+    src: "/Images/react.svg",
+    link: "https://reactnative.dev/",
   },
   {
     name: "Webpack",
