@@ -85,6 +85,11 @@ export const familiarSkills: Skill[] = [
     link: "https://reactnative.dev/",
   },
   {
+    name: "Angular",
+    src: "/Images/Angular-Dark.svg",
+    link: "https://angular.io/",
+  },
+  {
     name: "Webpack",
     src: "/Images/webpack.svg",
     link: "https://webpack.js.org/",
