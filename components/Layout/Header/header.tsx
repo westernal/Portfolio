@@ -17,12 +17,6 @@ const Header = () => {
     navItem?.classList.remove("selected");
   };
 
-  const selectNavItem = () => {
-    const activePage = document.getElementById(router.pathname.split("/")[1]);
-    activePage?.classList.add("selected");
-    if (!activePage) document.getElementById("home")?.classList.add("selected");
-  };
-
   useEffect(() => {
     window.onscroll = function () {
       myFunction();
@@ -41,12 +35,19 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
+    const selectNavItem = () => {
+      const activePage = document.getElementById(router.pathname.split("/")[1]);
+      activePage?.classList.add("selected");
+      if (!activePage)
+        document.getElementById("home")?.classList.add("selected");
+    };
+
     if (router.isReady) {
       disablePreviousNavItem();
       selectNavItem();
       closeMenus();
     }
-  }, [router.isReady, router.query]);
+  }, [router.isReady, router.pathname, router.query]);
 
   return (
     <header id="header">
