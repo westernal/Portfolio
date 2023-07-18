@@ -5,7 +5,7 @@ const Jobs = () => {
   return (
     <section className="jobs" id="jobs">
       <div className="job-list">
-        {jobs.map((job, index) => (
+        {jobs.toReversed().map((job) => (
           <div
             className={`job reveal  ${
               job.id % 2 == 0 ? "left-reveal" : "right-reveal"

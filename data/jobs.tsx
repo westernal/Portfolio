@@ -3,6 +3,14 @@ import { Job } from "../interfaces/Interfaces";
 export const jobs: Job[] = [
   {
     id: 0,
+    title: "Frontend Developer",
+    company: "Oben Origin co.",
+    location: "Tehran, Iran",
+    duration: { from: "01/2020", to: "11/2021" },
+    companyLogo: { url: "/Images/logo.svg", width: 100, height: 100 },
+  },
+  {
+    id: 1,
     title: "Frontend Engineer",
     company: "Restarone Solutions Inc.",
     location: "Toronto, Canada",
@@ -10,11 +18,11 @@ export const jobs: Job[] = [
     companyLogo: { url: "/Images/Sticker-1-05 1.png", width: 55, height: 75 },
   },
   {
-    id: 1,
+    id: 2,
     title: "Frontend Developer",
-    company: "Oben Origin co.",
-    location: "Tehran, Iran",
-    duration: { from: "01/2020", to: "11/2021" },
-    companyLogo: { url: "/Images/logo.svg", width: 100, height: 100 },
+    company: "SafEcho AG",
+    location: "Zug, Switzerland",
+    duration: { from: "07/2023", to: "Present" },
+    companyLogo: { url: "/Images/1679506950613.jfif", width: 75, height: 75 },
   },
 ];
