@@ -20,9 +20,9 @@ export const jobs: Job[] = [
   {
     id: 2,
     title: "Frontend Developer",
-    company: "SafEcho AG",
+    company: "Silver Brain AI AG",
     location: "Zug, Switzerland",
     duration: { from: "07/2023", to: "Present" },
-    companyLogo: { url: "/Images/1679506950613.jfif", width: 75, height: 75 },
+    companyLogo: { url: "/Images/1684220729246.jfif", width: 75, height: 75 },
   },
 ];
