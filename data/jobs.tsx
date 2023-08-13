@@ -23,6 +23,6 @@ export const jobs: Job[] = [
     company: "Silver Brain AI AG",
     location: "Zug, Switzerland",
     duration: { from: "07/2023", to: "Present" },
-    companyLogo: { url: "/Images/SB-silver.svg", width: 75, height: 75 },
+    companyLogo: { url: "/Images/SB-silver.svg", width: 55, height: 75 },
   },
 ];
