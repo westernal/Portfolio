@@ -229,7 +229,6 @@ a {
   grid-template-columns: 100px auto;
   justify-content: center;
   align-items: center;
-  column-gap: 50px;
 }
 
 .job-name h3 {
@@ -932,7 +931,6 @@ html:has(#home-page) {
   }
 
   .job-profile {
-    gap: 0;
     grid-template-columns: auto;
   }
 
