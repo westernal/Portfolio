@@ -7,7 +7,7 @@ export const jobs: Job[] = [
     company: "Oben Origin co.",
     location: "Tehran, Iran",
     duration: { from: "01/2020", to: "11/2021" },
-    companyLogo: { url: "/Images/logo.svg", width: 100, height: 100 },
+    companyLogo: { url: "/Images/logo.svg", width: 55, height: 55 },
   },
   {
     id: 1,
