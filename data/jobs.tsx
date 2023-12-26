@@ -19,7 +19,7 @@ export const jobs: Job[] = [
   },
   {
     id: 2,
-    title: "Frontend Developer",
+    title: "Frontend Team Lead",
     company: "Silver Brain AI AG",
     location: "Zug, Switzerland",
     duration: { from: "07/2023", to: "Present" },
