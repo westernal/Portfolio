@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 
 const About = () => {
@@ -25,12 +26,10 @@ const About = () => {
         </div>
         <div className="about-info">
           <p>
-            A 23 years-old frontend developer and computer {" ("}
-            software{")"} engineering graduate, coding since 2018 and over 3
-            years of experience in developing websites, trying my best to write
-            clean code, higher up the performance and improve the user
-            experience, always seeking to improve my abilities and learn new
-            things.
+            With solid experience in frontend development and leadership, I'm
+            the driving force behind projects that break the mold and leave
+            users craving more. It's not just about meeting expectations; it's
+            about blowing them away.
           </p>
 
           <div className="flex about-btns">
