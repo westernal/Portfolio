@@ -25,8 +25,8 @@ const About = () => {
         </div>
         <div className="about-info">
           <p>
-            A 22 years-old frontend developer and a recently computer {" ("}
-            software{")"} engineering graduate, coding since 2018 and over 2
+            A 23 years-old frontend developer and computer {" ("}
+            software{")"} engineering graduate, coding since 2018 and over 3
             years of experience in developing websites, trying my best to write
             clean code, higher up the performance and improve the user
             experience, always seeking to improve my abilities and learn new
