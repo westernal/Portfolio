@@ -6,17 +6,10 @@ const HomePage = () => {
       <section className="info ">
         <div className="flex name">
           <span className="first-name">
-            <span className="reveal">A</span>
-            <span className="reveal">L</span>
-            <span className="reveal">I</span>
+            <span className="reveal">ALI</span>
           </span>
           <span className="last-name">
-            <span className="reveal">N</span>
-            <span className="reveal">A</span>
-            <span className="reveal">V</span>
-            <span className="reveal">I</span>
-            <span className="reveal">D</span>
-            <span className="reveal">I</span>
+            <span className="reveal">NAVIDI</span>
           </span>
         </div>
         <div className="title reveal">Frontend Developer</div>
