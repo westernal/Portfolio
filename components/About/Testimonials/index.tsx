@@ -47,31 +47,18 @@ const Testimonials = () => {
 
                   <div className="flex control-btns">
                     {/* prevent user go back or next if there is not any testimonial left */}
-                    {item.id === 0 ? (
-                      <div
-                        className="button-previus"
-                        style={{ opacity: "0.7" }}
-                      >
+
+                    <ButtonBack>
+                      <div className="button-previus">
                         <IconArrowLeft />
                       </div>
-                    ) : (
-                      <ButtonBack>
-                        <div className="button-previus">
-                          <IconArrowLeft />
-                        </div>
-                      </ButtonBack>
-                    )}
-                    {item.id === testimonials.length - 1 ? (
-                      <div className="button-next" style={{ opacity: "0.7" }}>
+                    </ButtonBack>
+
+                    <ButtonNext>
+                      <div className="button-next">
                         <IconArrowRight />
                       </div>
-                    ) : (
-                      <ButtonNext>
-                        <div className="button-next">
-                          <IconArrowRight />
-                        </div>
-                      </ButtonNext>
-                    )}
+                    </ButtonNext>
                   </div>
                 </div>
                 <div className="testimonial-info">
