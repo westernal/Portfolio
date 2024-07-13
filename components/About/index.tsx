@@ -4,45 +4,63 @@ import Heading from "../shared/Heading";
 
 const About = () => {
   return (
-    <section className="about center active-page" id="about">
-      <Heading text="About Me" />
-
+    <section className="about about-page center active-page" id="about">
       <section className="about-card reveal ">
-        <div className="about-me flex">
+        <div className="about-me">
+          <Heading text="About Me" style={{ color: "white" }} />
+        </div>
+        <div className="about-info">
           <div className="about-img">
             <Image
-              src={"/Images/unnamed2.jpg"}
-              width={60}
-              height={60}
+              src={"/Images/Me.png"}
+              width={300}
+              height={300}
               alt="my picture"
             />
           </div>
-          <div className="about-title">
-            <h1 id="name"> Ali Navidi</h1>
-            <p className="titles">
-              Frontend Developer - Studied Software Engineering at{" "}
-              <a href="https://nit.ac.ir/" id="university">
-                BNUT
-              </a>
-            </p>
-          </div>
-        </div>
-        <div className="about-info">
           <p>
-            With solid experience in frontend development and leadership, I'm
-            the driving force behind projects that break the mold and leave
-            users craving more. It's not just about meeting expectations; it's
-            about blowing them away.
+            Hello! I'm Ali Navidi, a passionate and experienced frontend
+            developer with over three years of hands-on experience in the field.
+            With a Bachelor of Science in Computer Engineering, I've built a
+            strong foundation in software development and have honed my
+            expertise in creating seamless, user-friendly interfaces.
+          </p>
+
+          <p>
+            Throughout my career, I have led teams through complex projects,
+            ensuring we deliver top-notch solutions that meet and exceed client
+            expectations. My main skills lie in React and Next.js, where I've
+            developed a deep understanding and proficiency. These frameworks
+            allow me to build efficient, scalable, and high-performing web
+            applications that provide exceptional user experiences.
+          </p>
+
+          <p>
+            I thrive on problem-solving and enjoy the challenge of debugging and
+            optimizing code to achieve the best possible performance. Leading a
+            team has also given me the opportunity to mentor and inspire other
+            developers, fostering a collaborative and innovative work
+            environment.
+          </p>
+
+          <p>
+            Thank you for visiting my website! If you're interested in
+            collaborating or discussing potential opportunities, feel free to
+            reach out. Let's connect and create something extraordinary
+            together!
           </p>
 
           <div className="flex about-btns column-mobile">
-            <a href="/Ali Navidi Resume.pdf" download={true} id="resume">
-              <button className="btn secondary-btn from-top resume">
-                Resume
+            <a
+              href="mailto:ali_navidi24@yahoo.com?subject=Hi Ali, I Want to Hire You!"
+              style={{ display: "grid", placeItems: "center" }}
+            >
+              <button
+                className="btn from-top resume"
+                style={{ width: "200px", marginTop: "2rem" }}
+              >
+                Hire Me
               </button>
-            </a>
-            <a href="mailto:ali_navidi24@yahoo.com">
-              <button className="btn from-top resume">Email me</button>
             </a>
           </div>
         </div>

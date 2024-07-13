@@ -41,7 +41,7 @@ main {
 }
 
 #last-name {
-  color: var(--secondary-color);
+  color: var(--accent-color);
 }
 
 .flex {
@@ -93,7 +93,7 @@ h2 {
   margin-bottom: 2rem;
   font-size: 34px;
   text-transform: uppercase;
-  color: var(--accent-color) !important;
+  color: var(--accent-color);
   padding-bottom: 0 !important;
 }
 
@@ -144,8 +144,23 @@ a {
   color: var(--text-main-color);
 }
 
+.about-page {
+  background-color: var(--accent-color);
+  border-radius: 2rem;
+}
+
 .resume-btn {
   transition-delay: 2.5s !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.resume-btn button {
+  width: 200px;
 }
 
 .btn:before,
@@ -700,23 +715,24 @@ ul a.active {
 }
 
 .about-card {
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  border: 1px solid var(--secondary-color);
-  max-width: 600px;
-  margin-block: auto;
-  margin: 0 auto;
-  gap: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  padding: 20px;
-  color: var(--text-main-color);
-  text-align: justify;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 2fr;
+}
+
+.about-img {
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+
+.about-info p {
+  color: var(--main-color);
+  line-height: 22px;
 }
 
 .about-img img {
-  border-radius: 50%;
+  border-radius: 4px;
   object-fit: cover;
 }
 
@@ -729,14 +745,20 @@ ul a.active {
   height: 200px;
 }
 
+.about-me h1 {
+  font-size: 30px;
+  color: var(--main-color);
+}
+
 .titles {
   color: var(--text-secondary-color);
-  margin-top: -15px;
   text-align: left;
+  color: var(--secondary-color);
 }
 
 #university {
-  color: var(--accent-color);
+  color: var(--main-color);
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .job {
@@ -762,7 +784,7 @@ ul a.active {
 }
 
 .last-name {
-  color: var(--text-secondary-color);
+  color: var(--accent-color);
 }
 
 .title {
@@ -867,6 +889,10 @@ ul a.active {
     padding: 0;
   }
 
+  .about-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -925,8 +951,15 @@ ul a.active {
 
 @media only screen and (max-width: 600px) {
   .btn {
-    font-size: 1.2rem;
-    padding: 1.2rem;
+    padding: 8px 12px;
+  }
+
+  .about-card {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-btn {
+    grid-template-columns: 1fr;
   }
 
   .column-mobile {
