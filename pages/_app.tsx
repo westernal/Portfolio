@@ -5,6 +5,7 @@ import "../styles/style.css";
 import type { AppProps } from "next/app";
 import startAnimation from "../functions/startAnimation";
 import { useRouter } from "next/router";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -15,7 +16,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className={`${montserrat.variable} ${orbitron.variable}`}>
       <Layout>
-        <Component {...pageProps} />
+        <>
+          <Analytics />
+          <Component {...pageProps} />
+        </>
       </Layout>
     </div>
   );
