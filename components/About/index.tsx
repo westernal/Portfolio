@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import Heading from "../shared/Heading";
+import Testimonials from "./Testimonials";
 
 const About = () => {
   return (
@@ -65,6 +66,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <Testimonials />
     </section>
   );
 };

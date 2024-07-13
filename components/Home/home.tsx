@@ -14,13 +14,13 @@ const HomePage = () => {
         </div>
         <div className="title reveal">Frontend Developer</div>
         <div className=" reveal resume-btn">
-          <Link href={"#about"}>
-            <button className="btn secondary-btn from-top resume ">
-              About Me
+          <Link href="/Ali Navidi Resume.pdf" download={true} id="resume">
+            <button className="btn secondary-btn  from-top resume ">
+              Resume
             </button>
           </Link>
-          <Link href="/Ali Navidi Resume.pdf" download={true} id="resume">
-            <button className="btn  from-top resume ">Resume</button>
+          <Link href="mailto:ali_navidi24@yahoo.com?subject=Hi Ali, I Want to Hire You!">
+            <button className="btn  from-top resume ">Hire Me</button>
           </Link>
         </div>
       </section>

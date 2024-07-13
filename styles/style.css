@@ -280,6 +280,23 @@ a {
   color: var(--text-secondary-color);
 }
 
+.control-btns div {
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}
+
+.control-btns button {
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+}
+
+.testimonials {
+  margin-block: 150px 3rem;
+}
+
 .job-name {
   text-align: left;
 }
@@ -287,11 +304,6 @@ a {
 .socials {
   text-align: center;
   color: var(--text-secondary-color);
-}
-
-.jobs h2 {
-  color: var(--text-secondary-color);
-  padding-bottom: 50px;
 }
 
 html {
@@ -795,6 +807,36 @@ ul a.active {
   margin-top: 10px;
 }
 
+.testimonial-card {
+  background: var(--main-color);
+  border: 1px solid var(--secondary-color);
+  max-width: 600px;
+  margin-block: auto;
+  margin: 0 auto;
+  gap: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  color: var(--text-main-color);
+  text-align: justify;
+  height: 100%;
+}
+
+.testimonial-img img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial {
+  justify-content: space-between;
+}
+
+.testimonial-titles {
+  color: var(--text-secondary-color);
+  margin-top: -15px;
+  text-align: left;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
     opacity: 0;
@@ -952,6 +994,11 @@ ul a.active {
 @media only screen and (max-width: 600px) {
   .btn {
     padding: 8px 12px;
+  }
+
+  .testimonial {
+    flex-direction: column-reverse;
+    align-items: baseline;
   }
 
   .about-card {

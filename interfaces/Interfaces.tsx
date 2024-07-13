@@ -56,3 +56,11 @@ export interface Social {
   url: string;
   imageUrl: string;
 }
+
+export interface Testimonial {
+  id: number;
+  name: string;
+  avatar: string;
+  role: string;
+  description: string;
+}
