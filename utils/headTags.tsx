@@ -9,7 +9,10 @@ const HeadTags = () => {
         name="viewport"
         content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
       />
-      <meta name="description" content="Ali Navidi - Frontend Developer" />
+      <meta
+        name="description"
+        content="Meet Ali Navidi, a skilled frontend developer and frontend team lead specializing in React.js and Next.js."
+      />
       <meta name="keywords" content="developer, frontend, reactjs, nextjs" />
       <title>Ali Navidi | Frontend Developer</title>
       <link
