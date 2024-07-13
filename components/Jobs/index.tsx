@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { jobs } from "../../data/jobs";
+import Heading from "../shared/Heading";
 
 const Jobs = () => {
   return (
     <section className="jobs" id="jobs">
+      <Heading text="Work Experience" />
+
       <div className="job-list">
-        {jobs.reverse().map((job) => (
+        {jobs.map((job) => (
           <div
             className={`job reveal  ${
               job.id % 2 == 0 ? "left-reveal" : "right-reveal"

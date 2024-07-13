@@ -15,11 +15,13 @@ const HomePage = () => {
         <div className="title reveal">Frontend Developer</div>
         <div className="flex reveal resume-btn">
           <Link href={"/about"}>
-            <button className="btn from-top resume ">About Me</button>
+            <button className="btn secondary-btn from-top resume ">
+              About Me
+            </button>
           </Link>
-          <a href="/Ali Navidi Resume.pdf" download={true} id="resume">
-            <button className="btn from-top resume ">Resume</button>
-          </a>
+          <Link href="/Ali Navidi Resume.pdf" download={true} id="resume">
+            <button className="btn  from-top resume ">Resume</button>
+          </Link>
         </div>
       </section>
     </section>

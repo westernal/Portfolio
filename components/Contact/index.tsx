@@ -1,9 +1,11 @@
 import { socialMedias } from "../../data/contacts";
 import Image from "next/image";
+import Heading from "../shared/Heading";
 
 const Socials = () => {
   return (
-    <section className="socials" id="socials">
+    <section className="socials" id="contact">
+      <Heading text="Be in touch with me" />
       <section className="social-icons skills-list reveal">
         {socialMedias.map((socialMedia, index) => {
           return (

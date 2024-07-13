@@ -20,10 +20,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
       </div>
       <div className="project-info">
         <div className="project-title">
-          <div
-            className="project-color"
-            style={{ background: "darkslateblue" }}
-          ></div>
+          <div className="project-color"></div>
           <h3>{project.title}</h3>
           <p id="role">
             {project.myRole.frontEnd && "FRONTEND"}
@@ -31,11 +28,15 @@ const ProjectItem = ({ project }: { project: Project }) => {
             {project.myRole.design && " | DESIGN"}
           </p>
         </div>
-        <div className="flex">
+        <div className="flex" style={{ alignItems: "baseline" }}>
           <p id="project-description">{project.description}</p>
         </div>
-        <section className="project-links flex">
-          <a href={project.link.gitHub} style={{ background: "darkslateblue" }}>
+        <section className="project-links">
+          <a
+            href={project.link.gitHub}
+            className="btn secondary-btn from-top flex"
+            target="_blank"
+          >
             <Image
               src={"/Images/github.svg"}
               width={20}
@@ -48,7 +49,8 @@ const ProjectItem = ({ project }: { project: Project }) => {
           {project.link.website && (
             <a
               href={project.link.website}
-              style={{ background: "darkslateblue" }}
+              className="btn secondary-btn from-top flex"
+              target="_blank"
             >
               <Image
                 src={"/Images/Website.svg"}

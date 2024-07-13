@@ -1,10 +1,12 @@
 import Image from "next/image";
 import formatDate from "../../functions/formatDate";
 import posts from "../../data/blogs.json" assert { type: "json" };
+import Heading from "../shared/Heading";
 
 const Blog = () => {
   return (
-    <section className="blog" id="blog">
+    <section className="blog" id="blogs">
+      <Heading text="Blogs" />
       <section className="blog-list">
         {posts &&
           posts.map((post) => {
@@ -19,11 +21,11 @@ const Blog = () => {
                 <article className="blog-item ">
                   <div className="flex blog-image">
                     <Image
-                      width={300}
-                      height={120}
+                      fill
                       src={post.cover_image}
                       alt="post image"
                       id="post-image"
+                      style={{ objectFit: "cover" }}
                     />
                   </div>
                   <div className="blog-avatar ">

@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import BurgerMenu from "./burgerMenu";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
+import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
 
 const Header = () => {
   const router = useRouter();
@@ -103,39 +104,39 @@ const Header = () => {
       <nav id="navbar">
         <ul>
           <li>
-            <Link href="/" id="home">
+            <ScrollLink activeClass="active" spy to="home-page">
               Home
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link href="/about" id="about">
+            <ScrollLink activeClass="active" spy to="about">
               About
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link href="/projects" id="projects">
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link href="/skills" id="skills">
+            <ScrollLink activeClass="active" spy to="skills">
               Skills
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link href="/jobs" id="jobs">
+            <ScrollLink activeClass="active" spy to="jobs">
               Jobs
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link href="/blogs" id="blogs">
+            <ScrollLink activeClass="active" spy to="projects">
+              Projects
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink activeClass="active" spy to="blogs">
               Blogs
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link href="/contact" id="contact">
+            <ScrollLink activeClass="active" spy to="contact">
               Contact
-            </Link>
+            </ScrollLink>
           </li>
         </ul>
       </nav>

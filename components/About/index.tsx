@@ -1,9 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
+import Heading from "../shared/Heading";
 
 const About = () => {
   return (
     <section className="about center active-page" id="about">
+      <Heading text="About Me" />
+
       <section className="about-card reveal ">
         <div className="about-me flex">
           <div className="about-img">
@@ -32,9 +35,11 @@ const About = () => {
             about blowing them away.
           </p>
 
-          <div className="flex about-btns">
+          <div className="flex about-btns column-mobile">
             <a href="/Ali Navidi Resume.pdf" download={true} id="resume">
-              <button className="btn from-top resume">Resume</button>
+              <button className="btn secondary-btn from-top resume">
+                Resume
+              </button>
             </a>
             <a href="mailto:ali_navidi24@yahoo.com">
               <button className="btn from-top resume">Email me</button>
