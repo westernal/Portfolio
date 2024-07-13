@@ -730,7 +730,7 @@ ul a.active {
 }
 
 .titles {
-  opacity: 0.5;
+  color: var(--text-secondary-color);
   margin-top: -15px;
   text-align: left;
 }
