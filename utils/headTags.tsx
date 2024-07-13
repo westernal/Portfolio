@@ -9,16 +9,44 @@ const HeadTags = () => {
         name="viewport"
         content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
       />
+      <title>Ali Navidi | Frontend Developer</title>
       <meta
         name="description"
         content="Meet Ali Navidi, a skilled frontend developer and frontend team lead specializing in React.js and Next.js."
       />
+
+      <meta itemProp="name" content="Ali Navidi | Frontend Developer" />
       <meta
-        name="og:description"
+        itemProp="description"
         content="Meet Ali Navidi, a skilled frontend developer and frontend team lead specializing in React.js and Next.js."
       />
+      <meta itemProp="image" content="https://i.ibb.co/YjfxyL1/unnamed2.jpg" />
+
+      <meta property="og:url" content="https://www.alinavidi.dev" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Ali Navidi | Frontend Developer" />
+      <meta
+        property="og:description"
+        content="Meet Ali Navidi, a skilled frontend developer and frontend team lead specializing in React.js and Next.js."
+      />
+      <meta
+        property="og:image"
+        content="https://i.ibb.co/YjfxyL1/unnamed2.jpg"
+      />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Ali Navidi | Frontend Developer" />
+      <meta
+        name="twitter:description"
+        content="Meet Ali Navidi, a skilled frontend developer and frontend team lead specializing in React.js and Next.js."
+      />
+      <meta
+        name="twitter:image"
+        content="https://i.ibb.co/YjfxyL1/unnamed2.jpg"
+      />
+
       <meta name="keywords" content="developer, frontend, reactjs, nextjs" />
-      <title>Ali Navidi | Frontend Developer</title>
+
       <link
         rel="apple-touch-icon"
         sizes="180x180"
