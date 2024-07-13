@@ -14,7 +14,7 @@ const HomePage = () => {
         </div>
         <div className="title reveal">Frontend Developer</div>
         <div className="flex reveal resume-btn">
-          <Link href={"/about"}>
+          <Link href={"#about"}>
             <button className="btn secondary-btn from-top resume ">
               About Me
             </button>
