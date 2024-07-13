@@ -13,6 +13,10 @@ const HeadTags = () => {
         name="description"
         content="Meet Ali Navidi, a skilled frontend developer and frontend team lead specializing in React.js and Next.js."
       />
+      <meta
+        name="og:description"
+        content="Meet Ali Navidi, a skilled frontend developer and frontend team lead specializing in React.js and Next.js."
+      />
       <meta name="keywords" content="developer, frontend, reactjs, nextjs" />
       <title>Ali Navidi | Frontend Developer</title>
       <link
@@ -43,10 +47,10 @@ const HeadTags = () => {
         color="#5bbad5"
       />
       <meta name="msapplication-TileColor" content="#da532c" />
-      <meta name="theme-color" content="#030a17" />
+      <meta name="theme-color" content="#fff" />
       <link rel="shortcut icon" href="https://alinavidi.dev/favicon.ico" />
       <link rel="manifest" href="/manifest.json" />
-      <meta name="theme-color" content="#030a17" />
+      <meta name="theme-color" content="#fff" />
     </Head>
   );
 };
