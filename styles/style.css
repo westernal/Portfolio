@@ -520,7 +520,7 @@ html {
   margin: 10px 0;
   max-width: 300px;
   line-height: 25px;
-  text-align: justify;
+  text-align: left;
 }
 
 #project-image {
@@ -818,13 +818,17 @@ ul a.active {
   border-radius: 20px;
   padding: 20px;
   color: var(--text-main-color);
-  text-align: justify;
+  text-align: left;
   height: 100%;
 }
 
 .testimonial-img img {
   border-radius: 50%;
   object-fit: cover;
+}
+
+.testimonial-info p {
+  line-height: 22px;
 }
 
 .testimonial {
