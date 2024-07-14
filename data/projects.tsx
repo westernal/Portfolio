@@ -14,11 +14,7 @@ export const projects: Project[] = [
     image: {
       website: "/Images/westernal-web.png",
     },
-    link: {
-      website: "https://www.westernal.net/",
-      documentation: "https://github.com/westernal/Westernal-Frontend#readme",
-      gitHub: "https://github.com/westernal/Westernal-Frontend",
-    },
+    link: "https://github.com/westernal/Westernal-Frontend#readme",
     color: "#9d38fc",
   },
   {
@@ -34,9 +30,7 @@ export const projects: Project[] = [
     image: {
       website: "/Images/cinema-web.png",
     },
-    link: {
-      gitHub: "https://github.com/westernal/Cinema",
-    },
+    link: "https://github.com/westernal/Cinema",
     color: "#1e2130",
   },
   {
@@ -52,10 +46,7 @@ export const projects: Project[] = [
     image: {
       website: "/Images/sartel-web.png",
     },
-    link: {
-      website: "https://sari-sartel-westernal.vercel.app/",
-      gitHub: "https://github.com/westernal/sari-sartel",
-    },
+    link: "https://sari-sartel-westernal.vercel.app/",
     color: "#212121",
   },
   {
@@ -71,29 +62,7 @@ export const projects: Project[] = [
     image: {
       website: "/Images/dashboard-web.png",
     },
-    link: {
-      website: "https://dashoard.vercel.app/",
-      gitHub: "https://github.com/westernal/Dashboard",
-    },
+    link: "https://github.com/westernal/Dashboard",
     color: "linear-gradient(45deg, #365eff, #fc6ebc)",
-  },
-  {
-    id: 4,
-    title: "Tic Tac Toe",
-    myRole: {
-      frontEnd: true,
-      backEnd: false,
-      design: false,
-    },
-    description:
-      "Tic Tac Toe single player game against cpu using React.js, TailwindCSS and Redux-toolkit.",
-    image: {
-      website: "/Images/tic-tac-toe.png",
-    },
-    link: {
-      website: "https://tick-tac-toe-five.vercel.app/",
-      gitHub: "https://github.com/westernal/Tick-Tac-Toe",
-    },
-    color: "rgb(30 41 59)",
   },
 ];

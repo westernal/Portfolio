@@ -8,7 +8,7 @@ const Projects = () => {
     <section className=" projects" id="projects">
       <Heading text="Recent Projects" />
 
-      <section className="my-projects blog-list">
+      <section className=" blog-list">
         {projects.map((project: Project) => (
           <ProjectItem project={project} key={project.id} />
         ))}

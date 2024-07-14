@@ -11,11 +11,7 @@ export interface Project {
     logo?: string;
     website: string;
   };
-  link: {
-    website?: string;
-    documentation?: string;
-    gitHub: string;
-  };
+  link: string;
   color: string;
 }
 

@@ -1,69 +1,42 @@
 import Image from "next/image";
 import { Project } from "../../interfaces/Interfaces";
+import Tag from "../shared/Tag";
+import Link from "next/link";
 
 const ProjectItem = ({ project }: { project: Project }) => {
   return (
-    <article
-      className={`project blog-item reveal ${
+    <Link
+      className={` reveal ${
         project.id % 2 == 0 ? "left-reveal" : "right-reveal"
       }`}
+      href={project.link}
       id={`project${project.id}`}
+      target="_blank"
     >
-      <div className="project-image">
-        <Image
-          src={project.image.website}
-          width={322.8}
-          height={150}
-          id="project-image"
-          alt={`${project.title}'s image`}
-        />
-      </div>
-      <div className="project-info">
-        <div className="project-title">
-          <div className="project-color"></div>
-          <h3>{project.title}</h3>
-          <p id="role">
-            {project.myRole.frontEnd && "FRONTEND"}
-            {project.myRole.backEnd && " | BACKEND"}
-            {project.myRole.design && " | DESIGN"}
-          </p>
+      <article className="project blog-item">
+        <div className="project-image">
+          <Image
+            src={project.image.website}
+            fill
+            id="project-image"
+            alt={`${project.title}'s image`}
+            style={{ objectFit: "cover" }}
+          />
         </div>
-        <div className="flex" style={{ alignItems: "baseline" }}>
+        <div className="project-info">
+          <div className="project-title">
+            <h3>{project.title}</h3>
+            <div id="role" className="flex">
+              {project.myRole.frontEnd && <Tag content={"FRONTEND"} />}
+              {project.myRole.backEnd && <Tag content={"BACKEND"} />}
+              {project.myRole.design && <Tag content={"DESIGN"} />}
+            </div>
+          </div>
+
           <p id="project-description">{project.description}</p>
         </div>
-        <section className="project-links">
-          <a
-            href={project.link.gitHub}
-            className="btn secondary-btn from-top flex"
-            target="_blank"
-          >
-            <Image
-              src={"/Images/github.svg"}
-              width={20}
-              height={20}
-              alt="GitHub"
-            />
-            GitHub
-          </a>
-
-          {project.link.website && (
-            <a
-              href={project.link.website}
-              className="btn secondary-btn from-top flex"
-              target="_blank"
-            >
-              <Image
-                src={"/Images/Website.svg"}
-                width={20}
-                height={20}
-                alt="Website"
-              />
-              Website
-            </a>
-          )}
-        </section>
-      </div>
-    </article>
+      </article>
+    </Link>
   );
 };
 
