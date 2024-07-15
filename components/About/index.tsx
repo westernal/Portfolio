@@ -13,7 +13,7 @@ const About = () => {
         <div className="about-info">
           <div className="about-img">
             <Image
-              src={"/Images/Me.PNG"}
+              src={"/Images/IMG_5179.png"}
               width={300}
               height={300}
               alt="my picture"
