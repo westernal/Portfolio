@@ -15,7 +15,7 @@ const About = () => {
             <Image
               src={"/Images/IMG_5179.png"}
               width={300}
-              height={300}
+              height={350}
               alt="my picture"
             />
           </div>
