@@ -19,6 +19,22 @@ export const projects: Project[] = [
   },
   {
     id: 1,
+    title: "ChemAssist",
+    myRole: {
+      frontEnd: true,
+      backEnd: false,
+      design: false,
+    },
+    description:
+      "AI Enabled IUCLID6 Submissions, Save time and effort in IUCLID submissions with ChemAssist by utilizing the power of artificial intelligence to automate data entry, It's a platform, and it also has a website for buying subscriptions, both built using Next.js and TypeScript.",
+    image: {
+      website: "/Images/ChemAssist.png",
+    },
+    link: "https://www.chemassist.ai/",
+    color: "linear-gradient(45deg, #365eff, #fc6ebc)",
+  },
+  {
+    id: 2,
     title: "Cinema",
     myRole: {
       frontEnd: true,
@@ -34,7 +50,7 @@ export const projects: Project[] = [
     color: "#1e2130",
   },
   {
-    id: 2,
+    id: 3,
     title: "Sartel",
     myRole: {
       frontEnd: true,
@@ -48,21 +64,5 @@ export const projects: Project[] = [
     },
     link: "https://sari-sartel-westernal.vercel.app/",
     color: "#212121",
-  },
-  {
-    id: 3,
-    title: "Dashboard",
-    myRole: {
-      frontEnd: true,
-      backEnd: false,
-      design: true,
-    },
-    description:
-      "An admin dashboard website and PWA built with Next.js and Chart.js to manage website data and content.",
-    image: {
-      website: "/Images/dashboard-web.png",
-    },
-    link: "https://github.com/westernal/Dashboard",
-    color: "linear-gradient(45deg, #365eff, #fc6ebc)",
   },
 ];
