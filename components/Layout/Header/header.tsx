@@ -104,7 +104,7 @@ const Header = () => {
       <nav id="navbar">
         <ul>
           <li>
-            <ScrollLink activeClass="active" spy to="home-page">
+            <ScrollLink activeClass="active" spy to="home-page" href="/">
               Home
             </ScrollLink>
           </li>
