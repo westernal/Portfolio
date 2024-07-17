@@ -758,7 +758,8 @@ ul a.active {
 
 .about-info p {
   color: var(--main-color);
-  line-height: 22px;
+  line-height: 26px;
+  font-size: 20px;
 }
 
 .about-img img {
