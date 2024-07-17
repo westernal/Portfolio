@@ -4,7 +4,7 @@ const BurgerMenu = () => {
     document.getElementById("navbar")?.classList.toggle("show");
   };
   return (
-    <button className="burger" onClick={openNavBar}>
+    <button className="burger" aria-label="Burger Menu" onClick={openNavBar}>
       <span></span>
     </button>
   );
