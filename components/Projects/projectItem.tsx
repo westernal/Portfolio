@@ -6,9 +6,7 @@ import Link from "next/link";
 const ProjectItem = ({ project }: { project: Project }) => {
   return (
     <Link
-      className={` reveal ${
-        project.id % 2 == 0 ? "left-reveal" : "right-reveal"
-      }`}
+      className={` reveal left-reveal`}
       href={project.link}
       id={`project${project.id}`}
       target="_blank"
