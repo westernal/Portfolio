@@ -11,6 +11,10 @@ module.exports = withPWA({
   images: {
     domains: ["localhost", "res.cloudinary.com", "westernal.me"],
   },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 });
 
 const nextConfig = {
