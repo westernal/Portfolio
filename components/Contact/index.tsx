@@ -18,7 +18,7 @@ const Socials = () => {
             >
               <Image
                 src={socialMedia.imageUrl}
-                alt={socialMedia.name}
+                alt={`${socialMedia.name} logo`}
                 title={socialMedia.name}
                 id={socialMedia.name}
                 width={30}

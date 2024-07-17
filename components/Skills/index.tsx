@@ -9,7 +9,12 @@ const Skills = () => {
       <div className="skills-list reveal">
         {skills.map((item, i) => (
           <a href={item.link} className="skill-item" key={i}>
-            <Image width={35} height={35} src={item.src} alt={item.name} />
+            <Image
+              width={35}
+              height={35}
+              src={item.src}
+              alt={`${item.name} logo`}
+            />
             <p>{item.name}</p>
           </a>
         ))}
