@@ -57,7 +57,7 @@ const About = () => {
               style={{ display: "grid", placeItems: "center" }}
             >
               <button
-                className="btn secondary-btn from-top"
+                className="btn from-top resume"
                 style={{ width: "200px", marginTop: "2rem" }}
               >
                 Hire Me
