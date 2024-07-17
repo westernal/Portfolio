@@ -13,7 +13,7 @@ const HomePage = () => {
           </span>
         </div>
         <div className="title reveal">Frontend Developer</div>
-        <div className=" reveal resume-btn">
+        <div className=" reveal resume-btn column-mobile">
           <Link href="/Ali Navidi Resume.pdf" download={true} id="resume">
             <button className="btn secondary-btn  from-top resume ">
               Resume

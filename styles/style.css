@@ -137,6 +137,8 @@ a {
   font-family: var(--font-main);
   z-index: 1;
   border-radius: 4px;
+  min-width: 250px;
+  width: 100%;
 }
 
 .secondary-btn {
@@ -157,10 +159,11 @@ a {
   max-width: 600px;
   margin: 0 auto;
   margin-top: 2rem;
+  width: 100%;
 }
 
-.resume-btn button {
-  width: 200px;
+.resume-btn a {
+  width: 100%;
 }
 
 .btn:before,
@@ -189,6 +192,11 @@ a {
 
 .secondary-btn:hover::after {
   background: var(--accent-color);
+  color: var(--main-color);
+}
+
+.dark-hover:hover::after {
+  background: var(--text-main-color);
   color: var(--main-color);
 }
 
@@ -408,6 +416,9 @@ html {
 
 .more-button {
   margin-top: 50px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
 }
 
 .blog-more a:hover {
@@ -1040,6 +1051,10 @@ ul a.active {
 
   .column-mobile {
     flex-direction: column;
+  }
+
+  .more-button {
+    width: 100%;
   }
 
   .column-mobile button,
