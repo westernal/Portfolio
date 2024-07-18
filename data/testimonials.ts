@@ -10,6 +10,14 @@ export const testimonials: Testimonial[] = [
     role: "Software Engineer",
   },
   {
+    id: 4,
+    name: "Sagita IP",
+    avatar: "/Images/Sagita.jpg",
+    description:
+      "Ali is a highly skilled Front End Lead with a strong technical background. He consistently delivers quality work on time and is meticulous in maintaining the system's integrity. I should say, a respected team player, he collaborates effectively across divisions and fosters a positive team environment.",
+    role: "UI/UX Designer",
+  },
+  {
     id: 1,
     name: "Manuel Andaluz",
     avatar: "/Images/Manu.jpg",
