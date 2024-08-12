@@ -14,6 +14,7 @@ const Jobs = () => {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
             className={`job`}
             key={job.id}
           >

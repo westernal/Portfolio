@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const HomePage = () => {
   return (
-    <section className="about center active-page" id="home-page">
+    <section className="about center" id="home-page">
       <section className="info ">
         <div className="flex name">
           <motion.span

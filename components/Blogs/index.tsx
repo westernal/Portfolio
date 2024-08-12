@@ -13,6 +13,7 @@ const Blog = () => {
           posts.map((post, index) => {
             return (
               <motion.a
+                viewport={{ once: true }}
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
