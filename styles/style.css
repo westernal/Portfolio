@@ -152,7 +152,6 @@ a {
 }
 
 .resume-btn {
-  transition-delay: 2.5s !important;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -822,7 +821,6 @@ ul a.active {
 
 .title {
   color: var(--text-secondary-color);
-  transition-delay: 2.3s !important;
   text-align: center;
   font-size: 1.3rem;
   margin-top: 10px;
