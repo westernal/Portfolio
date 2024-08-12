@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { jobs } from "../../data/jobs";
 import Heading from "../shared/Heading";
+import { motion } from "framer-motion";
 
 const Jobs = () => {
   return (
@@ -8,11 +9,12 @@ const Jobs = () => {
       <Heading text="Work Experience" />
 
       <div className="job-list">
-        {jobs.map((job) => (
-          <div
-            className={`job reveal  ${
-              job.id % 2 == 0 ? "left-reveal" : "right-reveal"
-            }`}
+        {jobs.map((job, index) => (
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className={`job`}
             key={job.id}
           >
             <div className="job-profile">
@@ -34,7 +36,7 @@ const Jobs = () => {
             <div className="date">
               {job.duration.from} - {job.duration.to}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

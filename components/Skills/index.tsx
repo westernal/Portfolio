@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <section className="skills" id="skills">
       <Heading text="Skills" />
-      <div className="skills-list reveal">
+      <div className="skills-list ">
         {skills.map((item, i) => (
           <a href={item.link} className="skill-item" key={i}>
             <Image

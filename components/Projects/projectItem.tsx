@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { Project } from "../../interfaces/Interfaces";
 import Tag from "../shared/Tag";
-import Link from "next/link";
+import { motion } from "framer-motion";
 
 const ProjectItem = ({ project }: { project: Project }) => {
   return (
-    <Link
-      className={` reveal left-reveal`}
+    <motion.a
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5, delay: project.id * 0.1 }}
       href={project.link}
       id={`project${project.id}`}
       target="_blank"
@@ -34,7 +36,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
           <p id="project-description">{project.description}</p>
         </div>
       </article>
-    </Link>
+    </motion.a>
   );
 };
 

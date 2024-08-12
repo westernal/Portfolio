@@ -2,6 +2,7 @@ import Image from "next/image";
 import formatDate from "../../functions/formatDate";
 import posts from "../../data/blogs.json" assert { type: "json" };
 import Heading from "../shared/Heading";
+import { motion } from "framer-motion";
 
 const Blog = () => {
   return (
@@ -9,12 +10,14 @@ const Blog = () => {
       <Heading text="Blogs" />
       <section className="blog-list">
         {posts &&
-          posts.map((post) => {
+          posts.map((post, index) => {
             return (
-              <a
+              <motion.a
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 href={post.url}
                 key={post.id}
-                className="reveal left-reveal"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -42,7 +45,7 @@ const Blog = () => {
                   <strong id="blog-title">{post.title}</strong>
                   <p id="blog-description">{post.description}</p>
                 </article>
-              </a>
+              </motion.a>
             );
           })}
       </section>

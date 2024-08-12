@@ -6,7 +6,7 @@ import Testimonials from "./Testimonials";
 const About = () => {
   return (
     <section className="about about-page center active-page" id="about">
-      <section className="about-card reveal ">
+      <section className="about-card ">
         <div className="about-me">
           <Heading text="About Me" style={{ color: "white" }} />
         </div>

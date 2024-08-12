@@ -6,7 +6,7 @@ const Socials = () => {
   return (
     <section className="socials" id="contact">
       <Heading text="Be in touch with me" />
-      <section className="social-icons skills-list reveal">
+      <section className="social-icons skills-list">
         {socialMedias.map((socialMedia, index) => {
           return (
             <a
