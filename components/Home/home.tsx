@@ -41,7 +41,7 @@ const HomePage = () => {
           viewport={{ once: true }}
           className="  resume-btn column-mobile"
         >
-          <Link href="/Ali Navidi Resume.pdf" download={true} id="resume">
+          <Link href="/Ali Navidi Resume.pdf" target="_blank" id="resume">
             <button className="btn secondary-btn  from-top resume ">
               Resume
             </button>
