@@ -262,13 +262,13 @@ a {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   display: grid;
-  max-width: 600px;
   margin-block: auto;
   margin: 0 auto;
   border-radius: 10px;
   width: 100%;
   justify-content: space-evenly;
   column-gap: 10px;
+  max-width: 800px;
   padding: 20px;
   font-size: 0.9rem;
   align-items: center;
@@ -277,6 +277,7 @@ a {
 
 .contacts-list {
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 600px;
 }
 
 .skills-list p {
