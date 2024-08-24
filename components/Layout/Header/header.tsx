@@ -142,9 +142,7 @@ const Header = () => {
       </nav>
 
       <Link href={"/"}>
-        <h1 className="reveal" id="fullname">
-          ALI
-        </h1>
+        <h1 id="fullname">ALI</h1>
       </Link>
     </header>
   );
