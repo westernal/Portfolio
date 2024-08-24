@@ -266,7 +266,6 @@ a {
   margin-block: auto;
   margin: 0 auto;
   border-radius: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 100%;
   justify-content: space-evenly;
   column-gap: 10px;
@@ -1009,10 +1008,6 @@ ul a.active {
     margin-top: 0;
   }
 
-  .skills-list {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   .social-icons {
     grid-template-columns: auto auto;
   }
@@ -1025,6 +1020,5 @@ ul a.active {
 
   .skills-list {
     column-gap: 0;
-    grid-template-columns: 1fr 1fr;
   }
 }
