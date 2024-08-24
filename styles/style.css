@@ -311,12 +311,14 @@ a {
   padding: 1rem;
   border-radius: 50%;
   background-color: var(--secondary-color);
+  display: flex;
 }
 
 .control-btns button {
   padding: 0;
   border-radius: 50%;
   background-color: transparent;
+  display: flex;
   border: none;
 }
 
