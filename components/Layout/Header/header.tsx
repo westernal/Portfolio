@@ -54,7 +54,7 @@ const Header = () => {
     <header id="header">
       <BurgerMenu />
 
-      <div className="header-icons flex reveal">
+      <div className="header-icons flex">
         <a
           href="mailto:ali_navidi24@yahoo.com"
           className="social-icon"
