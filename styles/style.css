@@ -336,6 +336,7 @@ a {
   background: var(--secondary-gradient);
   border-radius: 2rem 2rem 0 0;
   margin-top: 3rem;
+  position: relative;
 }
 
 html {
@@ -395,6 +396,20 @@ html {
   position: relative;
   top: 0;
   color: var(--text-main-color);
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-main-color);
+  background: var(--secondary-gradient);
+  bottom: 1rem;
+  padding-inline: 1rem;
+  width: 100%;
+}
+
+.footer-info p {
+  font-size: 14px;
 }
 
 .skill-item:hover,

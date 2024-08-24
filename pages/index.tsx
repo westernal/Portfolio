@@ -1,6 +1,7 @@
 import About from "../components/About";
 import Blogs from "../components/Blogs";
 import Socials from "../components/Contact";
+import FooterInfo from "../components/FooterInfo";
 import HomePage from "../components/Home/home";
 import Jobs from "../components/Jobs";
 import Projects from "../components/Projects";
@@ -16,6 +17,7 @@ const Home = () => {
       <Projects />
       <Blogs />
       <Socials />
+      <FooterInfo />
     </>
   );
 };
