@@ -10,6 +10,16 @@
   --text-main-color: #333333;
   --text-secondary-color: #666666;
   --accent-color: #007bff;
+  --gradient-color: linear-gradient(
+    90deg,
+    hsla(280, 63%, 33%, 1) 0%,
+    hsla(248, 90%, 25%, 1) 100%
+  );
+  --secondary-gradient: linear-gradient(
+    90deg,
+    hsla(233, 100%, 90%, 1) 0%,
+    hsla(0, 0%, 89%, 1) 100%
+  );
   --secondary-accent-color: #004466;
   --highlight-color: #2ecc71;
 }
@@ -25,7 +35,7 @@ html {
 
 body {
   overflow-x: hidden;
-  background-color: var(--main-color);
+  background: var(--main-color);
   margin: 0;
 }
 
@@ -40,7 +50,7 @@ main {
 }
 
 #last-name {
-  color: var(--accent-color);
+  background: var(--gradient-color);
 }
 
 .flex {
@@ -92,8 +102,18 @@ h2 {
   margin-bottom: 2rem;
   font-size: 34px;
   text-transform: uppercase;
-  color: var(--accent-color);
+  background: var(--gradient-color);
   padding-bottom: 0 !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-heading {
+  background: var(--secondary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .error-page {
@@ -131,7 +151,7 @@ a {
   transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1) !important;
   cursor: pointer;
   user-select: none;
-  background-color: var(--text-main-color);
+  background: var(--gradient-color);
   border: 0;
   font-family: var(--font-main);
   z-index: 1;
@@ -141,12 +161,12 @@ a {
 }
 
 .secondary-btn {
-  background-color: var(--secondary-color);
+  background: var(--secondary-gradient);
   color: var(--text-main-color);
 }
 
 .about-page {
-  background-color: var(--accent-color);
+  background: var(--gradient-color);
   border-radius: 2rem;
 }
 
@@ -189,7 +209,7 @@ a {
 }
 
 .secondary-btn:hover::after {
-  background: var(--accent-color);
+  background: var(--text-secondary-color);
   color: var(--main-color);
 }
 
@@ -673,7 +693,7 @@ ul a {
 
 ul a.active {
   background-position: left;
-  background-color: var(--accent-color);
+  background: var(--gradient-color);
   color: var(--main-color);
 }
 
@@ -815,7 +835,10 @@ ul a.active {
 }
 
 .last-name {
-  color: var(--accent-color);
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title {
@@ -847,7 +870,7 @@ ul a.active {
 
 .tag {
   padding: 2px 5px;
-  background-color: var(--accent-color);
+  background: var(--gradient-color);
   color: var(--main-color);
   border-radius: 4px;
   font-size: 12px;

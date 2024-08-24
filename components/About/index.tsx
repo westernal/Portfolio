@@ -8,36 +8,15 @@ const About = () => {
     <section className="about about-page center active-page" id="about">
       <section className="about-card ">
         <div className="about-me">
-          <Heading text="About Me" style={{ color: "white" }} />
+          <Heading text="About Me" className="about-heading" />
         </div>
         <div className="about-info">
-          <div className="about-img">
-            <Image
-              src={"/Images/IMG_5179.png"}
-              width={300}
-              height={350}
-              alt="my picture"
-            />
-          </div>
           <p>
-            Hello! I'm Ali Navidi, a frontend developer with over three years of
-            experience. I specialize in React.js and Next.js, leveraging my
-            background in Computer Engineering to create efficient, scalable web
-            applications.
-          </p>
-
-          <p>
-            In my career, I've had the opportunity to lead teams through complex
-            projects, ensuring we deliver top-notch solutions that meet and
-            exceed client expectations. I thrive on problem-solving and
-            optimizing performance to provide exceptional user experiences.
-          </p>
-
-          <p>
-            Thank you for visiting my website! If you're interested in
-            discussing potential opportunities or collaborations, feel free to
-            reach out. Let's connect and create something extraordinary
-            together!
+            Frontend Developer with 3+ years of experience building responsive
+            web apps using Next.js and React. Led teams, optimized performance,
+            and delivered scalable solutions. Also familiar with backend
+            concepts, enabling better cross-functional collaboration and project
+            outcomes.
           </p>
 
           <div className="flex about-btns column-mobile">

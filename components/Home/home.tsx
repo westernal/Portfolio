@@ -32,7 +32,7 @@ const HomePage = () => {
           viewport={{ once: true }}
           className="title "
         >
-          Frontend Developer
+          Frontend Developer | I bring lines of code to life
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
