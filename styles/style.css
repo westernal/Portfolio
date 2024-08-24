@@ -27,7 +27,6 @@ body {
   overflow-x: hidden;
   background-color: var(--main-color);
   margin: 0;
-  background-image: url(/Images/stars.svg);
 }
 
 #fullname {
