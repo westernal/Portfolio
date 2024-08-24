@@ -275,6 +275,10 @@ a {
   color: var(--text-main-color);
 }
 
+.contacts-list {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .skills-list p {
   margin: 10px 0 0 0;
 }
@@ -1020,5 +1024,9 @@ ul a.active {
 
   .skills-list {
     column-gap: 0;
+  }
+
+  .contacts-list {
+    grid-template-columns: 1fr;
   }
 }

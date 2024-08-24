@@ -7,7 +7,7 @@ const Socials = () => {
     <section className="socials" id="contact">
       <div className="socials-layout">
         <Heading text="Be in touch with me" />
-        <section className="social-icons skills-list">
+        <section className="social-icons skills-list contacts-list">
           {socialMedias.map((socialMedia, index) => {
             return (
               <a
