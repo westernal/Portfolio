@@ -82,10 +82,8 @@ header {
 .projects,
 .blog,
 .jobs,
-.skills,
 .socials,
 .error-page {
-  visibility: visible;
   padding: 3rem 10%;
   max-height: unset;
   min-height: 100vh;
@@ -93,6 +91,10 @@ header {
   overflow-y: hidden;
   overflow: hidden;
   color: var(--text-main-color);
+}
+
+.skills {
+  padding: 3rem 10%;
 }
 
 .about h1,
@@ -268,7 +270,6 @@ a {
   width: 100%;
   justify-content: space-evenly;
   column-gap: 10px;
-  max-width: 800px;
   padding: 20px;
   font-size: 0.9rem;
   align-items: center;

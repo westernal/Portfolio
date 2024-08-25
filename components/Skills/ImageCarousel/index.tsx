@@ -1,17 +1,28 @@
-import { motion } from "framer-motion";
-import { useRef } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
 import { skills } from "../../../data/skills";
 
 export default function ImageCarousel() {
-  const carouselRef = useRef<any>();
+  const controls = useAnimation();
 
   // Duplicate the skills array to create a smooth loop
-  const loopingSkills = [...skills, ...skills];
+  const loopingSkills = [...skills, ...skills, ...skills, ...skills];
+
+  useEffect(() => {
+    // Start the animation when the component mounts
+    controls.start({
+      x: ["0%", "-50%"],
+      transition: {
+        duration: 10, // Adjust duration to control speed
+        repeat: Infinity,
+        ease: "linear",
+      },
+    });
+  }, [controls]);
 
   return (
     <div
-      ref={carouselRef}
       style={{
         overflow: "hidden",
         width: "100%",
@@ -23,14 +34,18 @@ export default function ImageCarousel() {
           display: "flex",
           whiteSpace: "nowrap",
         }}
-        animate={{
-          x: ["0%", "-50%"], // Move from 0% to -50% of the total width
-        }}
-        transition={{
-          duration: 5, // Adjust duration to control speed
-          repeat: Infinity,
-          ease: "linear",
-        }}
+        animate={controls}
+        onHoverStart={() => controls.stop()} // Stop the animation on hover
+        onHoverEnd={() =>
+          controls.start({
+            x: ["0%", "-50%"], // Restart animation when hover ends
+            transition: {
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear",
+            },
+          })
+        }
       >
         {loopingSkills.map((item, i) => (
           <a

@@ -49,20 +49,4 @@ export const projects: Project[] = [
     link: "https://github.com/westernal/Cinema",
     color: "#1e2130",
   },
-  {
-    id: 3,
-    title: "Sartel",
-    myRole: {
-      frontEnd: true,
-      backEnd: false,
-      design: true,
-    },
-    description:
-      "Sartel is a website and PWA selling mobile phones and accessories. built with Next.js and TypeScript.",
-    image: {
-      website: "/Images/sartel-web.png",
-    },
-    link: "https://sari-sartel-westernal.vercel.app/",
-    color: "#212121",
-  },
 ];
