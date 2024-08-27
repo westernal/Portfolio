@@ -14,7 +14,7 @@ export const projects: Project[] = [
     image: {
       website: "/Images/westernal-web.png",
     },
-    link: "https://github.com/westernal/Westernal-Frontend#readme",
+    link: "https://www.westernal.net/ali",
     color: "#9d38fc",
   },
   {
