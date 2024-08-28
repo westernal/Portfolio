@@ -1,3 +1,4 @@
+// components/Loader.js
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -36,26 +37,28 @@ const languages = [
   "안녕하세요",
 ];
 
-export default function Loader() {
+export default function Loader({ onFinish }: { onFinish: any }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
     if (currentIndex < languages.length - 1) {
       const timer = setTimeout(() => setCurrentIndex(currentIndex + 1), 300);
       return () => clearTimeout(timer);
     } else {
-      const timer = setTimeout(() => setIsFinished(true), 500);
+      const timer = setTimeout(() => {
+        if (onFinish) onFinish(); // Call onFinish to notify the parent
+      }, 800); // Match this duration to the loader's transition time
       return () => clearTimeout(timer);
     }
-  }, [currentIndex]);
+  }, [currentIndex, onFinish]);
 
   return (
     <motion.div
       className="loader-container"
       variants={loaderVariants}
       initial="visible"
-      animate={isFinished ? "hidden" : "visible"}
+      animate="visible"
+      exit="hidden"
       style={{
         position: "fixed",
         top: 0,
