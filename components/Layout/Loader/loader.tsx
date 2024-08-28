@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 const loaderVariants = {
   visible: {
     transition: {
-      staggerChildren: 1, // Controls the delay between each word
+      staggerChildren: 1,
     },
   },
   hidden: {
+    y: "-100%", // Move the loader upwards off the screen
     transition: {
-      staggerChildren: 0.3,
-      when: "afterChildren",
+      duration: 0.8,
+      ease: "easeInOut",
     },
   },
 };
@@ -22,7 +23,7 @@ const textVariants = {
     y: 0,
     transition: { duration: 0.3, ease: "easeInOut" },
   },
-  exit: { opacity: 0, y: -20, transition: { duration: 0.3 } }, // Exit animation
+  exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
 };
 
 const languages = [
@@ -33,15 +34,18 @@ const languages = [
   "Ciao",
   "Hallo",
   "안녕하세요",
-  "こんにちは",
 ];
 
 export default function Loader() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
     if (currentIndex < languages.length - 1) {
-      const timer = setTimeout(() => setCurrentIndex(currentIndex + 1), 300); // 1 second delay
+      const timer = setTimeout(() => setCurrentIndex(currentIndex + 1), 300);
+      return () => clearTimeout(timer);
+    } else {
+      const timer = setTimeout(() => setIsFinished(true), 500);
       return () => clearTimeout(timer);
     }
   }, [currentIndex]);
@@ -51,7 +55,7 @@ export default function Loader() {
       className="loader-container"
       variants={loaderVariants}
       initial="visible"
-      animate="hidden"
+      animate={isFinished ? "hidden" : "visible"}
       style={{
         position: "fixed",
         top: 0,
@@ -66,7 +70,7 @@ export default function Loader() {
     >
       <AnimatePresence>
         <motion.div
-          key={languages[currentIndex]} // Use key to trigger exit and enter animation
+          key={languages[currentIndex]}
           variants={textVariants}
           initial="hidden"
           animate="visible"

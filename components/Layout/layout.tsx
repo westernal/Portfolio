@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: ReactElement }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2500);
+    setTimeout(() => setLoading(false), 3100);
   }, []);
   return loading ? (
     <Loader />
