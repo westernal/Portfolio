@@ -1,24 +1,35 @@
-import { useState, useEffect } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 
 const TypingAnimation = ({ text }: { text: string }) => {
-  const [displayedText, setDisplayedText] = useState<string>("");
+  const [displayedText, setDisplayedText] = useState("");
+
+  const animateText = useCallback(() => {
+    let index = 0;
+    return () => {
+      setDisplayedText(text.slice(0, index + 1));
+      index++;
+    };
+  }, [text]);
 
   useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      setDisplayedText((prev) => prev + text.charAt(index));
-      index++;
-      if (index === text.length) clearInterval(timer);
-    }, 25); // Adjusted to make it faster
+    setDisplayedText("");
+    const animate = animateText();
+    const intervalId = setInterval(() => {
+      animate();
+      if (displayedText.length === text.length) {
+        clearInterval(intervalId);
+      }
+    }, 25);
 
-    return () => clearInterval(timer);
-  }, [text]);
+    return () => clearInterval(intervalId);
+  }, [text, animateText]);
 
   return (
     <motion.p
       animate={{ opacity: [0, 1], y: [20, 0] }}
-      transition={{ duration: 0.1 }} // Faster transition
+      transition={{ duration: 0.3 }}
     >
       {displayedText}
     </motion.p>
