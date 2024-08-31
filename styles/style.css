@@ -352,6 +352,18 @@ html {
   fill: black;
 }
 
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--gradient-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #dev svg rect {
   transition: 0.3s;
   fill: var(--text-main-color);
