@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 const ProjectItem = ({ project }: { project: Project }) => {
   return (
     <motion.a
-      initial={{ x: -100, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay: project.id * 0.1 }}
+      initial={{ y: 200, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, delay: project.id * 0.2 }}
       viewport={{ once: true }}
       href={project.link}
       id={`project${project.id}`}

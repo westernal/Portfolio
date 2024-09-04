@@ -495,7 +495,6 @@ html {
   border-radius: 10px;
   transition: ease 0.3s;
   top: 0;
-  padding: 10px;
   position: relative;
 }
 
@@ -537,7 +536,7 @@ html {
 }
 
 #post-image {
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
 }
 
 .reactions {
@@ -588,7 +587,7 @@ html {
 }
 
 #project-image {
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
 }
 
 .next-button {
@@ -597,6 +596,7 @@ html {
 }
 
 .project-info {
+  padding: 10px;
   display: grid;
   grid-template-rows: auto 1fr;
 }
@@ -781,6 +781,10 @@ ul a.active {
 .blog-image {
   position: relative;
   height: 200px;
+}
+
+.blog-info {
+  padding: 10px;
 }
 
 .project-image {

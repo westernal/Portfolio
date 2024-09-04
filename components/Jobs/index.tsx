@@ -13,7 +13,7 @@ const Jobs = () => {
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
             viewport={{ once: true }}
             className={`job`}
             key={job.id}

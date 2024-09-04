@@ -14,9 +14,9 @@ const Blog = () => {
             return (
               <motion.a
                 viewport={{ once: true }}
-                initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ y: 200, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
                 href={post.url}
                 key={post.id}
                 target="_blank"
@@ -32,19 +32,21 @@ const Blog = () => {
                       style={{ objectFit: "cover" }}
                     />
                   </div>
-                  <div className="blog-avatar ">
-                    <Image
-                      width={40}
-                      height={40}
-                      src={post.user.profile_image}
-                      alt="avatar"
-                      id="avatar"
-                    />
-                    <p> Ali Navidi</p>
+                  <div className="blog-info">
+                    <div className="blog-avatar ">
+                      <Image
+                        width={40}
+                        height={40}
+                        src={post.user.profile_image}
+                        alt="avatar"
+                        id="avatar"
+                      />
+                      <p> Ali Navidi</p>
+                    </div>
+                    <p id="blog-date">{formatDate(post.published_at)}</p>
+                    <strong id="blog-title">{post.title}</strong>
+                    <p id="blog-description">{post.description}</p>
                   </div>
-                  <p id="blog-date">{formatDate(post.published_at)}</p>
-                  <strong id="blog-title">{post.title}</strong>
-                  <p id="blog-description">{post.description}</p>
                 </article>
               </motion.a>
             );
