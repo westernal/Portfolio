@@ -1,8 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
-import Image from "next/image";
 import Heading from "../shared/Heading";
 import Testimonials from "./Testimonials";
-import TypingAnimation from "../Animations/TypingAnimation";
 
 const About = () => {
   return (
@@ -12,13 +9,13 @@ const About = () => {
           <Heading text="About Me" className="about-heading" />
         </div>
         <div className="about-info">
-          <TypingAnimation
-            text="Frontend Developer with 3+ years of experience building responsive
+          <p>
+            Frontend Developer with 3+ years of experience building responsive
             web apps using Next.js and React. Led teams, optimized performance,
             and delivered scalable solutions. Also familiar with backend
             concepts, enabling better cross-functional collaboration and project
-            outcomes."
-          />
+            outcomes.
+          </p>
 
           <div className="flex about-btns column-mobile">
             <a
