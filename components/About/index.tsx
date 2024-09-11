@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Heading from "../shared/Heading";
 import Testimonials from "./Testimonials";
 
