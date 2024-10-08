@@ -2,6 +2,14 @@ import { Testimonial } from "../interfaces/Interfaces";
 
 export const testimonials: Testimonial[] = [
   {
+    id: 3,
+    name: "Ankit Garg",
+    avatar: "/Images/Ankit.jpg",
+    description:
+      "It has been a pleasure to work with Ali. Extremely talented, professional, trustworthy and going out of the way to solve problems. He successfully delivered a complex frontend product development project for our portfolio company Celsius, a LLM production pipeline management platform. Wish him lots of success in his career.",
+    role: "CEO of Silver Brain AI",
+  },
+  {
     id: 0,
     name: "Aygen Yucel",
     avatar: "/Images/Aygen.jpg",
@@ -32,5 +40,13 @@ export const testimonials: Testimonial[] = [
     description:
       "Beyond his technical skills, Ali brings a contagious positive energy to the workplace. His optimistic outlook and passion for his work are evident in every interaction, and he is always willing to lend a helping hand or share his insights. This attitude not only boosts team morale but also fosters a collaborative and supportive environment where everyone can thrive.",
     role: "Frontend Developer",
+  },
+  {
+    id: 5,
+    name: "Ashen Jayarathne",
+    avatar: "/Images/Ashen.jpg",
+    description:
+      "I had the pleasure of working with Mr. Ali Navidi during my time at Silver Brain AI AG, where he served as the frontend team lead. His technical expertise, problem-solving skills, and dedication to the team's success make him one of the most talented professionals I have encountered in my career. I highly recommend Ali for any software development role. His leadership and knowledge are truly outstanding.",
+    role: "Software Engineer",
   },
 ];
