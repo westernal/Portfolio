@@ -15,7 +15,6 @@
     rgba(241, 241, 241, 1) 0%,
     rgba(58, 58, 58, 1) 85%
   );
-  --secondary-accent-color: #004466;
   --error-color: #f44336;
   --toastify-color-dark: #1a1a1a;
 }
