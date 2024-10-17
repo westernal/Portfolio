@@ -916,6 +916,7 @@ ul a.active {
 #contact-form input,
 #contact-form textarea {
   border: none;
+  border-radius: 0;
   resize: none;
   width: 100%;
   background: transparent;
@@ -940,6 +941,7 @@ ul a.active {
   display: grid;
   place-content: center;
   width: fit-content;
+  font-weight: normal;
 }
 
 .input-wrapper {
