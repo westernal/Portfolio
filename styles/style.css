@@ -916,6 +916,7 @@ ul a.active {
 #contact-form input,
 #contact-form textarea {
   border: none;
+  font-size: 14px;
   border-radius: 0;
   resize: none;
   width: 100%;
