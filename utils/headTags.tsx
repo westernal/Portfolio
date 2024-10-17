@@ -72,10 +72,10 @@ const HeadTags = () => {
         color="#5bbad5"
       />
       <meta name="msapplication-TileColor" content="#da532c" />
-      <meta name="theme-color" content="#fff" />
+      <meta name="theme-color" content="#161616" />
       <link rel="shortcut icon" href="https://alinavidi.dev/favicon.ico" />
       <link rel="manifest" href="/manifest.json" />
-      <meta name="theme-color" content="#fff" />
+      <meta name="theme-color" content="#161616" />
     </Head>
   );
 };
