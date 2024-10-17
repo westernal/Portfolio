@@ -1,12 +1,12 @@
 import Link from "next/link";
+import Skills from "../Skills";
 
 const HomePage = () => {
   return (
     <section className="about center" id="home-page">
       <section className="info ">
         <div className="flex name">
-          <span className="first-name">ALI</span>
-          <span className="last-name">NAVIDI</span>
+          <span className="last-name">ALI NAVIDI</span>
         </div>
         <div className="title ">
           Frontend Developer | I Bring Lines of Code to Life

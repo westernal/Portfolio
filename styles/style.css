@@ -5,20 +5,15 @@
 }
 
 :root {
-  --main-color: #ffffff;
-  --secondary-color: #f2f2f2;
-  --text-main-color: #333333;
+  --main-color: #161616;
+  --secondary-color: #1a1a1a;
+  --text-main-color: #8d8d8d;
   --text-secondary-color: #666666;
   --accent-color: #007bff;
   --gradient-color: linear-gradient(
     90deg,
-    hsla(280, 63%, 33%, 1) 0%,
-    hsla(248, 90%, 25%, 1) 100%
-  );
-  --secondary-gradient: linear-gradient(
-    90deg,
-    hsla(233, 100%, 90%, 1) 0%,
-    hsla(0, 0%, 89%, 1) 100%
+    rgba(241, 241, 241, 1) 0%,
+    rgba(58, 58, 58, 1) 85%
   );
   --secondary-accent-color: #004466;
   --highlight-color: #2ecc71;
@@ -94,7 +89,7 @@ header {
 }
 
 .skills {
-  padding: 3rem 10%;
+  padding: 3rem 0 10% 0;
 }
 
 .about h1,
@@ -115,7 +110,7 @@ h2 {
 }
 
 .about-heading {
-  background: var(--secondary-gradient);
+  background: var(--gradient-color);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -156,7 +151,7 @@ a {
   transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1) !important;
   cursor: pointer;
   user-select: none;
-  background: var(--gradient-color);
+  background: var(--text-main-color);
   border: 0;
   font-family: var(--font-main);
   z-index: 1;
@@ -166,13 +161,8 @@ a {
 }
 
 .secondary-btn {
-  background: var(--secondary-gradient);
+  background: var(--secondary-color);
   color: var(--text-main-color);
-}
-
-.about-page {
-  background: var(--gradient-color);
-  border-radius: 2rem 2rem 0 0;
 }
 
 .resume-btn {
@@ -259,26 +249,24 @@ a {
 }
 
 .skills-list {
-  background: var(--secondary-gradient);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  background: var(--secondary-color);
   display: grid;
   margin-block: auto;
-  margin: 0 auto;
-  border-radius: 10px;
   width: 100%;
   justify-content: space-evenly;
   column-gap: 10px;
-  padding: 20px;
+  padding: 5rem 0;
   font-size: 0.9rem;
   align-items: center;
   color: var(--text-main-color);
 }
 
+.skills-list img {
+  filter: grayscale(100%);
+}
+
 .contacts-list {
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  max-width: 600px;
 }
 
 .skills-list p {
@@ -338,7 +326,7 @@ a {
 .socials {
   text-align: center;
   color: var(--text-secondary-color);
-  background: var(--secondary-gradient);
+  background: var(--secondary-color);
   border-radius: 2rem 2rem 0 0;
   margin-top: 3rem;
   position: relative;
@@ -358,7 +346,7 @@ html {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: var(--gradient-color);
+  background: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,7 +407,7 @@ html {
   display: flex;
   justify-content: space-between;
   color: var(--text-main-color);
-  background: var(--secondary-gradient);
+  background: var(--secondary-color);
   bottom: 1rem;
   padding-inline: 1rem;
   width: 100%;
@@ -488,11 +476,10 @@ html {
 
 .blog-item {
   text-align: left;
-  background: var(--secondary-gradient);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: var(--secondary-color);
   color: var(--text-main-color);
   height: 100%;
-  border-radius: 10px;
+  border-radius: 4px;
   transition: ease 0.3s;
   top: 0;
   position: relative;
@@ -531,8 +518,7 @@ html {
 }
 
 .blog-item:hover {
-  top: -10px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  opacity: 0.7;
 }
 
 #post-image {
@@ -640,7 +626,7 @@ nav {
 
 header svg path,
 header svg {
-  fill: var(--secondary-gradient);
+  fill: var(--text-main-color);
 }
 
 ul {
@@ -685,7 +671,7 @@ ul a {
 
 ul a.active {
   background-position: left;
-  background: var(--gradient-color);
+  background: var(--text-main-color);
   color: var(--main-color);
 }
 
@@ -764,7 +750,7 @@ ul a.active {
 }
 
 .about-info p {
-  color: var(--main-color);
+  color: var(--text-main-color);
   line-height: 26px;
   font-size: 20px;
 }
@@ -781,6 +767,7 @@ ul a.active {
 .blog-image {
   position: relative;
   height: 200px;
+  filter: grayscale(1);
 }
 
 .blog-info {
@@ -809,10 +796,10 @@ ul a.active {
 }
 
 .job {
-  background: var(--secondary-gradient);
+  background: var(--secondary-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 4px;
 }
 
 .job {
@@ -844,14 +831,14 @@ ul a.active {
 }
 
 .testimonial-card {
-  background: var(--secondary-gradient);
+  background: var(--secondary-color);
   border: 1px solid var(--secondary-color);
   max-width: 600px;
   margin-block: auto;
   margin: 0 auto;
   gap: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  border-radius: 4px;
   padding: 20px;
   color: var(--text-main-color);
   text-align: left;
@@ -865,7 +852,7 @@ ul a.active {
 
 .tag {
   padding: 2px 5px;
-  background: var(--gradient-color);
+  background: var(--text-main-color);
   color: var(--main-color);
   border-radius: 4px;
   font-size: 12px;

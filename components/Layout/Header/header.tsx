@@ -109,15 +109,16 @@ const Header = () => {
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink activeClass="active" spy to="about" href="#about">
-              About
-            </ScrollLink>
-          </li>
-          <li>
             <ScrollLink activeClass="active" spy to="skills" href="#skills">
               Skills
             </ScrollLink>
           </li>
+          <li>
+            <ScrollLink activeClass="active" spy to="about" href="#about">
+              About
+            </ScrollLink>
+          </li>
+
           <li>
             <ScrollLink activeClass="active" spy to="jobs" href="#jobs">
               Jobs

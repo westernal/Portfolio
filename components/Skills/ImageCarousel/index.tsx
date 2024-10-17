@@ -14,7 +14,7 @@ export default function ImageCarousel() {
     controls.start({
       x: ["0%", "-50%"],
       transition: {
-        duration: 10, // Adjust duration to control speed
+        duration: 40, // Adjust duration to control speed
         repeat: Infinity,
         ease: "linear",
       },
@@ -33,19 +33,9 @@ export default function ImageCarousel() {
         style={{
           display: "flex",
           whiteSpace: "nowrap",
+          gap: "1rem",
         }}
         animate={controls}
-        onHoverStart={() => controls.stop()} // Stop the animation on hover
-        onHoverEnd={() =>
-          controls.start({
-            x: ["0%", "-50%"], // Restart animation when hover ends
-            transition: {
-              duration: 10,
-              repeat: Infinity,
-              ease: "linear",
-            },
-          })
-        }
       >
         {loopingSkills.map((item, i) => (
           <a
