@@ -16,7 +16,8 @@
     rgba(58, 58, 58, 1) 85%
   );
   --secondary-accent-color: #004466;
-  --highlight-color: #2ecc71;
+  --error-color: #f44336;
+  --toastify-color-dark: #1a1a1a;
 }
 
 * {
@@ -332,6 +333,29 @@ a {
   position: relative;
 }
 
+.socials-layout {
+  display: grid;
+  grid-gap: 1rem;
+  gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+}
+
+.spinner {
+  padding: 10px;
+  border: 2px solid var(--secondary-color);
+  border-right-color: var(--text-secondary-color);
+  border-radius: 50%;
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  /* 100% keyframe for  clockwise. 
+     use 0% instead for anticlockwise */
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -511,6 +535,11 @@ html {
   align-items: center;
   gap: 10px;
   margin-top: 10px;
+}
+
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 #avatar {
@@ -877,6 +906,62 @@ ul a.active {
   text-align: left;
 }
 
+#contact-form {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+  border: none;
+  resize: none;
+  width: 100%;
+  background: transparent;
+  transition: 0.3s;
+  outline: none;
+  padding: 1rem;
+  color: var(--text-main-color);
+  border-bottom: 1px solid var(--text-secondary-color);
+}
+
+.Toastify__toast {
+  background: var(--main-color) !important;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-bottom: 1px solid var(--text-main-color);
+}
+
+#contact-form .btn {
+  margin-top: 2rem;
+  display: grid;
+  place-content: center;
+  width: fit-content;
+}
+
+.input-wrapper {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+}
+
+.error {
+  color: var(--error-color);
+  font-size: 12px;
+  text-align: left;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: none;
+}
+
 @media only screen and (max-width: 1200px) {
   .my-projects {
     grid-template-columns: auto auto;
@@ -887,6 +972,10 @@ ul a.active {
   .blog-list {
     grid-template-columns: 1fr;
     padding: 0;
+  }
+
+  .socials-layout {
+    grid-template-columns: 1fr;
   }
 
   .about-card {
