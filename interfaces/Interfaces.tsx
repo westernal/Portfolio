@@ -8,7 +8,7 @@ export interface Project {
   };
   description: string;
   image: {
-    logo?: string;
+    mobile: string;
     website: string;
   };
   link: string;
