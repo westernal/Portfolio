@@ -33,20 +33,4 @@ export const projects: Project[] = [
     link: "https://www.chemassist.ai/",
     color: "linear-gradient(45deg, #365eff, #fc6ebc)",
   },
-  {
-    id: 2,
-    title: "Cinema",
-    myRole: {
-      frontEnd: true,
-      backEnd: false,
-      design: true,
-    },
-    description:
-      "Cinema is a platform for watching and downloading movies. A user can login and buy subscriptions to watch the latest movies and series and learn more about cinema, actors/actresses and more. It's a website and PWA built with Next.js and TypeScript.",
-    image: {
-      website: "/Images/Cinema-Desktop.png",
-    },
-    link: "https://github.com/westernal/Cinema",
-    color: "#1e2130",
-  },
 ];

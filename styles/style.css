@@ -470,6 +470,10 @@ html {
   gap: 20px;
 }
 
+.projects .blog-list {
+  grid-template-columns: 1fr 1fr;
+}
+
 .my-projects {
   grid-template-columns: auto auto auto;
 }
