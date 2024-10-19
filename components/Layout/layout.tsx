@@ -1,7 +1,7 @@
 import { ReactElement, useCallback } from "react";
 import Header from "./Header/header";
 import HeadTags from "../../utils/headTags";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Loader from "./Loader/loader";
 import { AnimatePresence, motion } from "framer-motion";
 

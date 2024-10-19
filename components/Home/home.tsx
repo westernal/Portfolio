@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Skills from "../Skills";
 
 const HomePage = () => {
   return (
