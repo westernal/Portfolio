@@ -5,7 +5,20 @@ module.exports = {
 
 module.exports = {
   images: {
-    domains: ["localhost", "res.cloudinary.com", "westernal.me"],
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "",
+        search: "",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        port: "",
+        search: "",
+      },
+    ],
   },
   i18n: {
     locales: ["en"],
