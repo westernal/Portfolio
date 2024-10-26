@@ -12,7 +12,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 6,
     name: "Charles Guinand",
-    avatar: "/Images/Charles.jfif",
+    avatar: "/Images/Charles.jpg",
     description:
       "Working with Ali has been a fantastic experience! He’s a motivated, thoughtful developer who always brings valuable knowledge to the table. Eager to learn and quick to find solutions, Ali consistently delivers high-quality results. When the opportunity to lead came up, he embraced it, stepping into the frontend lead role effortlessly. He not only delivered on his own tasks but also mentored interns and helped the team succeed.",
     role: "Ex COO of Silver Brain AI",
