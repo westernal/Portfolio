@@ -36,7 +36,7 @@ const Testimonials = () => {
                         src={item.avatar}
                         width={60}
                         height={60}
-                        alt="my picture"
+                        alt="Profile picture"
                       />
                     </div>
                     <div className="testimonial-title">
