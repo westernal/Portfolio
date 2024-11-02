@@ -1,13 +1,15 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import BurgerMenu from "./burgerMenu";
-
 import { useRouter } from "next/router";
 import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 import SocialIcons from "../../SocialIcons";
+import { ThemeContext } from "../../../pages/_app";
+import { DarkIcon, LightIcon } from "../../../utils/icons";
 
 const Header = () => {
   const router = useRouter();
+  const { isDark, SetIsDark } = useContext(ThemeContext);
 
   const closeMenus = () => {
     document.getElementsByClassName("burger")[0].classList.remove("active");
@@ -98,9 +100,15 @@ const Header = () => {
         </ul>
       </nav>
 
-      <Link href={"/"}>
-        <h1 id="fullname">ALI</h1>
-      </Link>
+      <div className="flex">
+        <Link href={"/"}>
+          <h1 id="fullname">ALI</h1>
+        </Link>
+
+        <button className="theme-btn" onClick={() => SetIsDark(!isDark)}>
+          {isDark ? <DarkIcon /> : <LightIcon />}
+        </button>
+      </div>
     </header>
   );
 };

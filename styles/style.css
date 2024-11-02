@@ -9,7 +9,6 @@
   --secondary-color: #1a1a1a;
   --text-main-color: #8d8d8d;
   --text-secondary-color: #666666;
-  --accent-color: #007bff;
   --gradient-color: linear-gradient(
     90deg,
     rgba(241, 241, 241, 1) 0%,
@@ -17,6 +16,18 @@
   );
   --error-color: #f44336;
   --toastify-color-dark: #1a1a1a;
+}
+
+.light {
+  --main-color: #f8f8f8;
+  --secondary-color: #e4e4e4;
+  --text-main-color: #2f2f2f;
+  --text-secondary-color: #000;
+  --gradient-color: linear-gradient(
+    90deg,
+    rgba(47, 47, 47, 1) 0%,
+    rgba(105, 105, 105, 1) 100%
+  );
 }
 
 * {
@@ -30,8 +41,11 @@ html {
 
 body {
   overflow-x: hidden;
-  background: var(--main-color);
   margin: 0;
+}
+
+.body {
+  background: var(--main-color);
 }
 
 #fullname {
@@ -41,6 +55,15 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.theme-btn {
+  background: transparent;
+  cursor: pointer;
+  width: auto;
+  outline: none;
+  border: none;
+  display: flex;
 }
 
 main {
@@ -584,7 +607,7 @@ html {
 }
 
 .blog-item:hover {
-  color: #fff;
+  color: var(--text-secondary-color);
 }
 
 #post-image {
