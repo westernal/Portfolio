@@ -339,6 +339,10 @@ a {
   grid-template-columns: 1fr 2fr;
 }
 
+header #StackOverflow {
+  display: none;
+}
+
 .spinner {
   padding: 10px;
   border: 2px solid var(--secondary-color);
@@ -1025,7 +1029,7 @@ ul a.active {
     padding: 0 20px;
   }
 
-  .header-icons {
+  header .header-icons {
     display: none;
   }
 
