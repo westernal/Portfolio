@@ -604,6 +604,7 @@ html {
 
 #avatar {
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .blog-item:hover {
