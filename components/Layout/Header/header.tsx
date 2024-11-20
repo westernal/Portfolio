@@ -106,7 +106,7 @@ const Header = () => {
         </Link>
 
         <button className="theme-btn" onClick={() => SetIsDark(!isDark)}>
-          {isDark ? <DarkIcon /> : <LightIcon />}
+          {isDark ? <LightIcon /> : <DarkIcon />}
         </button>
       </div>
     </header>
