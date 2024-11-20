@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SocialIcons from "../SocialIcons";
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
         <div className="title ">
           Frontend Developer | I Bring Lines of Code to Life
         </div>
+
         <div className="  resume-btn column-mobile">
           <Link href="/Ali Navidi Resume.pdf" target="_blank" id="resume">
             <button className="btn secondary-btn  from-top resume ">
@@ -20,6 +22,8 @@ const HomePage = () => {
             <button className="btn  from-top resume ">Hire Me</button>
           </Link>
         </div>
+
+        <SocialIcons />
       </section>
     </section>
   );
