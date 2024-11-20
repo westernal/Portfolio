@@ -1,8 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useContext } from "react";
 import Heading from "../shared/Heading";
 import Testimonials from "./Testimonials";
+import GitHubCalendar from "react-github-calendar";
+import { ThemeContext } from "../../pages/_app";
+import Image from "next/image";
 
 const About = () => {
+  const { isDark } = useContext(ThemeContext);
+
   return (
     <section className="about about-page center active-page" id="about">
       <section className="about-card ">
@@ -35,6 +41,13 @@ const About = () => {
       </section>
 
       <Testimonials />
+
+      <div className="flex">
+        <GitHubCalendar
+          username="westernal"
+          colorScheme={isDark ? "dark" : "light"}
+        />
+      </div>
     </section>
   );
 };

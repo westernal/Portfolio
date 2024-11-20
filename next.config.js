@@ -12,12 +12,6 @@ module.exports = {
         port: "",
         search: "",
       },
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-        port: "",
-        search: "",
-      },
     ],
   },
   i18n: {
