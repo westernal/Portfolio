@@ -857,7 +857,6 @@ ul a.active {
 .blog-image {
   position: relative;
   height: 200px;
-  filter: grayscale(1);
 }
 
 .blog-info {
