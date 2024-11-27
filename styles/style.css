@@ -92,7 +92,7 @@ header {
   place-items: center;
   position: fixed;
   width: 100%;
-  z-index: 4;
+  z-index: 100;
   transition: 0.3s;
 }
 
