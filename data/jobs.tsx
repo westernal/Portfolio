@@ -2,6 +2,14 @@ import { Job } from "../interfaces/Interfaces";
 
 export const jobs: Job[] = [
   {
+    id: 4,
+    title: "Senior Frontend Developer",
+    company: "Bimeh Bazaar",
+    location: "Tehran, Iran",
+    duration: { from: "01/2025", to: "Now" },
+    companyLogo: { url: "/Images/bime-bazar.svg", width: 55, height: 75 },
+  },
+  {
     id: 3,
     title: "Frontend Team Lead",
     company: "Silver Brain AI AG",
