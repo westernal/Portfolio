@@ -2,9 +2,7 @@
 import { useContext } from "react";
 import Heading from "../shared/Heading";
 import Testimonials from "./Testimonials";
-import GitHubCalendar from "react-github-calendar";
 import { ThemeContext } from "../../pages/_app";
-import Image from "next/image";
 
 const About = () => {
   const { isDark } = useContext(ThemeContext);
@@ -41,13 +39,6 @@ const About = () => {
       </section>
 
       <Testimonials />
-
-      <div className="flex">
-        <GitHubCalendar
-          username="westernal"
-          colorScheme={isDark ? "dark" : "light"}
-        />
-      </div>
     </section>
   );
 };
