@@ -1,13 +1,11 @@
-import dynamic from "next/dynamic";
-
-const HomePage = dynamic(() => import("../components/Home/home"));
-const About = dynamic(() => import("../components/About"));
-const Blogs = dynamic(() => import("../components/Blogs"));
-const Socials = dynamic(() => import("../components/Contact"));
-const FooterInfo = dynamic(() => import("../components/FooterInfo"));
-const Jobs = dynamic(() => import("../components/Jobs"));
-const Projects = dynamic(() => import("../components/Projects"));
-const Skills = dynamic(() => import("../components/Skills"));
+import About from "../components/About";
+import Blogs from "../components/Blogs";
+import Socials from "../components/Contact";
+import FooterInfo from "../components/FooterInfo";
+import HomePage from "../components/Home/home";
+import Jobs from "../components/Jobs";
+import Projects from "../components/Projects";
+import Skills from "../components/Skills";
 
 const Home = () => {
   return (
