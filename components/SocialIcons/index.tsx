@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const SocialIcons = () => {
   return (
     <div className="header-icons flex">
-      <a
+      <Link
         href="mailto:ali_navidi24@yahoo.com"
         className="social-icon"
         target="_blank"
@@ -17,8 +18,8 @@ const SocialIcons = () => {
           width={25}
           height={25}
         />
-      </a>
-      <a
+      </Link>
+      <Link
         href="https://github.com/westernal"
         className="social-icon"
         target="_blank"
@@ -32,8 +33,8 @@ const SocialIcons = () => {
           width={25}
           height={25}
         />
-      </a>
-      <a
+      </Link>
+      <Link
         href="https://www.linkedin.com/in/ali-navidi/"
         className="social-icon"
         target="_blank"
@@ -47,8 +48,8 @@ const SocialIcons = () => {
           width={25}
           height={25}
         />
-      </a>
-      <a
+      </Link>
+      <Link
         href="https://stackoverflow.com/users/15353979/ali-navidi"
         className="social-icon"
         target="_blank"
@@ -62,7 +63,7 @@ const SocialIcons = () => {
           width={25}
           height={25}
         />
-      </a>
+      </Link>
     </div>
   );
 };
