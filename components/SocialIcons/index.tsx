@@ -17,6 +17,7 @@ const SocialIcons = () => {
           id="Email"
           width={25}
           height={25}
+          loading="eager"
         />
       </Link>
       <Link
@@ -32,6 +33,7 @@ const SocialIcons = () => {
           id="Github"
           width={25}
           height={25}
+          loading="eager"
         />
       </Link>
       <Link
@@ -47,6 +49,7 @@ const SocialIcons = () => {
           id="LinkedIn"
           width={25}
           height={25}
+          loading="eager"
         />
       </Link>
       <Link
@@ -62,6 +65,7 @@ const SocialIcons = () => {
           id="StackOverflow"
           width={25}
           height={25}
+          loading="eager"
         />
       </Link>
     </div>
