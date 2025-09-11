@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import formatDate from "../../functions/formatDate";
 import posts from "../../data/blogs.json" assert { type: "json" };

@@ -1,12 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useContext } from "react";
+import Link from "next/link";
 import Heading from "../shared/Heading";
 import Testimonials from "./Testimonials";
-import { ThemeContext } from "../../pages/_app";
 
 const About = () => {
-  const { isDark } = useContext(ThemeContext);
-
   return (
     <section className="about about-page center active-page" id="about">
       <section className="about-card ">
@@ -23,7 +20,7 @@ const About = () => {
           </p>
 
           <div className="flex about-btns column-mobile">
-            <a
+            <Link
               href="mailto:ali_navidi24@yahoo.com?subject=Hi Ali, I Want to Hire You!"
               style={{ display: "grid", placeItems: "center" }}
             >
@@ -33,7 +30,7 @@ const About = () => {
               >
                 Let's Connect
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

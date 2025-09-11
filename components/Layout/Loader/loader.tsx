@@ -1,8 +1,8 @@
 // components/Loader.js
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const loaderVariants = {
+const loaderVariants: Variants = {
   visible: {
     transition: {
       staggerChildren: 1,
@@ -17,7 +17,7 @@ const loaderVariants = {
   },
 };
 
-const textVariants = {
+const textVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,

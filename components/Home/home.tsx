@@ -8,9 +8,9 @@ const HomePage = () => {
         <div className="flex name">
           <span className="last-name">ALI NAVIDI</span>
         </div>
-        <div className="title ">
+        <p className="title ">
           Frontend Developer | I Bring Lines of Code to Life
-        </div>
+        </p>
 
         <div className="  resume-btn column-mobile">
           <Link href="/Ali Navidi Resume.pdf" target="_blank" id="resume">

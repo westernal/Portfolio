@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { jobs } from "../../data/jobs";
 import Heading from "../shared/Heading";

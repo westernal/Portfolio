@@ -1,3 +1,5 @@
+"use client";
+
 import Heading from "../shared/Heading";
 import SocialIcons from "../SocialIcons";
 import ContactForm from "./Form";

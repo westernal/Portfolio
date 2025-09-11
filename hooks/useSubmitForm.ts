@@ -10,7 +10,7 @@ export const useSubmitForm = () => {
 
     const formData = new FormData(event.target);
 
-    formData.append("access_key", process.env.NEXT_PUBLIC_CONTACT_KEY || "");
+    formData.append("access_key", process.env["NEXT_PUBLIC_CONTACT_KEY"] || "");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);

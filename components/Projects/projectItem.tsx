@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Project } from "../../interfaces/Interfaces";
+import type { Project } from "../../interfaces/Interfaces";
 import Tag from "../shared/Tag";
 import { motion } from "framer-motion";
 import { useState } from "react";

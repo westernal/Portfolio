@@ -1,16 +1,11 @@
-import { ReactElement } from "react";
 import Header from "./Header/header";
-import HeadTags from "../../utils/headTags";
+import type { ReactNode } from "react";
 
-const Layout = ({ children }: { children: ReactElement }) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div>
       <Header />
-      <main className="home">
-        <HeadTags />
-
-        {children}
-      </main>
+      <main className="home">{children}</main>
     </div>
   );
 };

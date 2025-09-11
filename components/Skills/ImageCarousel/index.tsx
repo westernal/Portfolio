@@ -1,5 +1,7 @@
+"use client";
+
 import { motion, useAnimation } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 import { skills } from "../../../data/skills";
 

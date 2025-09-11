@@ -1,20 +1,107 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "lib": ["dom", "dom.iterable", "esnext", "ES2023", "ES2023.Array"],
+    // Target latest browsers and Node.js versions
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "ES2023",
+      "ES2023.Array",
+      "WebWorker"
+    ],
+    // Module settings
+    "module": "esnext",
+    "moduleResolution": "bundler", // Better for Next.js
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    // React settings
+    "jsx": "preserve",
+    "jsxImportSource": "react",
+    // Strict Type-Checking
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    // Additional Checks
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    // Build Options
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    // Path Aliases - make imports cleaner
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@types/*": [
+        "types/*"
+      ]
+    },
+    // Advanced Options
+    "allowSyntheticDefaultImports": true,
+    "verbatimModuleSyntax": true,
+    "declaration": false,
+    "sourceMap": true,
+    // Performance Options
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Home/about.tsx", "components/Socials/Icons/socialIcons.tsx", "components/Socials/socials.tsx", "pages/_app.tsx", "functions/formatDate.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "**/*.js",
+    "**/*.json",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    ".next",
+    "coverage",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.test.tsx"
+  ],
+  // Type Checking for Package.json
+  "typeAcquisition": {
+    "enable": true,
+    "include": [
+      "jest"
+    ]
+  }
 }

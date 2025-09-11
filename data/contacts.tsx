@@ -1,4 +1,4 @@
-import { Social } from "../interfaces/Interfaces";
+import type { Social } from "../interfaces/Interfaces";
 
 export const socialMedias: Social[] = [
   {

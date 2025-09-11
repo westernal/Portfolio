@@ -1,6 +1,6 @@
 import { projects } from "../../data/projects";
 import ProjectItem from "../../components/Projects/projectItem";
-import { Project } from "../../interfaces/Interfaces";
+import type { Project } from "../../interfaces/Interfaces";
 import Heading from "../shared/Heading";
 
 const Projects = () => {
