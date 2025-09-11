@@ -4,10 +4,10 @@ export const jobs: Job[] = [
   {
     id: 4,
     title: "Senior Frontend Developer",
-    company: "Bimeh Bazaar",
+    company: "Bime Bazar",
     location: "Tehran, Iran",
     duration: { from: "01/2025", to: "Now" },
-    companyLogo: { url: "/Images/bime-bazar.svg", width: 55, height: 75 },
+    companyLogo: { url: "/Images/bime-bazar.svg", width: 55, height: 67 },
   },
   {
     id: 3,

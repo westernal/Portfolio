@@ -15,7 +15,7 @@ const About = () => {
         </div>
         <div className="about-info">
           <p>
-            Frontend Developer with 3+ years of experience building responsive
+            Frontend Developer with 4+ years of experience building responsive
             web apps using Next.js and React. Led teams, optimized performance,
             and delivered scalable solutions. Also familiar with backend
             concepts, enabling better cross-functional collaboration and project

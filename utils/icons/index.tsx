@@ -11,7 +11,7 @@ export const StackOverFlowIcon = () => (
     <g
       id="logo-meta"
       stroke="none"
-      stroke-width="1"
+      strokeWidth="1"
       fill="none"
       fillRule="evenodd"
     >
@@ -40,7 +40,7 @@ export const EmailIcon = () => (
   >
     <title>email</title>
     <desc>Created with Sketch.</desc>
-    <g id="Icons" fill="none" fillRule="evenodd" stroke="none" stroke-width="1">
+    <g id="Icons" fill="none" fillRule="evenodd" stroke="none" strokeWidth="1">
       <g id="Outlined" transform="translate(-918.000000, -1220.000000)">
         <g id="Communication" transform="translate(100.000000, 1162.000000)">
           <g id="Outlined-/-Communication-/-email">
@@ -127,10 +127,10 @@ export const DarkIcon = () => (
     id="Layer_2"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
-      stroke-linecap="round"
+      strokeLinecap="round"
       stroke-linejoin="round"
     ></g>
     <g id="SVGRepo_iconCarrier">
@@ -148,10 +148,10 @@ export const LightIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     stroke="#8d8d8d"
   >
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
-      stroke-linecap="round"
+      strokeLinecap="round"
       stroke-linejoin="round"
     ></g>
     <g id="SVGRepo_iconCarrier">
