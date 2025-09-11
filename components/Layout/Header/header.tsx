@@ -38,11 +38,7 @@ const Header = () => {
               Jobs
             </ScrollLink>
           </li>
-          <li>
-            <ScrollLink activeClass="active" spy to="projects" href="#projects">
-              Projects
-            </ScrollLink>
-          </li>
+
           <li>
             <ScrollLink activeClass="active" spy to="blogs" href="#blogs">
               Blogs

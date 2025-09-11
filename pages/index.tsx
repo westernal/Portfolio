@@ -4,7 +4,6 @@ import Socials from "../components/Contact";
 import FooterInfo from "../components/FooterInfo";
 import HomePage from "../components/Home/home";
 import Jobs from "../components/Jobs";
-import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 
 const Home = () => {
@@ -14,7 +13,7 @@ const Home = () => {
       <Skills />
       <About />
       <Jobs />
-      <Projects />
+      {/* <Projects /> */}
       <Blogs />
       <Socials />
       <FooterInfo />
