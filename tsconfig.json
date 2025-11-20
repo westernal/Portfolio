@@ -16,7 +16,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     // React settings
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "jsxImportSource": "react",
     // Strict Type-Checking
     "strict": true,
@@ -84,7 +84,8 @@
     "**/*.ts",
     "**/*.tsx",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

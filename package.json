@@ -11,23 +11,24 @@
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "framer-motion": "^12.23.12",
-    "next": "15.5.3",
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
+    "framer-motion": "^12.23.24",
+    "next": "16.0.3",
+    "npm-check-updates": "^19.1.2",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "react-multi-carousel": "^2.8.6",
     "react-scroll": "^1.9.3",
     "react-toastify": "^11.0.5"
   },
   "devDependencies": {
-    "@types/node": "^24.3.1",
-    "@types/react": "19.1.12",
+    "@types/node": "^24.10.1",
+    "@types/react": "19.2.6",
     "@types/react-scroll": "^1.8.10",
-    "eslint": "^9.35.0",
-    "eslint-config-next": "15.5.3",
-    "typescript": "^5.9.2"
+    "eslint": "^9.39.1",
+    "eslint-config-next": "16.0.3",
+    "typescript": "^5.9.3"
   },
   "overrides": {
-    "@types/react": "19.1.12"
+    "@types/react": "19.2.6"
   }
 }
