@@ -1,10 +1,14 @@
+import { default as dynamicImport } from "next/dynamic";
 import About from "../components/About/index";
-import Blogs from "../components/Blogs/index";
-import Socials from "../components/Contact/index";
 import FooterInfo from "../components/FooterInfo/index";
 import HomePage from "../components/Home/home";
-import Jobs from "../components/Jobs/index";
 import Skills from "../components/Skills/index";
+
+const BlogsLazy = dynamicImport(() => import("../components/Blogs/index"));
+const JobsLazy = dynamicImport(() => import("../components/Jobs/index"));
+const SocialsLazy = dynamicImport(() => import("../components/Contact/index"));
+
+export const dynamic = "force-static";
 
 const Home = () => {
   return (
@@ -12,10 +16,9 @@ const Home = () => {
       <HomePage />
       <Skills />
       <About />
-      <Jobs />
-
-      <Blogs />
-      <Socials />
+      <JobsLazy />
+      <BlogsLazy />
+      <SocialsLazy />
       <FooterInfo />
     </>
   );
