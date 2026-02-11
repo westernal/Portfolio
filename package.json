@@ -16,7 +16,7 @@
     "npm-check-updates": "^19.1.2",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-multi-carousel": "^2.8.6",
+    "react-multi-carousel": "^2.8.5",
     "react-scroll": "^1.9.3",
     "react-toastify": "^11.0.5"
   },
