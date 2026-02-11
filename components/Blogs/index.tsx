@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import formatDate from "../../functions/formatDate";
-import posts from "../../data/blogs.json" assert { type: "json" };
+import posts from "../../data/blogs.json";
 import Heading from "../shared/Heading";
 import { motion } from "framer-motion";
 
