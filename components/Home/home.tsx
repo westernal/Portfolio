@@ -18,7 +18,7 @@ const HomePage = () => {
               Resume
             </button>
           </Link>
-          <Link href="mailto:ali_navidi24@yahoo.com?subject=Hi Ali, I Want to Hire You!">
+          <Link href="mailto:aliinavidi1379@gmail.com?subject=Hi Ali, I Want to Hire You!">
             <button className="btn  from-top resume ">Hire Me</button>
           </Link>
         </div>

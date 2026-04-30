@@ -21,7 +21,7 @@ const About = () => {
 
           <div className="flex about-btns column-mobile">
             <Link
-              href="mailto:ali_navidi24@yahoo.com?subject=Hi Ali, I Want to Hire You!"
+              href="mailto:aliinavidi1379@gmail.com?subject=Hi Ali, I Want to Hire You!"
               style={{ display: "grid", placeItems: "center" }}
             >
               <button

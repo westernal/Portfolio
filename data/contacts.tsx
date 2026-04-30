@@ -3,7 +3,7 @@ import type { Social } from "../interfaces/Interfaces";
 export const socialMedias: Social[] = [
   {
     name: "Email",
-    url: "mailto:ali_navidi24@yahoo.com",
+    url: "mailto:aliinavidi1379@gmail.com",
     imageUrl: "/Images/email.svg",
   },
   {

@@ -5,7 +5,7 @@ const SocialIcons = () => {
   return (
     <div className="header-icons flex">
       <Link
-        href="mailto:ali_navidi24@yahoo.com"
+        href="mailto:aliinavidi1379@gmail.com"
         className="social-icon"
         target="_blank"
         rel="noreferrer"
