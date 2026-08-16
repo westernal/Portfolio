@@ -1,24 +1,25 @@
 import type { Social } from "../interfaces/Interfaces";
+import { profile } from "./profile";
 
 export const socialMedias: Social[] = [
   {
     name: "Email",
-    url: "mailto:aliinavidi1379@gmail.com",
+    url: `mailto:${profile.email}`,
     imageUrl: "/Images/email.svg",
   },
   {
-    name: "Github",
-    url: "https://github.com/westernal",
+    name: "GitHub",
+    url: profile.links.github,
     imageUrl: "/Images/github.svg",
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/ali-navidi/",
+    url: profile.links.linkedin,
     imageUrl: "/Images/linkedin.svg",
   },
   {
-    name: "StackOverflow",
-    url: "https://stackoverflow.com/users/15353979/ali-navidi",
+    name: "Stack Overflow",
+    url: profile.links.stackoverflow,
     imageUrl: "/Images/stackoverflow.svg",
   },
 ];

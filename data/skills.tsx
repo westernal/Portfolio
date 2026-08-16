@@ -1,4 +1,48 @@
-import type { Skill } from "../interfaces/Interfaces";
+import type { Skill, SkillGroup } from "../interfaces/Interfaces";
+
+/**
+ * The marquee shows logos; this shows the actual stack. Grouped so a reader
+ * can find what they came for instead of scanning a wall of nouns.
+ */
+export const skillGroups: SkillGroup[] = [
+  {
+    title: "Languages",
+    items: ["TypeScript", "JavaScript", "HTML5", "CSS3"],
+  },
+  {
+    title: "Frameworks & UI",
+    items: [
+      "React",
+      "Next.js (App Router)",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "SASS",
+      "Styled Components",
+    ],
+  },
+  {
+    title: "Data & state",
+    items: ["TanStack Query", "SWR", "GraphQL / Apollo", "REST", "WebSocket"],
+  },
+  {
+    title: "Quality & tooling",
+    items: ["Jest", "Cypress", "ESLint", "Webpack", "Git", "CI/CD", "Sentry"],
+  },
+  {
+    title: "Beyond the browser",
+    items: ["Node.js", "Express", "MongoDB", "Docker", "PWA", "i18n"],
+  },
+  {
+    title: "How I work",
+    items: [
+      "Code review",
+      "Mentoring",
+      "Architecture",
+      "Agile",
+      "Figma hand-off",
+    ],
+  },
+];
 
 export const skills: Skill[] = [
   {

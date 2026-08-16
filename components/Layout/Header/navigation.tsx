@@ -2,42 +2,33 @@
 
 import { Link as ScrollLink } from "react-scroll";
 
+const links = [
+  { to: "home-page", label: "Home", href: "/" },
+  { to: "experience", label: "Experience", href: "#experience" },
+  { to: "about", label: "About", href: "#about" },
+  { to: "blogs", label: "Writing", href: "#blogs" },
+  { to: "contact", label: "Contact", href: "#contact" },
+];
+
 const Navigation = () => {
   return (
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Sections">
       <ul>
-        <li>
-          <ScrollLink activeClass="active" spy to="home-page" href="/">
-            Home
-          </ScrollLink>
-        </li>
-        <li>
-          <ScrollLink activeClass="active" spy to="skills" href="#skills">
-            Skills
-          </ScrollLink>
-        </li>
-        <li>
-          <ScrollLink activeClass="active" spy to="about" href="#about">
-            About
-          </ScrollLink>
-        </li>
-
-        <li>
-          <ScrollLink activeClass="active" spy to="jobs" href="#jobs">
-            Jobs
-          </ScrollLink>
-        </li>
-
-        <li>
-          <ScrollLink activeClass="active" spy to="blogs" href="#blogs">
-            Blogs
-          </ScrollLink>
-        </li>
-        <li>
-          <ScrollLink activeClass="active" spy to="contact" href="#contact">
-            Contact
-          </ScrollLink>
-        </li>
+        {links.map((link) => (
+          <li key={link.to}>
+            <ScrollLink
+              activeClass="active"
+              spy
+              smooth
+              offset={-70}
+              duration={400}
+              to={link.to}
+              href={link.href}
+            >
+              {link.label}
+            </ScrollLink>
+          </li>
+        ))}
       </ul>
     </nav>
   );

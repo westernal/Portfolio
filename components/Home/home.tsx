@@ -1,30 +1,68 @@
 import Link from "next/link";
 import SocialIcons from "../SocialIcons";
+import { mailtoHref, profile, stats } from "../../data/profile";
 
 const HomePage = () => {
   return (
-    <section className="about center" id="home-page">
-      <section className="info ">
-        <div className="flex name">
-          <span className="last-name">ALI NAVIDI</span>
-        </div>
-        <p className="title ">
-          Frontend Developer | I Bring Lines of Code to Life
-        </p>
+    <section className="hero" id="home-page">
+      <div className="hero-inner">
+        {profile.availability.open && (
+          <p className="availability">
+            <span className="availability-dot" aria-hidden="true" />
+            {profile.availability.label}
+            <span className="availability-detail">
+              {profile.availability.detail}
+            </span>
+          </p>
+        )}
 
-        <div className="  resume-btn column-mobile">
-          <Link href="/Ali Navidi Resume.pdf" target="_blank" id="resume">
-            <button className="btn secondary-btn  from-top resume ">
-              Resume
-            </button>
-          </Link>
-          <Link href="mailto:aliinavidi1379@gmail.com?subject=Hi Ali, I Want to Hire You!">
-            <button className="btn  from-top resume ">Hire Me</button>
+        <h1 className="hero-name">{profile.name}</h1>
+
+        <p className="hero-role">{profile.role}</p>
+
+        <p className="hero-headline">{profile.headline}</p>
+        <p className="hero-sub">{profile.subheadline}</p>
+
+        <div className="hero-actions">
+          {/* Label matches where it lands. If a projects section ever comes
+              back, "See my work" pointing at that is the stronger CTA. */}
+          <a href="#experience" className="btn btn-primary">
+            See my experience
+          </a>
+          <a href={mailtoHref} className="btn btn-ghost">
+            Email me
+          </a>
+          <Link
+            href={profile.resume}
+            target="_blank"
+            className="btn btn-quiet"
+            id="resume"
+          >
+            Résumé (PDF)
           </Link>
         </div>
 
-        <SocialIcons />
-      </section>
+        <dl className="stat-strip">
+          {stats.map((stat) => (
+            <div className="stat" key={stat.label}>
+              <dt className="stat-value">{stat.value}</dt>
+              <dd className="stat-label">{stat.label}</dd>
+            </div>
+          ))}
+        </dl>
+
+        <div className="hero-meta">
+          <span>
+            {profile.location} · {profile.timezone}
+          </span>
+          <span className="hero-meta-sep" aria-hidden="true">
+            ·
+          </span>
+          <span>{profile.timezoneNote}</span>
+        </div>
+
+        <SocialIcons className="hero-socials" />
+      </div>
     </section>
   );
 };

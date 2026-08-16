@@ -38,7 +38,7 @@ const ContactForm = () => {
         </p>
       </div>
 
-      <button type="submit" className="btn from-top resume " disabled={loading}>
+      <button type="submit" className="btn btn-primary" disabled={loading}>
         {loading ? <Spinner /> : "Submit"}
       </button>
     </form>

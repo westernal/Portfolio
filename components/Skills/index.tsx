@@ -2,11 +2,10 @@ import ImageCarousel from "./ImageCarousel";
 
 const Skills = () => {
   return (
-    <section className="skills" id="skills">
-      <div className="skills-list ">
-        <ImageCarousel />
-      </div>
-    </section>
+    <aside className="skills-strip" aria-label="Technologies I work with">
+      <p className="skills-strip-label">Day to day</p>
+      <ImageCarousel />
+    </aside>
   );
 };
 

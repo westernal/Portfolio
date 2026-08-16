@@ -1,58 +1,38 @@
 "use client";
 
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { skills } from "../../../data/skills";
 
 export default function ImageCarousel() {
-  const controls = useAnimation();
+  const reduceMotion = useReducedMotion();
 
-  // Duplicate the skills array to create a smooth loop
+  /**
+   * Four copies, animated to -50%: the halfway point is two identical copies
+   * in, so the loop restarts on a pixel-identical frame. Spacing lives in the
+   * item's margin rather than a flex `gap` — a gap would make the two halves
+   * differ by one gap width and put a visible stutter in the seam.
+   */
   const loopingSkills = [...skills, ...skills, ...skills, ...skills];
 
-  useEffect(() => {
-    // Start the animation when the component mounts
-    controls.start({
-      x: ["0%", "-50%"],
-      transition: {
-        duration: 40, // Adjust duration to control speed
-        repeat: Infinity,
-        ease: "linear",
-      },
-    });
-  }, [controls]);
-
   return (
-    <div
-      style={{
-        overflow: "hidden",
-        width: "100%",
-        display: "flex",
-      }}
-    >
+    <div className="skills-marquee">
       <motion.div
-        style={{
-          display: "flex",
-          whiteSpace: "nowrap",
-          gap: "1rem",
-        }}
-        animate={controls}
+        className="skills-track"
+        animate={reduceMotion ? undefined : { x: ["0%", "-50%"] }}
+        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
       >
         {loopingSkills.map((item, i) => (
           <a
             href={item.link}
             className="skill-item"
-            key={i}
+            key={`${item.name}-${i}`}
             target="_blank"
             rel="noopener noreferrer"
+            aria-hidden={i >= skills.length}
+            tabIndex={i >= skills.length ? -1 : undefined}
           >
-            <Image
-              width={35}
-              height={35}
-              src={item.src}
-              alt={`${item.name} logo`}
-            />
+            <Image width={20} height={20} src={item.src} alt="" />
             <p>{item.name}</p>
           </a>
         ))}

@@ -1,24 +1,12 @@
-export interface Project {
-  id: number;
-  title: string;
-  myRole: {
-    frontEnd: boolean;
-    backEnd: boolean;
-    design: boolean;
-  };
-  description: string;
-  image: {
-    mobile: string;
-    website: string;
-  };
-  link: string;
-  color: string;
-}
-
 export interface Skill {
   name: string;
   src: string;
   link: string;
+}
+
+export interface SkillGroup {
+  title: string;
+  items: string[];
 }
 
 export interface Job {
@@ -30,6 +18,11 @@ export interface Job {
     from: string;
     to: string;
   };
+  /** Achievements with numbers where they exist. This is the section recruiters read. */
+  highlights: string[];
+  stack: string[];
+  /** e.g. "Promotion" — a small signal that says more than a job title alone. */
+  badge?: string;
   companyLogo: {
     url: string;
     width: number;

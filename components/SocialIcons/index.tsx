@@ -1,74 +1,30 @@
 import Image from "next/image";
-import Link from "next/link";
+import { socialMedias } from "../../data/contacts";
 
-const SocialIcons = () => {
+const SocialIcons = ({ className = "" }: { className?: string }) => {
   return (
-    <div className="header-icons flex">
-      <Link
-        href="mailto:aliinavidi1379@gmail.com"
-        className="social-icon"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image
-          src="/Images/email.svg"
-          alt="Email"
-          title="Email"
-          id="Email"
-          width={25}
-          height={25}
-          loading="eager"
-        />
-      </Link>
-      <Link
-        href="https://github.com/westernal"
-        className="social-icon"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image
-          src="/Images/github.svg"
-          alt="Github"
-          title="Github"
-          id="Github"
-          width={25}
-          height={25}
-          loading="eager"
-        />
-      </Link>
-      <Link
-        href="https://www.linkedin.com/in/ali-navidi/"
-        className="social-icon"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image
-          src="/Images/linkedin.svg"
-          alt="LinkedIn"
-          title="LinkedIn"
-          id="LinkedIn"
-          width={25}
-          height={25}
-          loading="eager"
-        />
-      </Link>
-      <Link
-        href="https://stackoverflow.com/users/15353979/ali-navidi"
-        className="social-icon"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image
-          src="/Images/stackoverflow.svg"
-          alt="StackOverflow"
-          title="StackOverflow"
-          id="StackOverflow"
-          width={25}
-          height={25}
-          loading="eager"
-        />
-      </Link>
-    </div>
+    <ul className={`social-icons flex ${className}`}>
+      {socialMedias.map((social) => (
+        <li key={social.name}>
+          <a
+            href={social.url}
+            className="social-icon"
+            target="_blank"
+            rel="noreferrer"
+            aria-label={social.name}
+            title={social.name}
+          >
+            <Image
+              src={social.imageUrl}
+              alt=""
+              width={24}
+              height={24}
+              loading="eager"
+            />
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 };
 

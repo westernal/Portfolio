@@ -1,24 +1,22 @@
-import Head from "next/head";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-const Error = () => {
+export const metadata: Metadata = {
+  title: "404 — Page not found",
+};
+
+const NotFound = () => {
   return (
-    <main className="error-page flex">
-      <Head>
-        <title>404 - Ali Navidi</title>
-      </Head>
-
-      <div className="blog-item">
-        <h1>404 - Page not found</h1>
-        <p>
-          Looks like the link you{"'"}re looking for doesn{"'"}t exist!
-        </p>
-        <Link href="/">
-          <button className="btn from-top resume">Go to home page</button>
+    <main className="error-page">
+      <div className="error-card">
+        <h1>404 — Page not found</h1>
+        <p>The link you followed doesn&apos;t point anywhere.</p>
+        <Link href="/" className="btn btn-primary">
+          Back to home
         </Link>
       </div>
     </main>
   );
 };
 
-export default Error;
+export default NotFound;

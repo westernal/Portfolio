@@ -7,6 +7,12 @@ export const jobs: Job[] = [
     company: "Bime Bazar",
     location: "Tehran, Iran",
     duration: { from: "01/2025", to: "Now" },
+    highlights: [
+      "Rebuilt the front end of a high-traffic insurance comparison marketplace from scratch in Next.js, replacing the legacy stack with no loss of service.",
+      "Set the architecture, code structure and performance budget the new codebase is built on.",
+      "Own the public-facing experience end to end, from quote comparison flows to checkout.",
+    ],
+    stack: ["Next.js", "TypeScript", "React", "SSR"],
     companyLogo: { url: "/Images/bime-bazar.svg", width: 55, height: 67 },
   },
   {
@@ -15,6 +21,14 @@ export const jobs: Job[] = [
     company: "Silver Brain AI AG",
     location: "Zug, Switzerland",
     duration: { from: "11/2023", to: "08/2024" },
+    badge: "Promotion",
+    highlights: [
+      "Led frontend delivery for Celsius, an LLM production-pipeline management platform, from architecture through launch.",
+      "Owned a large frontend codebase across multiple products, setting the review standards that kept technical debt down.",
+      "Improved application response time through caching strategy and rendering work.",
+      "Mentored developers and interns in Next.js, lifting the team's throughput.",
+    ],
+    stack: ["Next.js", "TypeScript", "GraphQL", "TanStack Query", "Sentry"],
     companyLogo: { url: "/Images/SB-silver.svg", width: 55, height: 75 },
   },
   {
@@ -23,15 +37,27 @@ export const jobs: Job[] = [
     company: "Silver Brain AI AG",
     location: "Zug, Switzerland",
     duration: { from: "07/2023", to: "11/2023" },
+    highlights: [
+      "Promoted to Frontend Team Lead after four months.",
+      "Cut time-to-interactive with code splitting and lazy loading.",
+      "Restructured the codebase, reducing complexity and making it safe for a growing team to work in.",
+      "Found and fixed the memory leaks behind recurring crashes, stabilising the app.",
+    ],
+    stack: ["React", "Next.js", "TypeScript", "Jest"],
     companyLogo: { url: "/Images/SB-silver.svg", width: 55, height: 75 },
   },
-
   {
     id: 1,
     title: "Frontend Engineer",
     company: "Restarone Solutions Inc.",
     location: "Toronto, Canada",
     duration: { from: "09/2022", to: "12/2022" },
+    highlights: [
+      "Shipped websites, landing pages and mobile apps end to end for products with a real user base.",
+      "Reduced page load time through asset, image and rendering optimisation.",
+      "Turned UX and business requirements directly into production code with the design team.",
+    ],
+    stack: ["React", "JavaScript", "REST API"],
     companyLogo: { url: "/Images/Sticker-1-05 1.png", width: 55, height: 75 },
   },
   {
@@ -40,6 +66,13 @@ export const jobs: Job[] = [
     company: "Oben Origin co.",
     location: "Tehran, Iran",
     duration: { from: "01/2020", to: "11/2021" },
+    highlights: [
+      "Joined as an intern and moved to full-time frontend developer within three months.",
+      "Shipped PWAs across client sites, growing both users and mobile conversions.",
+      "Moved all output to a responsive, mobile-first standard, growing mobile traffic.",
+      "Applied SEO fundamentals that lifted organic traffic and conversions.",
+    ],
+    stack: ["JavaScript", "React", "PWA", "SEO"],
     companyLogo: { url: "/Images/logo.svg", width: 65, height: 65 },
   },
 ];
