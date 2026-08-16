@@ -1,32 +1,41 @@
 "use client";
 
-import { Link as ScrollLink } from "react-scroll";
+import { useActiveSection } from "../../../hooks/useActiveSection";
 
 const links = [
-  { to: "home-page", label: "Home", href: "/" },
-  { to: "experience", label: "Experience", href: "#experience" },
-  { to: "about", label: "About", href: "#about" },
-  { to: "blogs", label: "Writing", href: "#blogs" },
-  { to: "contact", label: "Contact", href: "#contact" },
+  { id: "home-page", label: "Home" },
+  { id: "experience", label: "Experience" },
+  { id: "about", label: "About" },
+  { id: "blogs", label: "Writing" },
+  { id: "contact", label: "Contact" },
 ];
 
 const Navigation = () => {
+  const active = useActiveSection(links.map((link) => link.id));
+
+  // The burger toggles these classes directly on the DOM; match that here so
+  // tapping a link on mobile closes the drawer instead of leaving it open.
+  const closeMenu = () => {
+    document.getElementById("burger")?.classList.remove("active");
+    document.getElementById("navbar")?.classList.remove("show");
+  };
+
   return (
     <nav id="navbar" aria-label="Sections">
       <ul>
         {links.map((link) => (
-          <li key={link.to}>
-            <ScrollLink
-              activeClass="active"
-              spy
-              smooth
-              offset={-70}
-              duration={400}
-              to={link.to}
-              href={link.href}
+          <li key={link.id}>
+            {/* Plain anchors: html has `scroll-behavior: smooth` and
+                `scroll-padding-top`, so the browser handles the offset scroll
+                without a library. */}
+            <a
+              href={`#${link.id}`}
+              className={active === link.id ? "active" : undefined}
+              aria-current={active === link.id ? "true" : undefined}
+              onClick={closeMenu}
             >
               {link.label}
-            </ScrollLink>
+            </a>
           </li>
         ))}
       </ul>
