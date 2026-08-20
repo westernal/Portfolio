@@ -1,12 +1,15 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { skills } from "../../../data/skills";
 
+/**
+ * The marquee is a CSS animation on a plain server component.
+ *
+ * It used to be a framer-motion `animate` prop, which pulled the whole library
+ * into the initial payload for one linear translate — 70KB of JavaScript and a
+ * pair of long tasks during hydration, for something the compositor can do on
+ * its own thread.
+ */
 export default function ImageCarousel() {
-  const reduceMotion = useReducedMotion();
-
   /**
    * Four copies, animated to -50%: the halfway point is two identical copies
    * in, so the loop restarts on a pixel-identical frame. Spacing lives in the
@@ -17,11 +20,7 @@ export default function ImageCarousel() {
 
   return (
     <div className="skills-marquee">
-      <motion.div
-        className="skills-track"
-        animate={reduceMotion ? undefined : { x: ["0%", "-50%"] }}
-        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-      >
+      <div className="skills-track">
         {loopingSkills.map((item, i) => (
           <a
             href={item.link}
@@ -36,7 +35,7 @@ export default function ImageCarousel() {
             <p>{item.name}</p>
           </a>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }

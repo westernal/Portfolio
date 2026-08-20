@@ -1,4 +1,3 @@
-import Link from "next/link";
 import SocialIcons from "../SocialIcons";
 import { mailtoHref, profile, stats } from "../../data/profile";
 
@@ -32,14 +31,18 @@ const HomePage = () => {
           <a href={mailtoHref} className="btn btn-ghost">
             Email me
           </a>
-          <Link
+          {/* A plain anchor, not next/link: the PDF is a static file rather than a
+              route, and Link prefetched all 210KB of it on load — which on a
+              throttled connection pushed the hero's own LCP paint out by seconds. */}
+          <a
             href={profile.resume}
             target="_blank"
+            rel="noreferrer"
             className="btn btn-quiet"
             id="resume"
           >
             Résumé (PDF)
-          </Link>
+          </a>
         </div>
 
         <dl className="stat-strip">

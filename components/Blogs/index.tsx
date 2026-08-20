@@ -1,10 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import formatDate from "../../functions/formatDate";
 import posts from "../../data/blogs.json";
 import Heading from "../shared/Heading";
-import { motion } from "framer-motion";
+import Reveal from "../shared/Reveal";
 import { profile } from "../../data/profile";
 
 const Blog = () => {
@@ -19,12 +17,9 @@ const Blog = () => {
       {/* Three fills the row cleanly; the rest live behind the CTA below. */}
       <div className="blog-list">
         {posts.slice(0, 3).map((post, index) => (
-          <motion.a
-            // Defaults only — see the note in Jobs.
-            viewport={{ once: true }}
-            initial={{ y: 32, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.45, delay: Math.min(index, 3) * 0.08 }}
+          <Reveal
+            as="a"
+            delay={Math.min(index, 3) * 80}
             href={post.url}
             key={post.id}
             target="_blank"
@@ -49,7 +44,7 @@ const Blog = () => {
                 Read on dev.to<span aria-hidden="true"> ↗</span>
               </span>
             </div>
-          </motion.a>
+          </Reveal>
         ))}
       </div>
 

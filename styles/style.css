@@ -350,6 +350,19 @@ ol {
   vertical-align: middle;
 }
 
+/* Scroll reveal, driven by components/shared/Reveal. Kept in CSS rather than in
+   JS so the reduced-motion block below flattens it with everything else. */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 .flex {
   display: flex;
   justify-content: center;
@@ -464,7 +477,7 @@ header {
 }
 
 
-nav {
+#navbar {
   z-index: 4;
   background: color-mix(in srgb, var(--surface) 92%, transparent);
   border: 1px solid var(--line);
@@ -473,12 +486,12 @@ nav {
   backdrop-filter: blur(12px);
 }
 
-nav ul {
+#navbar ul {
   display: flex;
   gap: 2px;
 }
 
-nav a {
+#navbar a {
   display: block;
   cursor: pointer;
   user-select: none;
@@ -491,12 +504,12 @@ nav a {
   transition: background-color 0.25s ease;
 }
 
-nav a:hover {
+#navbar a:hover {
   color: var(--text-strong);
   background: var(--surface-2);
 }
 
-nav a.active {
+#navbar a.active {
   background: var(--accent);
   color: var(--accent-contrast);
   font-weight: 600;
@@ -526,51 +539,210 @@ nav a.active {
   filter: invert(1) brightness(0.35);
 }
 
+/* ---------------------------------------------------------- mobile menu -- */
+
+/* Burger plus the sheet it opens. Hidden entirely on desktop — see the 950px
+   block at the bottom of this file. */
+.mobile-nav {
+  display: none;
+}
+
 .burger {
-  width: 40px;
-  height: 24px;
+  position: relative;
+  /* 44px square: the minimum comfortable touch target, and it keeps the button
+     the same size as the theme toggle across the header. */
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
   cursor: pointer;
   background: transparent;
-  border: 0;
-  display: none;
-  z-index: 20;
+  border: 1px solid transparent;
+  border-radius: 999px;
   padding: 0;
+  color: var(--text);
+  /* Above the sheet it opens, so it can double as the close button. */
+  z-index: 120;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.burger span,
-.burger span::before,
-.burger span::after {
-  width: 100%;
-  height: 3px;
-  background: var(--text);
-  border-radius: 12px;
+.burger:hover {
+  background: var(--surface-2);
+  border-color: var(--line);
+}
+
+.burger-bars {
+  position: relative;
   display: block;
-  transition: all 0.4s ease-in-out;
+  width: 22px;
+  height: 16px;
 }
 
-.burger span::before,
-.burger span::after {
+/* Three real elements rather than one span plus ::before/::after: the middle
+   bar has to fade while the outer two rotate, and pseudo-elements made those
+   two jobs share a single transform. */
+.burger-bars span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s ease;
+}
+
+.burger-bars span:nth-child(1) {
+  top: 0;
+}
+
+.burger-bars span:nth-child(2) {
+  top: 7px;
+}
+
+.burger-bars span:nth-child(3) {
+  top: 14px;
+}
+
+.burger.active .burger-bars span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger.active .burger-bars span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0.4);
+}
+
+.burger.active .burger-bars span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  opacity: 0;
+  /* `visibility` rather than `display: none`, so the fade has something to
+     animate; `inert` in the component handles the a11y tree either way. */
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s;
+}
+
+/* The blur is set here rather than on the base rule on purpose. A
+   `backdrop-filter` on a fixed, full-viewport element makes Chrome keep a
+   render surface for the whole screen even while the element is hidden, and on
+   a phone-sized viewport that alone pushed first paint out by well over a
+   second. */
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  backdrop-filter: blur(16px);
+}
+
+.mobile-menu-inner {
+  height: 100%;
+  /* dvh, not vh: the mobile URL bar collapsing mid-scroll would otherwise clip
+     the footer off the bottom of the sheet. */
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5.5rem clamp(1.5rem, 7vw, 3rem) 2.5rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.mobile-menu-inner ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mobile-menu-inner a {
+  display: block;
+  font-size: clamp(1.75rem, 8vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.mobile-menu-inner a:hover,
+.mobile-menu-inner a:focus-visible {
+  color: var(--text-strong);
+}
+
+/* The bar reads as the active marker; the colour change alone would be the only
+   cue, and it has to survive both palettes. */
+.mobile-menu-inner a.active {
+  color: var(--text-strong);
+}
+
+.mobile-menu-inner a.active::before {
   content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.75em;
+  height: 3px;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  background: var(--accent);
 }
 
-.burger span::before {
-  transform: translateY(-8px);
+/* Each row slides up as the sheet fades in, staggered by its position. The
+   delays are held in a custom property so the markup stays free of style. */
+.mobile-menu li,
+.mobile-menu-footer {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.burger span::after {
-  transform: translateY(5px);
+.mobile-menu.open li,
+.mobile-menu.open .mobile-menu-footer {
+  opacity: 1;
+  transform: none;
 }
 
-.burger.active span {
-  background: transparent;
+.mobile-menu.open li:nth-child(1) { transition-delay: 0.06s; }
+.mobile-menu.open li:nth-child(2) { transition-delay: 0.1s; }
+.mobile-menu.open li:nth-child(3) { transition-delay: 0.14s; }
+.mobile-menu.open li:nth-child(4) { transition-delay: 0.18s; }
+.mobile-menu.open li:nth-child(5) { transition-delay: 0.22s; }
+.mobile-menu.open .mobile-menu-footer { transition-delay: 0.26s; }
+
+.mobile-menu-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
 }
 
-.burger.active span::before {
-  transform: rotateZ(45deg) translateY(0);
+.mobile-menu-cta {
+  align-self: stretch;
+  justify-content: center;
 }
 
-.burger.active span::after {
-  transform: rotateZ(-45deg) translateY(-3px);
+.mobile-menu-socials {
+  gap: 0.5rem;
+}
+
+.mobile-menu-meta {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* Set on <body> while the sheet is open. */
+.menu-open {
+  overflow: hidden;
 }
 
 /* ----------------------------------------------------------------- hero -- */
@@ -782,6 +954,17 @@ nav a.active {
   display: flex;
   padding-inline: 0.375rem;
   will-change: transform;
+  /* 40s for one half of the track — see the four-copy note in ImageCarousel. */
+  animation: skills-scroll 40s linear infinite;
+}
+
+@keyframes skills-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* No pill chrome here — the logos already give each item an edge, and boxing
@@ -1057,26 +1240,49 @@ nav a.active {
 
 /* Scoped under .testimonials purely to outrank the library's own rules — its
    stylesheet is imported from the component and so lands after this file, and
-   its active dot is #080808, which is invisible on a dark background. */
+   its active dot is #080808, which is invisible on a dark background.
+
+   The button is a transparent 24px hit area with the visible dot drawn in a
+   pseudo-element. Styling the button itself made the tap target 8px square,
+   which is a third of the 24px minimum and was the one thing keeping the
+   accessibility score off 100. */
 .testimonials .react-multi-carousel-dot button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  margin-right: 2px;
+  border-radius: 999px;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  transition: width 0.25s ease;
+}
+
+.testimonials .react-multi-carousel-dot button::before {
+  content: "";
+  display: block;
   width: 8px;
   height: 8px;
-  border: 0;
   border-radius: 999px;
-  margin-right: 8px;
   background: var(--line-strong);
   transition: background-color 0.25s ease, width 0.25s ease;
 }
 
-.testimonials .react-multi-carousel-dot button:hover,
-.testimonials .react-multi-carousel-dot button:hover:active {
+.testimonials .react-multi-carousel-dot button:hover::before,
+.testimonials .react-multi-carousel-dot button:hover:active::before {
   background: var(--text-muted);
 }
 
 /* The active dot stretches into a pill — readable at a glance without relying
-   on colour alone. */
+   on colour alone. The button grows with it so the pill is not clipped. */
 .testimonials .react-multi-carousel-dot--active button,
 .testimonials .react-multi-carousel-dot--active button:hover {
+  width: 40px;
+}
+
+.testimonials .react-multi-carousel-dot--active button::before,
+.testimonials .react-multi-carousel-dot--active button:hover::before {
   width: 24px;
   background: var(--text-strong);
 }
@@ -1353,38 +1559,23 @@ nav a.active {
     grid-template-columns: 1fr;
   }
 
-  nav {
-    position: absolute;
-    top: 10px;
-    left: 12px;
-    border-radius: 14px;
-    padding: 60px 10px 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    overflow: hidden;
-    transform: translateX(-140%);
-    transition: transform 0.4s ease;
-    min-width: 190px;
-    box-shadow: var(--shadow);
+  /* The desktop pill nav goes away completely rather than being restyled into a
+     drawer — the sheet in mobileNav.tsx is a separate element, and leaving this
+     one visible-but-offscreen put a second copy of every link in the tab order. */
+  #navbar {
+    display: none;
   }
 
-  nav.show {
-    transform: translateX(0);
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  nav a {
-    border-radius: 10px;
+  .mobile-nav {
     display: block;
   }
 
-  .burger {
-    display: block;
+  /* Brand and theme toggle stay painted over the open sheet, so the header
+     never looks like it vanished. The focus trap in mobileNav.tsx walks the
+     whole header for exactly this reason. */
+  .header-right {
+    position: relative;
+    z-index: 120;
   }
 
   .header-cta {
@@ -1443,5 +1634,11 @@ nav a.active {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+
+  /* The blanket rule above would run the marquee to its end frame and leave the
+     strip parked at -50%. It has to be switched off outright instead. */
+  .skills-track {
+    animation: none !important;
   }
 }

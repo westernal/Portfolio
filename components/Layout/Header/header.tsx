@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import BurgerMenu from "./burgerMenu";
+import MobileNav from "./mobileNav";
 import SocialIcons from "../../SocialIcons";
 import Navigation from "./navigation";
 import ThemeButton from "./themeButton";
@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header id="header" className={scrolled ? "header-scrolled" : ""}>
-      <BurgerMenu />
+      <MobileNav />
 
       <SocialIcons className="header-icons" />
 

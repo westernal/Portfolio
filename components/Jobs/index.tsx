@@ -1,9 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import { jobs } from "../../data/jobs";
 import Heading from "../shared/Heading";
-import { motion } from "framer-motion";
+import Reveal from "../shared/Reveal";
 
 const Jobs = () => {
   return (
@@ -14,15 +12,13 @@ const Jobs = () => {
         lead="Five roles across Iran, Switzerland and Canada — with what actually changed in each."
       />
 
+      {/* Staggered, but capped at the fourth row: past that the last entry would
+          sit still long enough for the section to look broken. */}
       <ol className="timeline">
         {jobs.map((job, index) => (
-          <motion.li
-            initial={{ y: 32, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.45, delay: Math.min(index, 3) * 0.08 }}
-            // Defaults only. Passing `amount`/`margin` here stopped the
-            // observer firing at all and left every entry invisible.
-            viewport={{ once: true }}
+          <Reveal
+            as="li"
+            delay={Math.min(index, 3) * 80}
             className="timeline-item"
             key={job.id}
           >
@@ -64,7 +60,7 @@ const Jobs = () => {
                 ))}
               </ul>
             </div>
-          </motion.li>
+          </Reveal>
         ))}
       </ol>
     </section>
