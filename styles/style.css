@@ -381,13 +381,34 @@ header {
   inset: 0 0 auto 0;
   padding: 0.75rem clamp(1rem, 3vw, 2rem);
   z-index: 100;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+/* The scrolled backdrop lives on a pseudo-element, not on the header itself.
+   `backdrop-filter` makes an element the containing block for its
+   `position: fixed` descendants, so putting it on the header meant that the
+   moment the page was scrolled, the mobile sheet's `inset: 0` resolved against
+   the header strip instead of the viewport — the menu spilled down the page
+   over the content it was supposed to cover. The pseudo-element has no fixed
+   descendants, so it can blur freely. */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  background-color: color-mix(in srgb, var(--bg) 85%, transparent);
+  transition: opacity 0.3s ease;
 }
 
 .header-scrolled {
-  background-color: color-mix(in srgb, var(--bg) 85%, transparent);
+  border-bottom-color: var(--line);
+}
+
+.header-scrolled::before {
+  opacity: 1;
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
 }
 
 .header-right {
