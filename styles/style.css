@@ -621,7 +621,11 @@ header {
   position: fixed;
   inset: 0;
   z-index: 110;
-  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  /* Solid, not a translucent blur. A see-through sheet let the hero's radial
+     gradient smear through it in patches, and the menu read as dirty rather
+     than as its own surface — the blur was also a full-viewport render
+     surface Chrome kept alive while the sheet was hidden. */
+  background: var(--bg);
   opacity: 0;
   /* `visibility` rather than `display: none`, so the fade has something to
      animate; `inert` in the component handles the a11y tree either way. */
@@ -629,38 +633,38 @@ header {
   transition: opacity 0.28s ease, visibility 0.28s;
 }
 
-/* The blur is set here rather than on the base rule on purpose. A
-   `backdrop-filter` on a fixed, full-viewport element makes Chrome keep a
-   render surface for the whole screen even while the element is hidden, and on
-   a phone-sized viewport that alone pushed first paint out by well over a
-   second. */
 .mobile-menu.open {
   opacity: 1;
   visibility: visible;
-  backdrop-filter: blur(16px);
 }
 
 .mobile-menu-inner {
-  height: 100%;
   /* dvh, not vh: the mobile URL bar collapsing mid-scroll would otherwise clip
      the footer off the bottom of the sheet. */
   height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
   padding: 5.5rem clamp(1.5rem, 7vw, 3rem) 2.5rem;
   overflow-y: auto;
   overscroll-behavior: contain;
 }
 
-.mobile-menu-inner ul {
+/* Every rule below is scoped to this list rather than to `.mobile-menu-inner ul`
+   and `.mobile-menu-inner a`. Those descendant selectors also matched the
+   social icons and the Hire me button in the footer — stacking the icons into a
+   column and repainting the button's label in the muted link colour. */
+.mobile-menu-links {
+  /* Takes the space the footer does not, and centres the links inside it, so
+     the list sits in the middle of the sheet at any height. */
+  flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.25rem;
+  min-height: 0;
 }
 
-.mobile-menu-inner a {
+.mobile-menu-links a {
   display: block;
   font-size: clamp(1.75rem, 8vw, 2.5rem);
   font-weight: 600;
@@ -668,70 +672,70 @@ header {
   line-height: 1.2;
   color: var(--text-muted);
   padding: 0.35rem 0;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: color 0.2s ease;
 }
 
-.mobile-menu-inner a:hover,
-.mobile-menu-inner a:focus-visible {
+.mobile-menu-links a:hover,
+.mobile-menu-links a:focus-visible {
   color: var(--text-strong);
 }
 
-/* The bar reads as the active marker; the colour change alone would be the only
-   cue, and it has to survive both palettes. */
-.mobile-menu-inner a.active {
+.mobile-menu-links a.active {
   color: var(--text-strong);
 }
 
-.mobile-menu-inner a.active::before {
+/* A short rule before the active label — a cue that survives both palettes and
+   does not rely on colour alone. */
+.mobile-menu-links a.active::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
-  width: 0.75em;
+  width: 0.5em;
   height: 3px;
   border-radius: 3px;
-  margin-right: 0.5rem;
+  margin-right: 0.4rem;
   background: var(--accent);
 }
 
-/* Each row slides up as the sheet fades in, staggered by its position. The
-   delays are held in a custom property so the markup stays free of style. */
-.mobile-menu li,
+/* Each row rises as the sheet fades in, staggered by its position. */
+.mobile-menu-links li,
 .mobile-menu-footer {
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.mobile-menu.open li,
+.mobile-menu.open .mobile-menu-links li,
 .mobile-menu.open .mobile-menu-footer {
   opacity: 1;
   transform: none;
 }
 
-.mobile-menu.open li:nth-child(1) { transition-delay: 0.06s; }
-.mobile-menu.open li:nth-child(2) { transition-delay: 0.1s; }
-.mobile-menu.open li:nth-child(3) { transition-delay: 0.14s; }
-.mobile-menu.open li:nth-child(4) { transition-delay: 0.18s; }
-.mobile-menu.open li:nth-child(5) { transition-delay: 0.22s; }
+.mobile-menu.open .mobile-menu-links li:nth-child(1) { transition-delay: 0.06s; }
+.mobile-menu.open .mobile-menu-links li:nth-child(2) { transition-delay: 0.1s; }
+.mobile-menu.open .mobile-menu-links li:nth-child(3) { transition-delay: 0.14s; }
+.mobile-menu.open .mobile-menu-links li:nth-child(4) { transition-delay: 0.18s; }
+.mobile-menu.open .mobile-menu-links li:nth-child(5) { transition-delay: 0.22s; }
 .mobile-menu.open .mobile-menu-footer { transition-delay: 0.26s; }
 
 .mobile-menu-footer {
-  margin-top: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.25rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--line);
 }
 
 .mobile-menu-cta {
   align-self: stretch;
-  justify-content: center;
 }
 
+/* Back to a row — `.social-icons` sets that itself, but only once the list is
+   not being caught by a selector meant for the nav links. */
 .mobile-menu-socials {
-  gap: 0.5rem;
+  gap: 0.25rem;
+  margin-left: -8px;
 }
 
 .mobile-menu-meta {

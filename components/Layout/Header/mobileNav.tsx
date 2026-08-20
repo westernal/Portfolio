@@ -111,7 +111,7 @@ const MobileNav = () => {
         }}
       >
         <nav className="mobile-menu-inner" aria-label="Sections">
-          <ul>
+          <ul className="mobile-menu-links">
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
