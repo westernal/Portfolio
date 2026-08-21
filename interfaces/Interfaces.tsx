@@ -27,6 +27,10 @@ export interface Job {
     url: string;
     width: number;
     height: number;
+    /** Set for marks that are a full badge rather than a bare glyph — they
+        carry their own frame, so they sit better filling the tile than
+        floating inset in it. */
+    bleed?: boolean;
   };
 }
 

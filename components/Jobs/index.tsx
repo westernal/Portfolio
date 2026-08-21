@@ -22,7 +22,12 @@ const Jobs = () => {
             className="timeline-item"
             key={job.id}
           >
-            <div className="timeline-marker" aria-hidden="true">
+            <div
+              className={`timeline-marker${
+                job.companyLogo.bleed ? " timeline-marker--bleed" : ""
+              }`}
+              aria-hidden="true"
+            >
               <Image
                 width={job.companyLogo.width}
                 height={job.companyLogo.height}

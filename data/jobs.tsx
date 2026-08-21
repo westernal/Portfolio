@@ -58,7 +58,12 @@ export const jobs: Job[] = [
       "Turned UX and business requirements directly into production code with the design team.",
     ],
     stack: ["React", "JavaScript", "REST API"],
-    companyLogo: { url: "/Images/Sticker-1-05 1.png", width: 53, height: 75 },
+    companyLogo: {
+      url: "/Images/Sticker-1-05 1.png",
+      width: 53,
+      height: 75,
+      bleed: true,
+    },
   },
   {
     id: 0,

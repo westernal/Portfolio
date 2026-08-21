@@ -1077,6 +1077,13 @@ header::before {
   flex-shrink: 0;
 }
 
+/* A badge mark already has its own border and backdrop; the tile's padding
+   just shrinks it next to the bare glyphs, so drop it and clip to the corner. */
+.timeline-marker--bleed {
+  padding: 0;
+  overflow: hidden;
+}
+
 .timeline-marker img {
   /* Every mark is a different intrinsic shape, so let the box do the sizing:
      fill it and contain, rather than letting each logo's own dimensions decide
