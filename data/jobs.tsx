@@ -13,7 +13,7 @@ export const jobs: Job[] = [
       "Own the public-facing experience end to end, from quote comparison flows to checkout.",
     ],
     stack: ["Next.js", "TypeScript", "React", "SSR"],
-    companyLogo: { url: "/Images/bime-bazar.svg", width: 55, height: 67 },
+    companyLogo: { url: "/Images/bimebazar.png", width: 55, height: 67 },
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const jobs: Job[] = [
       "Mentored developers and interns in Next.js, lifting the team's throughput.",
     ],
     stack: ["Next.js", "TypeScript", "GraphQL", "TanStack Query", "Sentry"],
-    companyLogo: { url: "/Images/SB-silver.svg", width: 55, height: 75 },
+    companyLogo: { url: "/Images/SB-silver.svg", width: 58, height: 60 },
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ export const jobs: Job[] = [
       "Found and fixed the memory leaks behind recurring crashes, stabilising the app.",
     ],
     stack: ["React", "Next.js", "TypeScript", "Jest"],
-    companyLogo: { url: "/Images/SB-silver.svg", width: 55, height: 75 },
+    companyLogo: { url: "/Images/SB-silver.svg", width: 58, height: 60 },
   },
   {
     id: 1,
@@ -58,7 +58,7 @@ export const jobs: Job[] = [
       "Turned UX and business requirements directly into production code with the design team.",
     ],
     stack: ["React", "JavaScript", "REST API"],
-    companyLogo: { url: "/Images/Sticker-1-05 1.png", width: 55, height: 75 },
+    companyLogo: { url: "/Images/Sticker-1-05 1.png", width: 53, height: 75 },
   },
   {
     id: 0,
@@ -73,6 +73,6 @@ export const jobs: Job[] = [
       "Applied SEO fundamentals that lifted organic traffic and conversions.",
     ],
     stack: ["JavaScript", "React", "PWA", "SEO"],
-    companyLogo: { url: "/Images/logo.svg", width: 65, height: 65 },
+    companyLogo: { url: "/Images/logo.svg", width: 66, height: 55 },
   },
 ];

@@ -1078,18 +1078,13 @@ header::before {
 }
 
 .timeline-marker img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
+  /* Every mark is a different intrinsic shape, so let the box do the sizing:
+     fill it and contain, rather than letting each logo's own dimensions decide
+     how big it lands. */
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  /* Several company marks are dark-on-light originals and vanish on the
-     dark surface; lift them just enough to read. */
-  filter: brightness(1.45);
-}
-
-.light .timeline-marker img {
-  filter: none;
+  object-position: center;
 }
 
 .timeline-head {
