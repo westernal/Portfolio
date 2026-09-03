@@ -65,8 +65,8 @@ export const stats = [
     label: "Roles across Iran, Switzerland and Canada",
   },
   {
-    value: "4 mo",
-    label: "From developer to frontend team lead",
+    value: "2",
+    label: "Products led from architecture through launch",
   },
 ];
 
