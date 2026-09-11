@@ -43,7 +43,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Gabrielle Callegari",
+    name: "Gabriele Callegari",
     avatar: "/Images/Calle.jpg",
     description:
       "Beyond his technical skills, Ali brings a contagious positive energy to the workplace. His optimistic outlook and passion for his work are evident in every interaction, and he is always willing to lend a helping hand or share his insights. This attitude not only boosts team morale but also fosters a collaborative and supportive environment where everyone can thrive.",
@@ -56,5 +56,21 @@ export const testimonials: Testimonial[] = [
     description:
       "I had the pleasure of working with Mr. Ali Navidi during my time at Silver Brain AI AG, where he served as the frontend team lead. His technical expertise, problem-solving skills, and dedication to the team's success make him one of the most talented professionals I have encountered in my career. I highly recommend Ali for any software development role. His leadership and knowledge are truly outstanding.",
     role: "Software Engineer",
+  },
+  {
+    id: 7,
+    name: "Soroush Moradpour",
+    avatar: "/Images/Soroush.jpg",
+    description:
+      "I had the pleasure of working with Ali as part of the frontend team, and I can confidently say he is an exceptionally skilled developer. What truly sets him apart is his consistently positive attitude — he's always working with a smile and bringing good energy to the team. I highly recommend Ali for any role that values strong technical ability and an excellent team spirit.",
+    role: "Software Engineer",
+  },
+  {
+    id: 8,
+    name: "Mahnaz Sedighi",
+    avatar: "/Images/Mahnaz.jpg",
+    description:
+      "One of the qualities I appreciate most about Ali is his strong sense of ownership — when a bug or technical issue comes up, he doesn't just stick to his own area, he investigates, understands the problem, and helps find a solution. From a QA perspective, having a developer with this mindset makes collaboration far more effective. Ali is a dependable, professional teammate, and I'm very happy to have had the opportunity to work with him.",
+    role: "QA Specialist",
   },
 ];
