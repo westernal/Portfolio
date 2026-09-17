@@ -29,7 +29,7 @@ export const jobs: Job[] = [
       "Improved application response time through caching strategy and rendering work.",
       "Mentored developers and interns in Next.js, lifting the team's throughput.",
     ],
-    stack: ["Next.js", "TypeScript", "GraphQL", "TanStack Query", "Sentry"],
+    stack: ["Next.js", "TypeScript", "TanStack Query", "Sentry"],
     companyLogo: { url: "/Images/SB-silver.svg", width: 58, height: 60 },
   },
   {
