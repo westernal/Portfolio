@@ -11,8 +11,9 @@ export const jobs: Job[] = [
       "Rebuilt the front end of a high-traffic insurance comparison marketplace from scratch in Next.js, replacing the legacy stack with no loss of service.",
       "Set the architecture, code structure and performance budget the new codebase is built on.",
       "Own the public-facing experience end to end, from quote comparison flows to checkout.",
+      "Built the internal backoffice that operations, finance and logistics run on — task queues, orders, endorsements, wallet management and shipment tracking — in React Router 7 with role-based access.",
     ],
-    stack: ["Next.js", "TypeScript", "React", "SSR"],
+    stack: ["Next.js", "React Router 7", "TypeScript", "React", "SSR"],
     companyLogo: { url: "/Images/bimebazar.png", width: 55, height: 67 },
   },
   {
