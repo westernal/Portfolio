@@ -28,20 +28,13 @@ const HomePage = () => {
           <a href="#experience" className="btn btn-primary">
             See my experience
           </a>
-          <a href={mailtoHref} className="btn btn-ghost">
-            Email me
-          </a>
-          {/* A plain anchor, not next/link: the PDF is a static file rather than a
-              route, and Link prefetched all 210KB of it on load — which on a
-              throttled connection pushed the hero's own LCP paint out by seconds. */}
           <a
-            href={profile.resume}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-quiet"
-            id="resume"
+            href={mailtoHref}
+            className="btn btn-ghost"
+            data-track="email_clicked"
+            data-track-location="hero"
           >
-            Résumé (PDF)
+            Email me
           </a>
         </div>
 

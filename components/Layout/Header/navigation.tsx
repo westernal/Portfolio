@@ -1,7 +1,8 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useActiveSection } from "../../../hooks/useActiveSection";
-import { navIds, navLinks } from "./links";
+import { navIds, navLinks, sectionHref } from "./links";
 
 /**
  * The desktop pill nav. Below 950px it is `display: none` — which also takes it
@@ -9,6 +10,8 @@ import { navIds, navLinks } from "./links";
  */
 const Navigation = () => {
   const active = useActiveSection(navIds);
+  // None of these sections exist on /resume, so nothing there is "current".
+  const current = usePathname() === "/" ? active : null;
 
   return (
     <nav id="navbar" aria-label="Sections">
@@ -19,9 +22,9 @@ const Navigation = () => {
                 `scroll-padding-top`, so the browser handles the offset scroll
                 without a library. */}
             <a
-              href={`#${link.id}`}
-              className={active === link.id ? "active" : undefined}
-              aria-current={active === link.id ? "true" : undefined}
+              href={sectionHref(link.id)}
+              className={current === link.id ? "active" : undefined}
+              aria-current={current === link.id ? "true" : undefined}
             >
               {link.label}
             </a>

@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Layout from "../components/Layout/layout";
+import TrackClicks from "../components/Analytics/TrackClicks";
 import type { Metadata, Viewport } from "next";
 import { profile } from "../data/profile";
 import { jobs } from "../data/jobs";
@@ -108,7 +109,7 @@ const personSchema = {
   },
   alumniOf: {
     "@type": "CollegeOrUniversity",
-    name: "Noshirvani University of Technology, Babol",
+    name: profile.education.institution,
   },
   knowsAbout: skillGroups.flatMap((group) => group.items),
   sameAs: [
@@ -159,6 +160,7 @@ export default function RootLayout({
           theme="dark"
         />
         <Analytics />
+        <TrackClicks />
         <SpeedInsights />
         <Layout>{children}</Layout>
       </body>

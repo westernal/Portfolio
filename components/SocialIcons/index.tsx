@@ -13,6 +13,7 @@ const SocialIcons = ({ className = "" }: { className?: string }) => {
             rel="noreferrer"
             aria-label={social.name}
             title={social.name}
+            data-track={social.event}
           >
             <Image
               src={social.imageUrl}

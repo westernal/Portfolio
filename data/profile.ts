@@ -34,6 +34,18 @@ export const profile = {
     detail: "Remote or relocation",
   },
 
+  /** Read off the PDF résumé in /public, so the two can't disagree. */
+  education: {
+    degree: "B.Sc. Computer Engineering",
+    institution: "Noshirvani University of Technology, Babol",
+    years: "10/2018 – 02/2023",
+    notes: [
+      "Active member of the IEEE community.",
+      "Teaching assistant for Computer Architecture, two semesters.",
+      "Teaching assistant for Programming Language Design, one semester.",
+    ],
+  },
+
   email: "aliinavidi1379@gmail.com",
   resume: "/Ali Navidi Resume.pdf",
 

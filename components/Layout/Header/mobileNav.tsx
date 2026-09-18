@@ -1,10 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import SocialIcons from "../../SocialIcons";
 import { useActiveSection } from "../../../hooks/useActiveSection";
 import { mailtoHref, profile } from "../../../data/profile";
-import { navIds, navLinks } from "./links";
+import { navIds, navLinks, sectionHref } from "./links";
 
 /**
  * The mobile menu: a burger that opens a full-screen sheet.
@@ -19,6 +21,8 @@ import { navIds, navLinks } from "./links";
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
   const active = useActiveSection(navIds);
+  // None of these sections exist on /resume, so nothing there is "current".
+  const current = usePathname() === "/" ? active : null;
   const burgerRef = useRef<HTMLButtonElement>(null);
 
   const close = useCallback(() => setOpen(false), []);
@@ -115,9 +119,9 @@ const MobileNav = () => {
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
-                  href={`#${link.id}`}
-                  className={active === link.id ? "active" : undefined}
-                  aria-current={active === link.id ? "true" : undefined}
+                  href={sectionHref(link.id)}
+                  className={current === link.id ? "active" : undefined}
+                  aria-current={current === link.id ? "true" : undefined}
                   onClick={close}
                 >
                   {link.label}
@@ -127,12 +131,25 @@ const MobileNav = () => {
           </ul>
 
           <div className="mobile-menu-footer">
-            <a
-              href={mailtoHref}
+            <Link
+              href="/resume"
               className="btn btn-primary mobile-menu-cta"
+              prefetch={false}
               onClick={close}
             >
-              Hire me
+              Résumé
+            </Link>
+
+            {/* Kept here even though the desktop header dropped it: the sheet is
+                the only place either action appears on mobile. */}
+            <a
+              href={mailtoHref}
+              className="btn btn-ghost mobile-menu-cta"
+              onClick={close}
+              data-track="email_clicked"
+              data-track-location="mobile-menu"
+            >
+              Email me
             </a>
 
             <SocialIcons className="mobile-menu-socials" />

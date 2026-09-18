@@ -1,9 +1,9 @@
 import Image from "next/image";
 import formatDate from "../../functions/formatDate";
-import posts from "../../data/blogs.json";
 import Heading from "../shared/Heading";
 import Reveal from "../shared/Reveal";
 import { profile } from "../../data/profile";
+import { posts } from "../../data/blogs";
 
 const Blog = () => {
   return (
@@ -14,9 +14,10 @@ const Blog = () => {
         lead="Notes on frontend work — performance, tooling, and the occasional opinion."
       />
 
-      {/* Three fills the row cleanly; the rest live behind the CTA below. */}
+      {/* Exactly the three picked in data/blogs.ts; the rest live behind the
+          CTA below. */}
       <div className="blog-list">
-        {posts.slice(0, 3).map((post, index) => (
+        {posts.map((post, index) => (
           <Reveal
             as="a"
             delay={Math.min(index, 3) * 80}
@@ -25,19 +26,22 @@ const Blog = () => {
             target="_blank"
             rel="noreferrer"
             className="blog-card"
+            data-track="blog_post_opened"
           >
-            <div className="blog-image">
-              <Image
-                fill
-                src={post.cover_image}
-                alt=""
-                sizes="(max-width: 950px) 100vw, 30vw"
-                style={{ objectFit: "cover" }}
-              />
-            </div>
+            {post.coverImage && (
+              <div className="blog-image">
+                <Image
+                  fill
+                  src={post.coverImage}
+                  alt=""
+                  sizes="(max-width: 950px) 100vw, 30vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+            )}
 
             <div className="blog-info">
-              <p className="blog-date">{formatDate(post.published_at)}</p>
+              <p className="blog-date">{formatDate(post.publishedAt)}</p>
               <h3 className="blog-title">{post.title}</h3>
               <p className="blog-description">{post.description}</p>
               <span className="text-link blog-more">
@@ -54,6 +58,7 @@ const Blog = () => {
           target="_blank"
           rel="noreferrer"
           className="btn btn-ghost"
+          data-track="devto_profile_opened"
         >
           All posts on dev.to<span aria-hidden="true"> ↗</span>
         </a>

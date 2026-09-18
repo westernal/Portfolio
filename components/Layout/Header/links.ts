@@ -12,3 +12,13 @@ export const navLinks = [
 ] as const;
 
 export const navIds = navLinks.map((link) => link.id);
+
+/**
+ * Root-relative rather than a bare `#id`, so the header still works from
+ * /resume, where none of these sections exist.
+ *
+ * From the home page this is still a same-document fragment navigation — the
+ * browser compares everything before the `#`, finds it identical, and scrolls
+ * instead of reloading, so `scroll-behavior: smooth` keeps applying.
+ */
+export const sectionHref = (id: string) => `/#${id}`;

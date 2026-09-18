@@ -41,7 +41,12 @@ const About = () => {
           </p>
 
           <div className="about-actions">
-            <a href={mailtoHref} className="btn btn-primary">
+            <a
+              href={mailtoHref}
+              className="btn btn-primary"
+              data-track="email_clicked"
+              data-track-location="about"
+            >
               Let&apos;s talk
             </a>
             <a
@@ -49,6 +54,8 @@ const About = () => {
               target="_blank"
               rel="noreferrer"
               className="btn btn-ghost"
+              data-track="linkedin_opened"
+              data-track-location="about"
             >
               LinkedIn<span aria-hidden="true"> ↗</span>
             </a>

@@ -28,7 +28,12 @@ const Socials = () => {
             to me directly — I reply to every message within a day or two.
           </p>
 
-          <a href={mailtoHref} className="contact-email">
+          <a
+            href={mailtoHref}
+            className="contact-email"
+            data-track="email_clicked"
+            data-track-location="contact"
+          >
             {profile.email}
           </a>
 

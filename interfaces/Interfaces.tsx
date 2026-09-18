@@ -34,20 +34,23 @@ export interface Job {
   };
 }
 
-export interface Blog {
-  id: string;
+/** A dev.to post, normalised by data/blogs.ts — see DevToArticle there for the raw shape. */
+export interface BlogPost {
+  id: number;
   title: string;
   description: string;
   url: string;
-  user: { profile_image: string };
-  cover_image: string;
-  published_at: Date;
+  coverImage: string;
+  /** ISO 8601, straight from the feed. */
+  publishedAt: string;
 }
 
 export interface Social {
   name: string;
   url: string;
   imageUrl: string;
+  /** Analytics event name, read by components/Analytics/TrackClicks. */
+  event: string;
 }
 
 export interface Testimonial {
