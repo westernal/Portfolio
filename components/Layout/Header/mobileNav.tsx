@@ -136,6 +136,8 @@ const MobileNav = () => {
               className="btn btn-primary mobile-menu-cta"
               prefetch={false}
               onClick={close}
+              data-track="resume_opened"
+              data-track-location="mobile-menu"
             >
               Résumé
             </Link>

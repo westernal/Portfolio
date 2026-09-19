@@ -47,8 +47,14 @@ const Reveal = <T extends ElementType = "div">(
 
     // No observer (very old browser, or a JSDOM-style environment): show the
     // content rather than leaving it permanently at opacity 0.
+    //
+    // Written straight to the node instead of through setState. There is nothing
+    // to re-render for — the class is the entire effect, and it never changes
+    // again — and a synchronous setState in an effect body is the cascading
+    // render the react-hooks rule is there to catch. React leaves the attribute
+    // alone on later renders because the className prop it computes is unchanged.
     if (typeof IntersectionObserver === "undefined") {
-      setShown(true);
+      el.classList.add("is-visible");
       return;
     }
 

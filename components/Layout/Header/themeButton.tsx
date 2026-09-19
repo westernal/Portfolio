@@ -1,25 +1,45 @@
 "use client";
 
 import { DarkIcon, LightIcon } from "@/utils/icons";
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
+
+/**
+ * The theme is owned by `<html class="light">`, not by React: the inline script
+ * in layout.tsx applies it before first paint, and this button toggles the same
+ * class. So the label subscribes to that class rather than keeping a second copy
+ * of the answer in state and resyncing it in an effect — one source, and no
+ * window where the button says "dark" while the page is already light.
+ */
+const subscribe = (onStoreChange: () => void) => {
+  const observer = new MutationObserver(onStoreChange);
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+
+  return () => observer.disconnect();
+};
+
+const getSnapshot = () => document.documentElement.classList.contains("light");
+
+/** No DOM on the server, and dark is the palette the stylesheet ships. */
+const getServerSnapshot = () => false;
 
 const ThemeButton = () => {
-  const [isLight, setIsLight] = useState(false);
+  const isLight = useSyncExternalStore(
+    subscribe,
+    getSnapshot,
+    getServerSnapshot,
+  );
   /** Bumped per click; used as a key so the swap animation replays each time. */
   const [swaps, setSwaps] = useState(0);
-
-  // The inline script in layout.tsx has already applied the class before paint;
-  // this just syncs the label to whatever it decided.
-  useEffect(() => {
-    setIsLight(document.documentElement.classList.contains("light"));
-  }, []);
 
   const changeTheme = () => {
     const next = !isLight;
 
     const root = document.documentElement;
 
-    setIsLight(next);
     setSwaps((n) => n + 1);
 
     // Suppress transitions for the frame the tokens change in, or colour

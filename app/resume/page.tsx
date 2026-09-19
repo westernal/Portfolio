@@ -4,6 +4,7 @@ import FooterInfo from "../../components/FooterInfo/index";
 import { jobs } from "../../data/jobs";
 import { skillGroups } from "../../data/skills";
 import { mailtoHref, profile } from "../../data/profile";
+import { buildDateISO, buildMonth } from "../../functions/buildDate";
 
 export const dynamic = "force-static";
 
@@ -62,6 +63,12 @@ const ResumePage = () => {
               {profile.location} · {profile.timezone}
             </li>
           </ul>
+
+          {/* A résumé with no date on it is the one thing every reader silently
+              discounts. Build-time, so it stays true without being maintained. */}
+          <p className="resume-updated">
+            Updated <time dateTime={buildDateISO}>{buildMonth}</time>
+          </p>
 
           {/* Hidden in print — the reader is already holding the paper version. */}
           <div className="resume-actions">

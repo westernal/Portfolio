@@ -15,8 +15,9 @@ import { track } from "@vercel/analytics/react";
  * property, so "how many people mailed me" and "from which section" are one
  * event rather than four.
  *
- * Every tracked link either opens a new tab or hands off to a mail client, so
- * the page survives long enough for the beacon to leave.
+ * Nothing tracked here unloads the page: outbound links open a new tab, the mail
+ * CTAs hand off to a mail client, and the three résumé links are same-tab
+ * client-side navigations. The beacon always has time to leave.
  */
 export default function TrackClicks() {
   useEffect(() => {

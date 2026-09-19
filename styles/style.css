@@ -1620,6 +1620,13 @@ ol {
   margin: 0;
 }
 
+/* Same muted colour as the rest of the footer — the contrast ratios on
+   --text-muted are deliberate, so hierarchy here comes from position, not from
+   a dimmer grey. Kept on one line: a date broken across two reads as a typo. */
+.footer-updated {
+  white-space: nowrap;
+}
+
 /* --------------------------------------------------------------- resume -- */
 
 /* A document, not a landing page: one column, generous leading, and a measure
@@ -1673,6 +1680,14 @@ ol {
 
 .resume-contact a:hover {
   color: var(--text-strong);
+}
+
+/* Matches the contact row above it rather than the buttons below — it is a
+   property of the document, not an action. */
+.resume-updated {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0.75rem 0 0;
 }
 
 .resume-actions {
@@ -1816,6 +1831,7 @@ ol {
 
   .resume-contact,
   .resume-contact a,
+  .resume-updated,
   .resume-job-meta,
   .resume-job-stack,
   .resume-section h2 {
